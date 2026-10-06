@@ -1,0 +1,14 @@
+{
+  "noticias": [
+    {
+      "titulo": "Cuatro florenses representarán a Costa Rica en el Torneo Sub-16 UNCAF 2026",
+      "fecha": "2026-10-05",
+      "fecha_hora": "2026-10-05T16:58:27-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1791241063050-whatsapp-image-2026-10-05-at-12-32-50-pm.jpeg",
+      "resumen": "El Club Sport Herediano celebra la convocatoria de Ezequiel Matamoros, Caleb Flores, Deyron Mejías y Sebastián Vargas a la Selección Nacional Masculina Sub-16. El talento y el trabajo de las…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/cuatro-florenses-representaran-a-costa-rica-en-el-torneo-sub-16-uncaf-2026"
+    }
+  ]
+}

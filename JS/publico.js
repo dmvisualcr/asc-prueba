@@ -60,17 +60,47 @@
       '</article>';
   }
 
+  function urlExterna(u) { return /^https?:\/\//.test(u); }
+  function destinoEnlace(u) { return urlExterna(u) ? ' target="_blank" rel="noopener noreferrer"' : ''; }
+  function etiquetaNoticia(n) { return n.categoria || 'Otros medios'; }
+  function enlaceWhatsApp(n) {
+    var url = urlExterna(n.url) ? n.url : new URL(n.url, location.href).href;
+    return 'https://wa.me/?text=' + encodeURIComponent(n.titulo + ' ' + url);
+  }
+
   function tarjetaNoticia(n) {
-    var externa = /^https?:\/\//.test(n.url);
-    var destino = externa ? ' target="_blank" rel="noopener noreferrer"' : '';
+    var d = destinoEnlace(n.url);
     return '<div class="news-card news-card--ext">' +
-      '<a class="news-img-link" href="' + esc(n.url) + '"' + destino + '>' +
-        '<img src="' + esc(ruta(n.imagen)) + '" alt="' + esc(n.titulo) + '" loading="lazy">' +
+      '<a class="news-img-link" href="' + esc(n.url) + '"' + d + '>' +
+        '<img src="' + esc(ruta(n.imagen)) + '" alt="" loading="lazy">' +
+        '<span class="news-cat">' + esc(etiquetaNoticia(n)) + '</span>' +
       '</a>' +
-      '<div class="news-info" data-fuente="' + esc(n.fuente) + '">' +
+      '<div class="news-info" data-fuente="' + esc(n.fuente || 'herediano.com') + '">' +
         '<p class="date">' + fecha(n.fecha) + '</p>' +
-        '<h3><a href="' + esc(n.url) + '"' + destino + '>' + esc(n.titulo) + '</a></h3>' +
-      '</div></div>';
+        '<h3><a href="' + esc(n.url) + '"' + d + '>' + esc(n.titulo) + '</a></h3>' +
+      '</div>' +
+      '<a class="news-share" href="' + esc(enlaceWhatsApp(n)) + '" target="_blank" rel="noopener noreferrer" ' +
+        'aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><i class="fab fa-whatsapp"></i></a>' +
+      '</div>';
+  }
+
+  function noticiaDestacada(n) {
+    var d = destinoEnlace(n.url);
+    return '<article class="news-feature">' +
+      '<a class="news-feature-img" href="' + esc(n.url) + '"' + d + '>' +
+        '<img src="' + esc(ruta(n.imagen)) + '" alt="">' +
+      '</a>' +
+      '<div class="news-feature-body">' +
+        '<span class="news-cat">' + esc(etiquetaNoticia(n)) + '</span>' +
+        '<h2><a href="' + esc(n.url) + '"' + d + '>' + esc(n.titulo) + '</a></h2>' +
+        (n.resumen ? '<p class="news-excerpt">' + esc(n.resumen) + '</p>' : '') +
+        '<p class="news-meta">' + fecha(n.fecha) + ' · Fuente: ' + esc(n.fuente || 'herediano.com') + '</p>' +
+        '<div class="news-actions">' +
+          '<a class="btn-gold" href="' + esc(n.url) + '"' + d + '>Leer nota</a>' +
+          '<a class="news-share news-share--lg" href="' + esc(enlaceWhatsApp(n)) + '" target="_blank" rel="noopener noreferrer">' +
+            '<i class="fab fa-whatsapp"></i> Compartir</a>' +
+        '</div>' +
+      '</div></article>';
   }
 
   /* ---------- Equipo ---------- */
@@ -122,33 +152,101 @@
   }
 
   /* ---------- Noticias: página completa ---------- */
+  var ORDEN_CATEGORIAS = ['Comunicados', 'Cantera', 'Crónicas', 'Refuerzos', 'Entradas', 'Femenino', 'Noticias', 'Otros medios'];
+
   function iniciarNoticias() {
     var grid = document.getElementById('news-grid');
     if (!grid) return;
     var masWrap = document.getElementById('news-more');
+    var contenedor = grid.parentElement;
 
-    cargar('noticias.json').then(function (datos) {
-      var lista = (datos.noticias || []).slice().sort(porFechaDesc);
-      var mostradas = 0;
-
-      function mostrarMas() {
-        var tramo = lista.slice(mostradas, mostradas + NOTICIAS_POR_PAGINA);
-        grid.insertAdjacentHTML('beforeend', tramo.map(tarjetaNoticia).join(''));
-        mostradas += tramo.length;
-        protegerImagenes(grid);
-        if (masWrap) masWrap.hidden = mostradas >= lista.length;
+    // Si la página no trae estos contenedores, se crean encima de la cuadrícula
+    function asegurar(id, clase) {
+      var el = document.getElementById(id);
+      if (!el) {
+        el = document.createElement('div');
+        el.id = id;
+        el.className = clase;
+        contenedor.insertBefore(el, grid);
       }
+      return el;
+    }
+    var cajaFiltros = asegurar('news-filters', 'news-filters');
+    var cajaDestacada = asegurar('news-featured', 'news-featured');
 
-      if (!lista.length) {
+    var vacio = { noticias: [] };
+    Promise.all([
+      cargar('noticias-club.json').catch(function () { return vacio; }), // se actualiza sola desde herediano.com
+      cargar('noticias.json').catch(function () { return vacio; })       // las que agregás a mano (otros medios)
+    ]).then(function (res) {
+      var vistas = {};
+      var todas = [].concat(res[0].noticias || [], res[1].noticias || []).filter(function (n) {
+        if (!n || !n.url || vistas[n.url]) return false;
+        vistas[n.url] = true;
+        return true;
+      }).sort(function (a, b) {
+        return String(b.fecha_hora || b.fecha).localeCompare(String(a.fecha_hora || a.fecha));
+      });
+
+      if (!todas.length) {
         grid.innerHTML = '<p class="empty-note">Todavía no hay noticias publicadas.</p>';
         return;
       }
-      grid.innerHTML = ''; // quita el texto "Cargando noticias…"
-      mostrarMas();
-      var btn = masWrap && masWrap.querySelector('button');
-      if (btn) btn.addEventListener('click', mostrarMas);
-    }).catch(function () {
-      grid.innerHTML = '<p class="empty-note">No se pudieron cargar las noticias.</p>';
+
+      var categoria = 'Todas';
+      var resto = [];
+      var mostradas = 0;
+
+      function mostrarMas() {
+        var tramo = resto.slice(mostradas, mostradas + NOTICIAS_POR_PAGINA);
+        grid.insertAdjacentHTML('beforeend', tramo.map(tarjetaNoticia).join(''));
+        mostradas += tramo.length;
+        protegerImagenes(grid);
+        if (masWrap) masWrap.hidden = mostradas >= resto.length;
+      }
+
+      function pintar() {
+        var items = categoria === 'Todas' ? todas.slice()
+          : todas.filter(function (n) { return etiquetaNoticia(n) === categoria; });
+        var destacada = categoria === 'Todas' ? items.shift() : null;
+        cajaDestacada.innerHTML = destacada ? noticiaDestacada(destacada) : '';
+        protegerImagenes(cajaDestacada);
+        grid.innerHTML = '';
+        resto = items;
+        mostradas = 0;
+        if (masWrap) masWrap.hidden = true;
+        mostrarMas();
+      }
+
+      // Botones de categoría (solo si hay más de una)
+      var presentes = [];
+      todas.forEach(function (n) {
+        var c = etiquetaNoticia(n);
+        if (presentes.indexOf(c) === -1) presentes.push(c);
+      });
+      presentes.sort(function (a, b) {
+        var ia = ORDEN_CATEGORIAS.indexOf(a), ib = ORDEN_CATEGORIAS.indexOf(b);
+        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+      });
+      if (presentes.length > 1) {
+        cajaFiltros.innerHTML = ['Todas'].concat(presentes).map(function (c) {
+          return '<button type="button" class="news-chip" data-cat="' + esc(c) + '" aria-pressed="' +
+                 (c === 'Todas') + '">' + esc(c) + '</button>';
+        }).join('');
+        cajaFiltros.addEventListener('click', function (e) {
+          var btn = e.target.closest('.news-chip');
+          if (!btn) return;
+          categoria = btn.dataset.cat;
+          cajaFiltros.querySelectorAll('.news-chip').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b === btn));
+          });
+          pintar();
+        });
+      }
+
+      var btnMas = masWrap && masWrap.querySelector('button');
+      if (btnMas) btnMas.addEventListener('click', mostrarMas);
+      pintar();
     });
   }
 
