@@ -1,40 +1,35 @@
 {
   "director": {
-    "nombre": "Nombre del Director Técnico",
+    "nombre": "Paulo César Wanchope",
     "cargo": "Director técnico",
-    "foto": "IMG/cuerpo-tecnico/dt.jpg",
-    "bio": "Escribí aquí una reseña corta del director técnico: trayectoria, títulos y lo que representa para el club."
+    "foto": "IMG/cuerpo-tecnico/DT.png",
+    "bio": "Exfutbolista y referente del fútbol costarricense, cuenta con una amplia trayectoria tanto nacional como internacional. Formado en las ligas menores del Herediano, regresó en 2026 para asumir por tercera ocasión la dirección técnica del conjunto rojiamarillo. A lo largo de su carrera como entrenador también ha dirigido a la Selección Nacional de Costa Rica, Saprissa, Cartaginés y Pérez Zeledón."
   },
   "staff": [
     {
-      "nombre": "Nombre Apellido",
-      "cargo": "Asistente técnico",
+      "nombre": "Jafet Soto",
+      "cargo": "Director técnico",
       "foto": "IMG/cuerpo-tecnico/asistente-1.jpg"
     },
     {
-      "nombre": "Nombre Apellido",
+      "nombre": "Yendrick Ruiz",
       "cargo": "Asistente técnico",
       "foto": "IMG/cuerpo-tecnico/asistente-2.jpg"
     },
     {
-      "nombre": "Nombre Apellido",
-      "cargo": "Preparador de porteros",
+      "nombre": "Miguel Segura",
+      "cargo": "Entrenador de Porteros",
       "foto": "IMG/cuerpo-tecnico/porteros.jpg"
     },
     {
-      "nombre": "Nombre Apellido",
+      "nombre": "Manuel Víquez",
       "cargo": "Preparador físico",
       "foto": "IMG/cuerpo-tecnico/fisico.jpg"
     },
     {
-      "nombre": "Nombre Apellido",
-      "cargo": "Médico del equipo",
-      "foto": "IMG/cuerpo-tecnico/medico.jpg"
-    },
-    {
-      "nombre": "Nombre Apellido",
+      "nombre": "Randall Alemán",
       "cargo": "Fisioterapeuta",
-      "foto": "IMG/cuerpo-tecnico/fisio.jpg"
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
     }
   ]
 }
