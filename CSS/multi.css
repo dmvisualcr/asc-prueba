@@ -1,0 +1,820 @@
+/* ==========================================================================
+   BASE.CSS — Se carga en TODAS las páginas del sitio.
+   Contiene: reset, variables globales, header/navbar, footer,
+   título de sección genérico y CTA "Únete a la familia".
+   ========================================================================== */
+
+/* ==========================================================================
+   1. RESET, FUENTES Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ededed; /* Fondo general claro estilo revista */
+  color: #1a1a1a;
+  overflow-x: hidden;
+  padding-top: 85px; /* Evita que el header fijo tape el inicio del contenido */
+}
+
+img, iframe, video, embed, object {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   2. VARIABLES DE DISEÑO (Identidad Herediana — paleta única del sitio)
+   ========================================================================== */
+:root {
+  --rojo: #9e0b1f;               /* Rojo sobrio institucional */
+  --amarillo-dorado: #e2b442;    /* Dorado premium */
+  --negro-puro: #000000;
+  --blanco-puro: #ffffff;
+  --gris-oscuro: #1c1c1c;        /* Para textos en el bloque claro */
+  --gris-textos: #666666;        /* Para autores y secundario */
+  --max-width: 1200px;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVBAR (Glassmorphism / Efecto Cristal)
+   ========================================================================== */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--rojo);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 55px;
+  display: block;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 19px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--blanco-puro);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--blanco-puro);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+  transition: color .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--amarillo-dorado);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--amarillo-dorado), transparent);
+  transition: width .3s ease, left .3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ==========================================================================
+   4. TÍTULO DE SECCIÓN GENÉRICO (usado en varias páginas)
+   ========================================================================== */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  max-width: var(--max-width);
+  margin: 0 auto 50px;
+  font-size: 42px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: -1px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--rojo);
+  position: relative;
+}
+
+/* ==========================================================================
+   5. CTA "ÚNETE A LA FAMILIA FLORENSE" (compartido: index y beneficios)
+   ========================================================================== */
+.about-contact-section {
+  background: var(--blanco-puro);
+  padding: 90px 20px;
+  border-top: 1px solid #e2e2e2;
+}
+
+.about-contact {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-contact .section-title {
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 0;
+  margin-bottom: 15px;
+}
+
+.about-contact p {
+  font-size: 14px;
+  color: var(--gris-textos);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.about-contact-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  background: var(--rojo);
+  color: var(--blanco-puro);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: all 0.3s ease;
+}
+
+.about-contact-btn:hover {
+  background: var(--gris-oscuro);
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   6. FOOTER INSTITUCIONAL
+   ========================================================================== */
+footer {
+  background: #0f0f0f;
+  color: var(--blanco-puro);
+}
+
+.footer-lines { display: flex; }
+.footer-line-red { width: 50%; height: 4px; background: var(--rojo); }
+.footer-line-yellow { width: 50%; height: 4px; background: var(--amarillo-dorado); }
+
+.footer-content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.social-icons { margin-bottom: 16px; }
+.social-icons a { margin: 0 12px; font-size: 18px; color: rgba(255,255,255,0.5); text-decoration: none; }
+.social-icons a:hover { color: var(--amarillo-dorado); }
+
+footer p { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
+
+/* ==========================================================================
+   7. CLASES DE UTILIDAD (usadas en varias páginas, sobre todo multimedia)
+   ========================================================================== */
+.red-text { color: var(--rojo) !important; }
+.black-text { color: var(--gris-oscuro) !important; }
+
+/* ==========================================================================
+   8. RESPONSIVE BASE (menú móvil apilado)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-toggle-label { display: flex; }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 20px;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 400px;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 380px) {
+  .logo img { height: 44px; }
+}
+/* ==========================================================================
+   MULTI.CSS — Solo para paginicio/multimedia.html
+   Requiere que base.css esté cargado ANTES que este archivo.
+   NOTA: ya no redefine :root — usa las variables --rojo, --amarillo-dorado
+   y --gris-oscuro de base.css (antes este archivo tenía su propia paleta
+   duplicada con colores distintos: --herediano-rojo, --herediano-amarillo,
+   --texto-negro. Se unificó todo a una sola paleta).
+   ========================================================================== */
+
+/* --- 1. ANULACIÓN DEL CONTENEDOR PRINCIPAL (.panel-main) --- */
+.panel-main {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* --- 2. WRAPPER PARA CENTRAR CONTENIDO ESTÁNDAR --- */
+.multimedia-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2b. TÍTULO E INTRO SUELTOS (viven dentro de #multimedia, antes del wrapper) --- */
+#multimedia > h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--gris-oscuro);
+    letter-spacing: -0.5px;
+    margin: 50px auto 12px;
+    padding: 0 20px;
+}
+
+#multimedia > p {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* --- 3. SECCIÓN: EXPRESIDENTES (CARRUSEL ANCHO COMPLETO) --- */
+.presidents-history {
+    /* Rompe márgenes: se extiende de borde a borde de la pantalla, igual que el carrusel de trofeos */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    background: #fff;
+    padding: 50px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+}
+
+.presidents-history h3 {
+    font-size: 2rem;
+    color: var(--gris-oscuro);
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    display: block;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.presidents-history h3::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: var(--amarillo-dorado);
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+.presidents-history .history-intro {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.president-card-item {
+    min-width: 220px;
+    max-width: 22%;
+    flex-basis: auto;
+    padding: 15px 12px;
+    margin: 0 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid var(--amarillo-dorado);
+    border-bottom: 1px solid #eaeaea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: auto;
+}
+
+.president-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-top-color: var(--rojo);
+}
+
+.photo-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 12px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--rojo);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: none !important;
+}
+
+.president-name-grid {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gris-oscuro);
+    margin: 8px 0 4px 0;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.president-seasons-split {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--rojo) !important;
+    line-height: 1.3;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.president-seasons-split span {
+    display: block;
+}
+
+.president-seasons-split .divider {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--amarillo-dorado);
+    margin: 4px auto;
+}
+
+/* --- 4. SECCIÓN: IDENTIDAD HISTÓRICA (GRID DE FOTOS) --- */
+.identity-history-gallery {
+    padding-top: 20px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.identity-history-gallery h3 {
+    font-size: 2rem;
+    color: var(--rojo);
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    display: block;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.identity-history-gallery h3::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: var(--amarillo-dorado);
+    margin: 8px auto 20px auto;
+    border-radius: 2px;
+}
+
+.identity-history-gallery .history-intro {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.identity-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.identity-history-gallery .photo-item {
+    border: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0 !important;
+    border-top: 4px solid var(--amarillo-dorado);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-color 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+}
+
+.identity-history-gallery .photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-top-color: var(--rojo);
+}
+
+.identity-history-gallery .photo-item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.identity-history-gallery .photo-item p {
+    padding: 15px 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--gris-oscuro);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* --- 5. SECCIÓN: CÁPSULAS DE VIDEO (REPRODUCTOR RESPONSIVO) --- */
+.video-capsulas-container {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.video-capsulas-container h3 {
+    font-size: 2rem;
+    color: var(--rojo);
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    display: block;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.video-capsulas-container h3::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: var(--amarillo-dorado);
+    margin: 8px auto 20px auto;
+    border-radius: 2px;
+}
+
+.video-capsulas-container .history-intro {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.main-video-player {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.playlist-access {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.playlist-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #c40018;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.playlist-button:hover {
+    background-color: #9e0013;
+    transform: translateY(-2px);
+}
+
+.playlist-note {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* --- 6. SECCIÓN: CARRUSEL DE TROFEOS (ANCHO COMPLETO) --- */
+.trophy-carousel-container {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+
+    background: #fff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+    margin-top: 50px !important;
+    padding: 40px 0 !important;
+}
+
+.trophy-carousel-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--rojo);
+    text-align: center;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.trophy-carousel-container h3::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: var(--amarillo-dorado);
+    margin: 8px auto 30px auto;
+    border-radius: 2px;
+}
+
+/* --- 7. CONTROL DE FLECHAS DE LOS CARRUSELES --- */
+/* --- 7b. ESTRUCTURA BASE DE LOS CARRUSELES (esto faltaba por completo) --- */
+
+/* Contenedor de cada carrusel: fila con flechas a los lados */
+.trophy-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0 60px; /* deja espacio para las flechas flotantes */
+    overflow: hidden;
+}
+
+/* La fila que se desliza (contiene las tarjetas) */
+.carousel-slides {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+/* Tarjetas del carrusel de trofeos (las de presidentes ya tienen su propio ancho vía .president-card-item) */
+.trophy-carousel-container .carousel-item {
+    flex: 0 0 auto;
+    width: 170px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: 4px solid var(--amarillo-dorado);
+    border-radius: 8px;
+    padding: 16px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+.trophy-carousel-container .carousel-item:hover {
+    transform: translateY(-4px);
+    border-top-color: var(--rojo);
+}
+
+.trophy-carousel-container .carousel-item img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.trophy-carousel-container .carousel-item h4 {
+    font-size: 0.85rem;
+    color: var(--gris-oscuro);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Botón flotante circular — esto es lo que faltaba para que no se viera como un "<" suelto */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 15px;
+    color: #111 !important;
+    transition: color 0.2s ease, box-shadow 0.2s ease;
+    z-index: 5;
+}
+
+.carousel-nav:hover {
+    color: var(--rojo) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.trophy-carousel:not(.presidents-carousel-unique) .prev-btn {
+    left: 20px;
+    right: auto;
+    z-index: 10;
+}
+.trophy-carousel:not(.presidents-carousel-unique) .next-btn {
+    right: 20px;
+    left: auto;
+    z-index: 10;
+}
+
+.presidents-carousel-unique .prev-btn-presidents {
+    left: 20px;
+    right: auto;
+    z-index: 10;
+}
+.presidents-carousel-unique .next-btn-presidents {
+    right: 20px;
+    left: auto;
+    z-index: 10;
+}
+
+/* --- 8. AJUSTE DEL FOOTER (pegado al carrusel de trofeos en esta página) --- */
+footer {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.footer-content {
+    padding-top: 40px !important;
+    margin-top: 0 !important;
+}
+
+/* --- 9. MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .identity-grid-6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .president-card-item {
+        min-width: 160px;
+        max-width: 30%;
+        padding: 12px 8px;
+        margin: 0 8px;
+    }
+
+    .photo-container {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 8px;
+    }
+
+    .president-name-grid {
+        font-size: 0.9rem;
+        min-height: 32px;
+    }
+
+    .president-seasons-split {
+        font-size: 0.85rem;
+    }
+
+    .identity-grid-6 {
+        grid-template-columns: 1fr;
+    }
+
+    .identity-history-gallery .photo-item img {
+        height: 180px;
+    }
+}

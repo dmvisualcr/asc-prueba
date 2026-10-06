@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sitio oficial de la Asociación Deportiva Club Sport Herediano: noticias, plantel, cuerpo técnico, beneficios y actividades.">
+<link rel="icon" href="IMG/Escudo.PNG" type="image/png">
+<title>Asociación Deportiva Club Sport Herediano</title>
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="CSS/publico.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="IMG/Escudo.PNG" alt="Logo Herediano">
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="paginicio/plantel.html">Equipo</a></li>
+                <li><a href="paginicio/cuerpo-tecnico.html">Cuerpo Técnico</a></li>
+                <li><a href="paginicio/noticias.html">Noticias</a></li>
+                <li><a href="paginicio/actividades.html">Comisión</a></li>
+                <li><a href="paginicio/beneficios.html">Beneficios</a></li>
+                <li><a href="paginicio/nosotros.html">Nosotros</a></li>
+                <li><a href="paginicio/contacto.html">Contacto</a></li>
+                <li><a href="paginicio/acceso-asociados.html" class="nav-btn">Acceso asociados</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="bienvenida">
+        <div class="bienvenida-container">
+            <div class="bienvenida-title">
+                <p class="subtitle">BIENVENIDOS AL SITIO OFICIAL DE</p>
+                <h2>ASOCIACIÓN DEPORTIVA CLUB SPORT HEREDIANO</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <div class="slides">
+                <img src="IMG/equipo.jpg" alt="Plantilla del Club Sport Herediano">
+                <img src="IMG/BICAMPEONES.jpg" alt="Celebración de bicampeonato del CSH">
+                <img src="IMG/campeones.jpeg" alt="Jugadores celebrando título de campeón">
+                <img src="IMG/camisota.jpg" alt="Equipo femenino del Club Sport Herediano">
+                <img src="IMG/barra.jpeg" alt="Afición rojiamarilla en las gradas">
+                <img src="IMG/01.jpg" alt="Momento destacado del equipo, imagen 1">
+                <img src="IMG/02.jpg" alt="Momento destacado del equipo, imagen 2">
+                <img src="IMG/03.jpg" alt="Momento destacado del equipo, imagen 3">
+                <img src="IMG/04.jpg" alt="Momento destacado del equipo, imagen 4">
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+            <span class="indicator" data-index="3"></span>
+            <span class="indicator" data-index="4"></span>
+            <span class="indicator" data-index="5"></span>
+            <span class="indicator" data-index="6"></span>
+            <span class="indicator" data-index="7"></span>
+            <span class="indicator" data-index="8"></span>
+        </div>
+    </section>
+
+    <section class="calendar-section" id="calendario">
+        <h2 class="section-title">partidos del mes</h2>
+        <div class="calendar-wrap">
+            <div class="cal-box">
+                <div class="cal-head">
+                    <button type="button" class="cal-nav" id="cal-prev" aria-label="Mes anterior">&#10094;</button>
+                    <h3 class="cal-title" id="cal-title" aria-live="polite"></h3>
+                    <button type="button" class="cal-nav" id="cal-next" aria-label="Mes siguiente">&#10095;</button>
+                </div>
+                <div class="cal-grid" id="cal-grid"></div>
+                <ul class="cal-legend">
+                    <li><i class="lg-local"></i> Local</li>
+                    <li><i class="lg-visitante"></i> Visitante</li>
+                    <li><i class="lg-hoy"></i> Hoy</li>
+                </ul>
+            </div>
+            <div class="match-list" id="match-list" aria-live="polite">
+                <p class="empty-note">Cargando partidos…</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="club-teaser" id="club-teaser" hidden>
+        <h2 class="section-title">Plantel y cuerpo técnico</h2>
+        <div class="teaser-grid">
+            <div class="teaser-coach" id="teaser-coach"></div>
+            <div class="teaser-players" id="teaser-players"></div>
+        </div>
+        <div class="teaser-actions">
+            <a href="paginicio/plantel.html" class="about-contact-btn">Ver plantel completo</a>
+            <a href="paginicio/cuerpo-tecnico.html" class="btn-gold">Ver cuerpo técnico</a>
+        </div>
+    </section>
+
+    <section class="join-section">
+        <div class="join-inner">
+            <h2 class="section-title">Ser asociado</h2>
+            <p class="join-lead">Los asociados participan en las decisiones del club y viven el equipo de cerca. Estos son algunos beneficios; el detalle, los documentos y el contenido exclusivo están en la zona de asociados.</p>
+            <div class="join-points">
+                <div class="join-point">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Boleto asegurado</h3>
+                    <p>Ingreso a los partidos donde el Club Sport Herediano sea local, incluidas semifinales y finales.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-handshake-angle"></i>
+                    <h3>Voz y voto</h3>
+                    <p>Participás en las asambleas y podés elegir y ser electo para la Junta Directiva.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-tags"></i>
+                    <h3>Descuentos y rifas</h3>
+                    <p>Descuentos en las tiendas oficiales y en comercios aliados, y promociones exclusivas.</p>
+                </div>
+            </div>
+            <div class="join-actions">
+                <a href="paginicio/form.html" class="about-contact-btn">Quiero ser asociado</a>
+                <a href="paginicio/acceso-asociados.html" class="btn-dark">Acceso asociados</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-contact-section">
+        <div class="about-contact">
+            <h2 class="section-title">ÚNETE A LA FAMILIA FLORENSE</h2>
+            <p>¿Tienes alguna pregunta, sugerencia o quieres formar parte del Club Sport Herediano? Haz clic en el botón para enviarnos tu mensaje de manera rápida y sencilla.</p>
+            <a href="paginicio/form.html" class="about-contact-btn">
+                <i class="fas fa-envelope"></i> Enviar mensaje
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-lines">
+            <div class="footer-line-red"></div>
+            <div class="footer-line-yellow"></div>
+        </div>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/people/Asociaci%C3%B3n-Club-Sport-Herediano/61581442685298/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/acsherediano/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/50622618489" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>© 2026 Asociación Deportiva Club Sport Herediano</p>
+            <p>Contáctenos: socios@herediano.com | Tel: +506 2261-8489</p>
+        </div>
+    </footer>
+    
+    <script src="JS/script.js"></script>
+    <script src="JS/socios.js"></script>
+    <script src="JS/publico.js" data-base=""></script>
+</body>
+</html>

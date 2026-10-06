@@ -1,0 +1,44 @@
+{
+  "partidos": [
+    {
+      "fecha": "2026-10-10",
+      "hora": "20:00",
+      "rival": "A.D San Carlos",
+      "condicion": "Local",
+      "estadio": "Estadio Carlos Alvarado",
+      "marcador": null
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "20:00",
+      "rival": "L.D Alajuelense",
+      "condicion": "Visitante",
+      "estadio": "Estadio Alejandro Moreira Soto",
+      "marcador": null
+    },
+    {
+      "fecha": "2026-10-18",
+      "hora": "16:00",
+      "rival": "MCPL Pérez Zeledón",
+      "condicion": "Visitante",
+      "estadio": "Estadio Pérez Zeledón",
+      "marcador": null
+    },
+    {
+      "fecha": "2026-10-24",
+      "hora": "20:00",
+      "rival": "C.S Cartaginés",
+      "condicion": "Local",
+      "estadio": "Estadio Carlos Alvarado",
+      "marcador": null
+    },
+    {
+      "fecha": "2026-10-31",
+      "hora": "20:00",
+      "rival": "Sporting F.C",
+      "condicion": "Visitante",
+      "estadio": "Estadio Puente de Piedra",
+      "marcador": null
+    }
+  ]
+}

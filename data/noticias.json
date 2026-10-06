@@ -1,0 +1,32 @@
+{
+  "noticias": [
+    {
+      "titulo": "Herediano quiere celebrar contra Saprissa en la ‘Cueva’ tras más de 1.100 días sin hacerlo",
+      "fecha": "2026-09-18",
+      "imagen": "IMG/equipooo.png",
+      "fuente": "La Nación",
+      "url": "https://www.nacion.com/puro-deporte/futbol/herediano-quiere-celebrar-contra-saprissa-en-la/RCBRGVQC4FHYLEO6WAUQ4RR3HM/story/"
+    },
+    {
+      "titulo": "Paulo Wanchope quiere un resurgir de Herediano y empeorar el mal momento del Saprissa",
+      "fecha": "2026-09-18",
+      "imagen": "IMG/chope.png",
+      "fuente": "La Nación",
+      "url": "https://www.nacion.com/puro-deporte/futbol/paulo-wanchope-quiere-un-resurgir-de-herediano-y/H2QBR6YMWRHNDCMRJTNXSP65SQ/story/"
+    },
+    {
+      "titulo": "Paulo Wanchope rescata señales del Herediano tras su primera victoria",
+      "fecha": "2026-09-14",
+      "imagen": "IMG/chopee.png",
+      "fuente": "Yashin Quesada",
+      "url": "https://yashinquesada.com/categoria/futbol-nacional/herediano/"
+    },
+    {
+      "titulo": "Noticias Herediano",
+      "fecha": "2026-09-18",
+      "imagen": "IMG/noticias.jpg",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias?cat=Noticias"
+    }
+  ]
+}

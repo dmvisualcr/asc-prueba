@@ -1,0 +1,40 @@
+{
+  "director": {
+    "nombre": "Nombre del Director Técnico",
+    "cargo": "Director técnico",
+    "foto": "IMG/cuerpo-tecnico/dt.jpg",
+    "bio": "Escribí aquí una reseña corta del director técnico: trayectoria, títulos y lo que representa para el club."
+  },
+  "staff": [
+    {
+      "nombre": "Nombre Apellido",
+      "cargo": "Asistente técnico",
+      "foto": "IMG/cuerpo-tecnico/asistente-1.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "cargo": "Asistente técnico",
+      "foto": "IMG/cuerpo-tecnico/asistente-2.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "cargo": "Preparador de porteros",
+      "foto": "IMG/cuerpo-tecnico/porteros.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "cargo": "Preparador físico",
+      "foto": "IMG/cuerpo-tecnico/fisico.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "cargo": "Médico del equipo",
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
+    },
+    {
+      "nombre": "Nombre Apellido",
+      "cargo": "Fisioterapeuta",
+      "foto": "IMG/cuerpo-tecnico/fisio.jpg"
+    }
+  ]
+}
