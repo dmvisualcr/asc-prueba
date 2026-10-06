@@ -214,6 +214,18 @@ img.sin-foto {
   pointer-events: none;
 }
 
+.player-number {
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 84px;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--amarillo-dorado);
+}
 
 .player-info {
   position: absolute;
