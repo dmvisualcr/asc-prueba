@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "HEREDIANO VS SAN CARLOS: ENTRADAS A LA VENTA",
+      "fecha": "2026-10-06",
+      "fecha_hora": "2026-10-06T11:35:12-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1791308000138-whatsapp-image-2026-10-05-at-3-18-06-pm.jpeg",
+      "resumen": "¡Este sábado recibimos a la Asociación Deportiva San Carlos en nuestra CASA! 🏟️❤️💛 🎟️ Entradas a la venta en: Oficinas del Club y…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/herediano-vs-san-carlos-entradas-a-la-venta"
+    },
+    {
       "titulo": "Cuatro florenses representarán a Costa Rica en el Torneo Sub-16 UNCAF 2026",
       "fecha": "2026-10-05",
       "fecha_hora": "2026-10-05T16:58:27-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Refuerzos",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/aaron-suarez-bienvenido-al-campeon-nacional"
-    },
-    {
-      "titulo": "¡Gracias, Jurguens y Aarón!",
-      "fecha": "2026-05-22",
-      "fecha_hora": "2026-05-22T14:52:55-06:00",
-      "imagen": "https://www.herediano.com/news/gracias-jurguens-y-aaron/cover.jpg",
-      "resumen": "Informamos que los jugadores Jurguens Montenegro y Aarón Cruz no continuarán en el Club Sport Herediano.Agradecemos su compromiso y dedicación durante el tiempo en que defendieron la camiseta rojiamarilla.",
-      "categoria": "Refuerzos",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/gracias-jurguens-y-aaron"
     }
   ]
 }
