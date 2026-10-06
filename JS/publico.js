@@ -143,6 +143,7 @@
         grid.innerHTML = '<p class="empty-note">Todavía no hay noticias publicadas.</p>';
         return;
       }
+      grid.innerHTML = ''; // quita el texto "Cargando noticias…"
       mostrarMas();
       var btn = masWrap && masWrap.querySelector('button');
       if (btn) btn.addEventListener('click', mostrarMas);
