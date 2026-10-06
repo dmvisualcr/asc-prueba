@@ -698,7 +698,17 @@ img.sin-foto {
 }
 
 .join-inner .section-title {
-  margin-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.join-inner .section-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 5px;
+  margin-top: 14px;
+  border-radius: 3px;
+  background: var(--amarillo-dorado);
 }
 
 .join-lead {
@@ -720,15 +730,33 @@ img.sin-foto {
   background: var(--blanco-puro);
   border-radius: 12px;
   padding: 30px 26px;
-  border-left: 4px solid var(--rojo);
+  border-left: 4px solid var(--amarillo-dorado);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.join-point:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.09);
 }
 
 .join-point i {
-  font-size: 26px;
-  color: var(--rojo);
-  margin-bottom: 16px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: var(--gris-oscuro);
+  color: var(--amarillo-dorado);
+  font-size: 22px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.join-point:hover i {
+  background: var(--amarillo-dorado);
+  color: var(--gris-oscuro);
 }
 
 .join-point h3 {
@@ -750,6 +778,15 @@ img.sin-foto {
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
+}
+
+.join-actions .btn-dark {
+  color: var(--amarillo-dorado);
+}
+
+.join-actions .btn-dark:hover {
+  background: var(--amarillo-dorado);
+  color: var(--gris-oscuro);
 }
 
 /* ==========================================================================
@@ -840,6 +877,8 @@ img.sin-foto {
 
 @media (prefers-reduced-motion: reduce) {
   .player-card,
+  .join-point,
   .nav-links { transition: none; }
-  .player-card:hover { transform: none; }
+  .player-card:hover,
+  .join-point:hover { transform: none; }
 }
