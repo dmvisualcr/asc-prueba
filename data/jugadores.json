@@ -1,7 +1,6 @@
 {
   "jugadores": [
     {
-      "numero": 31,
       "nombre": "Dany Carvajal",
       "posicion": "Portero",
       "foto": "IMG/jugadores/31.png",
@@ -55,13 +54,6 @@
       "posicion": "Lateral Izquierdo",
       "foto": "IMG/jugadores/16.png",
       "destacado": true
-    },
-    {
-      "numero": 8,
-      "nombre": "Nombre Apellido 9",
-      "posicion": "Medio",
-      "foto": "IMG/jugadores/08.jpg",
-      "destacado": false
     },
     {
       "numero": 5,
