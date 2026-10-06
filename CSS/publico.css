@@ -1014,6 +1014,31 @@ img.sin-foto {
 }
 
 /* ==========================================================================
+   8b. FORMULARIO DE GOOGLE (form.html)
+   ========================================================================== */
+.form-intro {
+  margin: -14px auto 26px;
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gris-textos);
+}
+
+.google-form-container iframe {
+  border: 0;
+  min-height: 700px;
+  background: #fff;
+}
+
+.form-link-text {
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .google-form-container iframe { min-height: 840px; }
+}
+
+/* ==========================================================================
    9. ACCESO ASOCIADOS (página provisional)
    ========================================================================== */
 .access-card {
