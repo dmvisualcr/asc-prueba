@@ -137,10 +137,18 @@ button:focus-visible {
 .roster-grid {
   max-width: var(--max-width);
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* la última fila queda centrada */
   gap: 22px;
 }
+
+.roster-grid .player-card {
+  width: 220px;
+  flex: 0 0 auto;
+}
+
+.roster-grid .empty-note { flex: 1 1 100%; }
 
 .player-card {
   position: relative;
@@ -223,6 +231,128 @@ img.sin-foto {
   padding: 60px 20px;
   color: var(--gris-textos);
   font-size: 15px;
+}
+
+/* ==========================================================================
+   3b. EQUIPO: carrusel "Momentos de gloria"
+   ========================================================================== */
+.glory-section {
+  padding: 80px 20px 90px;
+  background: var(--gris-oscuro);
+  color: var(--blanco-puro);
+  text-align: center;
+}
+
+.glory-head { margin-bottom: 40px; }
+
+.glory-head h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.glory-head h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 3px;
+  background: var(--amarillo-dorado);
+}
+
+.glory-carousel {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.glory-track {
+  display: flex;
+  gap: 20px;
+  padding: 8px 4px 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.glory-track::-webkit-scrollbar { display: none; }
+
+.glory-card {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+  padding: 20px 12px 18px;
+  background: var(--blanco-puro);
+  color: var(--gris-oscuro);
+  border-top: 4px solid var(--amarillo-dorado);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+.glory-card:hover {
+  transform: translateY(-4px);
+  border-top-color: var(--rojo);
+}
+
+.glory-card img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.glory-card img.sin-foto { opacity: 0.25; padding: 20px; }
+
+.glory-card figcaption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.glory-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-62%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--amarillo-dorado);
+  color: var(--gris-oscuro);
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: background 0.25s ease, opacity 0.25s ease;
+}
+
+.glory-nav:hover:not(:disabled) { background: var(--blanco-puro); }
+.glory-nav:disabled { opacity: 0.3; cursor: default; }
+.glory-prev { left: 6px; }
+.glory-next { right: 6px; }
+
+@media (max-width: 768px) {
+  .glory-section { padding: 60px 14px 70px; }
+  .glory-head h2 { font-size: 30px; }
+  .glory-card { flex-basis: 150px; }
+  .glory-card img { height: 115px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glory-track { scroll-behavior: auto; }
+  .glory-card { transition: none; }
+  .glory-card:hover { transform: none; }
 }
 
 /* ==========================================================================
@@ -1089,7 +1219,8 @@ img.sin-foto {
   .match-card { grid-template-columns: 56px 1fr; gap: 14px; padding: 14px; }
   .match-side { grid-column: 2; text-align: left; }
   .match-date strong { font-size: 26px; }
-  .roster-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .roster-grid { gap: 14px; }
+  .roster-grid .player-card { width: calc(50% - 7px); }
   .player-info { left: 12px; right: 12px; bottom: 12px; }
   .player-info h3 { font-size: 13px; }
   .teaser-players { gap: 14px; }

@@ -120,6 +120,62 @@
     });
   }
 
+  /* ---------- Equipo: carrusel "Momentos de gloria" (campeonatos) ---------- */
+  function iniciarTrofeos() {
+    var roster = document.getElementById('roster-grid');
+    if (!roster || document.getElementById('trophies')) return;
+
+    cargar('trofeos.json').then(function (datos) {
+      var lista = datos.trofeos || [];
+      if (!lista.length) return; // sin datos no se muestra una franja vacía
+
+      var sec = document.createElement('section');
+      sec.id = 'trophies';
+      sec.className = 'glory-section';
+      sec.setAttribute('aria-labelledby', 'glory-title');
+      sec.innerHTML =
+        '<div class="glory-head">' +
+          '<span class="subtitle">Palmarés</span>' +
+          '<h2 id="glory-title">Momentos de gloria</h2>' +
+        '</div>' +
+        '<div class="glory-carousel">' +
+          '<button type="button" class="glory-nav glory-prev" aria-label="Ver anteriores"><i class="fas fa-chevron-left"></i></button>' +
+          '<div class="glory-track" tabindex="0" role="region" aria-label="Campeonatos nacionales">' +
+            lista.map(function (t) {
+              return '<figure class="glory-card">' +
+                '<img src="' + esc(encodeURI(ruta(t.imagen))) + '" alt="' + esc(t.titulo) + '" loading="lazy">' +
+                '<figcaption>' + esc(t.titulo) + '</figcaption></figure>';
+            }).join('') +
+          '</div>' +
+          '<button type="button" class="glory-nav glory-next" aria-label="Ver siguientes"><i class="fas fa-chevron-right"></i></button>' +
+        '</div>';
+
+      var seccionEquipo = roster.closest('section') || roster.parentElement;
+      seccionEquipo.insertAdjacentElement('afterend', sec);
+      protegerImagenes(sec);
+
+      var pista = sec.querySelector('.glory-track');
+      var prev = sec.querySelector('.glory-prev');
+      var next = sec.querySelector('.glory-next');
+      var suave = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+      function paso() { return Math.max(200, pista.clientWidth * 0.8); }
+      function actualizar() {
+        prev.disabled = pista.scrollLeft <= 4;
+        next.disabled = pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 4;
+      }
+      prev.addEventListener('click', function () { pista.scrollBy({ left: -paso(), behavior: suave }); });
+      next.addEventListener('click', function () { pista.scrollBy({ left: paso(), behavior: suave }); });
+      pista.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); pista.scrollBy({ left: paso(), behavior: suave }); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); pista.scrollBy({ left: -paso(), behavior: suave }); }
+      });
+      pista.addEventListener('scroll', actualizar, { passive: true });
+      window.addEventListener('resize', actualizar);
+      actualizar();
+    }).catch(function () { /* si no carga, simplemente no se muestra la franja */ });
+  }
+
   /* ---------- Cuerpo técnico ---------- */
   function iniciarCuerpoTecnico() {
     var dt = document.getElementById('coach-feature');
@@ -397,6 +453,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     iniciarPlantel();
+    iniciarTrofeos();
     iniciarCuerpoTecnico();
     iniciarNoticias();
     iniciarCalendario();

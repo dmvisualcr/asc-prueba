@@ -1,0 +1,104 @@
+{
+  "trofeos": [
+    {
+      "anio": 1921,
+      "titulo": "Campeonato Nacional 1921",
+      "imagen": "trofeos/1. 1921 ROJO.png"
+    },
+    {
+      "anio": 1922,
+      "titulo": "Campeonato Nacional 1922",
+      "imagen": "trofeos/2. 1922 AMARILLO.png"
+    },
+    {
+      "anio": 1924,
+      "titulo": "Campeonato Nacional 1924",
+      "imagen": "trofeos/3. 1924 ROJO.png"
+    },
+    {
+      "anio": 1927,
+      "titulo": "Campeonato Nacional 1927",
+      "imagen": "trofeos/4. 1927 AMARILLO.png"
+    },
+    {
+      "anio": 1930,
+      "titulo": "Campeonato Nacional 1930",
+      "imagen": "trofeos/5. 1930 ROJO.png"
+    },
+    {
+      "anio": 1931,
+      "titulo": "Campeonato Nacional 1931",
+      "imagen": "trofeos/6. 1931 AMARILLO.png"
+    },
+    {
+      "anio": 1932,
+      "titulo": "Campeonato Nacional 1932",
+      "imagen": "trofeos/7. 1932 ROJO.png"
+    },
+    {
+      "anio": 1933,
+      "titulo": "Campeonato Nacional 1933",
+      "imagen": "trofeos/8. 1933 AMARILLO.png"
+    },
+    {
+      "anio": 1935,
+      "titulo": "Campeonato Nacional 1935",
+      "imagen": "trofeos/9. 1935 ROJO.png"
+    },
+    {
+      "anio": 1937,
+      "titulo": "Campeonato Nacional 1937",
+      "imagen": "trofeos/10. 1937 AMARILLO.png"
+    },
+    {
+      "anio": 1947,
+      "titulo": "Campeonato Nacional 1947",
+      "imagen": "trofeos/11. 1947 ROJO.png"
+    },
+    {
+      "anio": 1948,
+      "titulo": "Campeonato Nacional 1948",
+      "imagen": "trofeos/12. 1948 AMARILLO.png"
+    },
+    {
+      "anio": 1951,
+      "titulo": "Campeonato Nacional 1951",
+      "imagen": "trofeos/13. 1951 ROJO.png"
+    },
+    {
+      "anio": 1955,
+      "titulo": "Campeonato Nacional 1955",
+      "imagen": "trofeos/14. 1955 AMARILLO.png"
+    },
+    {
+      "anio": 1961,
+      "titulo": "Campeonato Nacional 1961",
+      "imagen": "trofeos/15. 1961 ROJO.png"
+    },
+    {
+      "anio": 1978,
+      "titulo": "Campeonato Nacional 1978",
+      "imagen": "trofeos/16. 1978 AMARILLA.png"
+    },
+    {
+      "anio": 1979,
+      "titulo": "Campeonato Nacional 1979",
+      "imagen": "trofeos/17. 1979 ROJA.png"
+    },
+    {
+      "anio": 1981,
+      "titulo": "Campeonato Nacional 1981",
+      "imagen": "trofeos/18. 1981 AMARILLO.png"
+    },
+    {
+      "anio": 1985,
+      "titulo": "Campeonato Nacional 1985",
+      "imagen": "trofeos/19. 1985 ROJO.png"
+    },
+    {
+      "anio": 1987,
+      "titulo": "Campeonato Nacional 1987",
+      "imagen": "trofeos/20. 1987 AMARILLO.png"
+    }
+  ]
+}
