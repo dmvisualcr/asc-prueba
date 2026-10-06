@@ -16,6 +16,17 @@
   };
   var NOTICIAS_POR_PAGINA = 12;
 
+  // "Defensa Central", "Extremo Izquierdo", "Enganche"… se agrupan solo para los filtros;
+  // en la tarjeta se muestra la posición tal como la escribís en el JSON.
+  function grupoPosicion(texto) {
+    var t = String(texto || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (/portero|arquero/.test(t)) return 'Portero';
+    if (/defensa|lateral|zaguero|carrilero/.test(t)) return 'Defensa';
+    if (/volante|medio|enganche|mediapunta|contencion/.test(t)) return 'Medio';
+    if (/extremo|delantero|punta|atacante/.test(t)) return 'Delantero';
+    return '';
+  }
+
   /* ---------- utilidades ---------- */
   function esc(valor) {
     return String(valor == null ? '' : valor).replace(/[&<>"']/g, function (c) {
@@ -30,7 +41,7 @@
   }
 
   function cargar(archivo) {
-    return fetch(BASE + 'data/' + archivo).then(function (r) {
+    return fetch(BASE + 'data/' + archivo, { cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error('No se pudo cargar ' + archivo);
       return r.json();
     });
@@ -59,7 +70,6 @@
   /* ---------- plantillas ---------- */
   function tarjetaJugador(j) {
     return '<article class="player-card">' +
-      '<span class="player-number" aria-hidden="true">' + esc(j.numero) + '</span>' +
       '<img src="' + esc(ruta(j.foto)) + '" alt="' + esc(j.nombre) + '" loading="lazy">' +
       '<div class="player-info"><h3>' + esc(j.nombre) + '</h3><p>' + esc(j.posicion) + '</p></div>' +
       '</article>';
@@ -85,13 +95,18 @@
     var filtros = document.getElementById('roster-filters');
 
     cargar('jugadores.json').then(function (datos) {
+      // Se ordena solo por grupo; dentro de cada grupo se respeta el orden de tu JSON
+      function pesoGrupo(j) {
+        var i = ORDEN_POS.indexOf(grupoPosicion(j.posicion));
+        return i === -1 ? 99 : i;
+      }
       var jugadores = (datos.jugadores || []).slice().sort(function (a, b) {
-        return ORDEN_POS.indexOf(a.posicion) - ORDEN_POS.indexOf(b.posicion) || a.numero - b.numero;
+        return pesoGrupo(a) - pesoGrupo(b);
       });
 
       function pintar(posicion) {
         var lista = posicion === 'Todos' ? jugadores
-          : jugadores.filter(function (j) { return j.posicion === posicion; });
+          : jugadores.filter(function (j) { return grupoPosicion(j.posicion) === posicion; });
         grid.innerHTML = lista.length
           ? lista.map(tarjetaJugador).join('')
           : '<p class="empty-note">Aún no hay jugadores en esta posición.</p>';
@@ -99,7 +114,10 @@
       }
 
       if (filtros) {
-        var botones = ['Todos'].concat(ORDEN_POS).map(function (p) {
+        var presentes = ORDEN_POS.filter(function (g) {
+          return jugadores.some(function (j) { return grupoPosicion(j.posicion) === g; });
+        });
+        var botones = ['Todos'].concat(presentes).map(function (p) {
           var texto = p === 'Todos' ? 'Todos' : ETIQUETA_POS[p];
           return '<button type="button" class="filter-btn" data-pos="' + p + '" aria-pressed="' +
                  (p === 'Todos') + '">' + texto + '</button>';
@@ -116,7 +134,7 @@
       }
       pintar('Todos');
     }).catch(function () {
-      grid.innerHTML = '<p class="empty-note">No se pudo cargar el plantel. Intentá de nuevo en unos minutos.</p>';
+      grid.innerHTML = '<p class="empty-note">No se pudo cargar el equipo. Intentá de nuevo en unos minutos.</p>';
     });
   }
 

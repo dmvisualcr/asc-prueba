@@ -214,19 +214,6 @@ img.sin-foto {
   pointer-events: none;
 }
 
-.player-number {
-  position: absolute;
-  top: 6px;
-  right: 14px;
-  z-index: 2;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--amarillo-dorado);
-}
-
 .player-info {
   position: absolute;
   left: 18px;
@@ -861,7 +848,6 @@ img.sin-foto {
   .match-side { grid-column: 2; text-align: left; }
   .match-date strong { font-size: 26px; }
   .roster-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .player-number { font-size: 58px; right: 10px; }
   .player-info { left: 12px; right: 12px; bottom: 12px; }
   .player-info h3 { font-size: 13px; }
   .teaser-players { gap: 14px; }
