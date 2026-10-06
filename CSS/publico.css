@@ -116,44 +116,11 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   3. PLANTEL
+   3. EQUIPO
    ========================================================================== */
 .roster-section {
-  padding: 70px 20px 100px;
+  padding: 60px 20px 100px;
   background: #ededed;
-}
-
-.roster-filters {
-  max-width: var(--max-width);
-  margin: 0 auto 40px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.filter-btn {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 10px 22px;
-  border: 1.5px solid var(--gris-oscuro);
-  border-radius: 30px;
-  background: transparent;
-  color: var(--gris-oscuro);
-  cursor: pointer;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-}
-
-.filter-btn:hover {
-  border-color: var(--rojo);
-  color: var(--rojo);
-}
-
-.filter-btn[aria-pressed="true"] {
-  background: var(--rojo);
-  border-color: var(--rojo);
-  color: var(--blanco-puro);
 }
 
 .roster-grid {
@@ -179,6 +146,8 @@ button:focus-visible {
   border-color: var(--rojo);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
 }
+
+.player-number { display: none; }
 
 .player-card img {
   width: 100%;
@@ -860,7 +829,6 @@ img.sin-foto {
 
 @media (prefers-reduced-motion: reduce) {
   .player-card,
-  .nav-links,
-  .filter-btn { transition: none; }
+  .nav-links { transition: none; }
   .player-card:hover { transform: none; }
 }
