@@ -3,119 +3,119 @@
     {
       "nombre": "Dany Carvajal",
       "posicion": "Portero",
-      "foto": "IMG/jugadores/31.png",
+      "foto": "IMG/jugadores/31.webp",
       "destacado": false
     },
     {
       "numero": 92,
       "nombre": "Antony Walker",
       "posicion": "Portero",
-      "foto": "IMG/jugadores/92.png",
+      "foto": "IMG/jugadores/92.webp",
       "destacado": false
     },
     {
       "numero": 38,
       "nombre": "Getsel Montes",
       "posicion": "Defensa Central",
-      "foto": "IMG/jugadores/38.png",
+      "foto": "IMG/jugadores/38.webp",
       "destacado": false
     },
     {
       "numero": 24,
       "nombre": "Sergio Rodríguez",
       "posicion": "Defensa Central",
-      "foto": "IMG/jugadores/24.png",
+      "foto": "IMG/jugadores/24.webp",
       "destacado": true
     },
     {
       "numero": 23,
       "nombre": "Everardo Rubio",
       "posicion": "Defensa Central",
-      "foto": "IMG/jugadores/23.png",
+      "foto": "IMG/jugadores/23.webp",
       "destacado": false
     },
     {
       "numero": 99,
       "nombre": "Keyner Brown",
       "posicion": "Defensa Central",
-      "foto": "IMG/jugadores/99.png",
+      "foto": "IMG/jugadores/99.webp",
       "destacado": false
     },
     {
       "numero": 55,
       "nombre": "Yurguin Román",
       "posicion": "Lateral Izquierdo",
-      "foto": "IMG/jugadores/55.png",
+      "foto": "IMG/jugadores/55.webp",
       "destacado": false
     },
     {
       "numero": 16,
       "nombre": "Darril Araya",
       "posicion": "Lateral Izquierdo",
-      "foto": "IMG/jugadores/16.png",
+      "foto": "IMG/jugadores/16.webp",
       "destacado": true
     },
     {
       "numero": 5,
       "nombre": "Haxzel Quirós",
       "posicion": "Lateral Derecho",
-      "foto": "IMG/jugadores/5.png",
+      "foto": "IMG/jugadores/5.webp",
       "destacado": false
     },
     {
       "numero": 26,
       "nombre": "Eduardo Juárez",
       "posicion": "Volante de Contención",
-      "foto": "IMG/jugadores/26.png",
+      "foto": "IMG/jugadores/26.webp",
       "destacado": true
     },
     {
       "numero": 8,
       "nombre": "Allan Cruz",
       "posicion": "Mediocentro",
-      "foto": "IMG/jugadores/8.png",
+      "foto": "IMG/jugadores/8.webp",
       "destacado": false
     },
     {
       "numero": 22,
       "nombre": "Aarón Murillo",
       "posicion": "Mediocentro",
-      "foto": "IMG/jugadores/22.png",
+      "foto": "IMG/jugadores/22.webp",
       "destacado": false
     },
     {
       "numero": 10,
       "nombre": "Elías Aguilar",
       "posicion": "Enganche",
-      "foto": "IMG/jugadores/10.png",
+      "foto": "IMG/jugadores/10.webp",
       "destacado": true
     },
     {
       "numero": 97,
       "nombre": "Randall Leal",
       "posicion": "Extremo Izquierdo",
-      "foto": "IMG/jugadores/97.png",
+      "foto": "IMG/jugadores/97.webp",
       "destacado": false
     },
     {
       "numero": 11,
       "nombre": "Ronaldo Araya",
       "posicion": "Extremo Izquierdo",
-      "foto": "IMG/jugadores/11.png",
+      "foto": "IMG/jugadores/11.webp",
       "destacado": false
     },
     {
       "numero": 37,
       "nombre": "Keysher Fuller",
       "posicion": "Extremo Derecho",
-      "foto": "IMG/jugadores/37.png",
+      "foto": "IMG/jugadores/37.webp",
       "destacado": false
     },
     {
       "numero": 25,
       "nombre": "Emerson Bravo",
       "posicion": "Extremo Izquierdo",
-      "foto": "IMG/jugadores/25.png",
+      "foto": "IMG/jugadores/25.webp",
       "destacado": false
     }
   ]
