@@ -1,104 +1,580 @@
 {
   "trofeos": [
     {
+      "anio": 1912,
+      "etiqueta": "1912",
+      "titulo": "Belisario Porras",
+      "imagen": "trofeos/1912 - BELISARIO PORRAS.png"
+    },
+    {
+      "anio": 1912,
+      "etiqueta": "1912",
+      "titulo": "Colón Cristóbal Colón",
+      "imagen": "trofeos/1912 - COLON CRISTOBAL COLON.png"
+    },
+    {
+      "anio": 1915,
+      "etiqueta": "1915",
+      "titulo": "Alfredo González",
+      "imagen": "trofeos/1915 - ALFREDO GONZALEZ.png"
+    },
+    {
+      "anio": 1915,
+      "etiqueta": "1915",
+      "titulo": "Rafael Guirola",
+      "imagen": "trofeos/1915 - RAFAEL GUIROLA.png"
+    },
+    {
       "anio": 1921,
-      "titulo": "Campeonato Nacional 1921",
+      "etiqueta": "1921",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/1. 1921 ROJO.png"
     },
     {
       "anio": 1922,
-      "titulo": "Campeonato Nacional 1922",
+      "etiqueta": "1922",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/2. 1922 AMARILLO.png"
     },
     {
+      "anio": 1923,
+      "etiqueta": "1923",
+      "titulo": "Copa al Siglo Nuevo",
+      "imagen": "trofeos/1923 - COPA AL SIGLO NUEVO.png"
+    },
+    {
       "anio": 1924,
-      "titulo": "Campeonato Nacional 1924",
+      "etiqueta": "1924",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/3. 1924 ROJO.png"
     },
     {
+      "anio": 1924,
+      "etiqueta": "1924",
+      "titulo": "Copa Siglo Nuevo",
+      "imagen": "trofeos/1924 - COPA SIGLO NUEVO.png"
+    },
+    {
+      "anio": 1925,
+      "etiqueta": "1925",
+      "titulo": "Fortuna",
+      "imagen": "trofeos/1925 - FORTUNA.png"
+    },
+    {
+      "anio": 1926,
+      "etiqueta": "1926",
+      "titulo": "Fortuna",
+      "imagen": "trofeos/1926 - FORTUNA.png"
+    },
+    {
       "anio": 1927,
-      "titulo": "Campeonato Nacional 1927",
+      "etiqueta": "1927",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/4. 1927 AMARILLO.png"
     },
     {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "Atlético Chalaco",
+      "imagen": "trofeos/1927 - ATLETICO CHALACO.png"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "Fiestas Cívicas",
+      "imagen": "trofeos/1927 - FIESTAS CIVICAS.png"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "Jong Holland",
+      "imagen": "trofeos/1927 - JONG HOLLAND.png"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "La Libertad",
+      "imagen": "trofeos/1927 - LA LIBERTAD.png"
+    },
+    {
+      "anio": 1929,
+      "etiqueta": "1929",
+      "titulo": "Trofeo Burroughs",
+      "imagen": "trofeos/1929 - TROFEO BURROUGHS.png"
+    },
+    {
       "anio": 1930,
-      "titulo": "Campeonato Nacional 1930",
+      "etiqueta": "1930",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/5. 1930 ROJO.png"
     },
     {
       "anio": 1931,
-      "titulo": "Campeonato Nacional 1931",
+      "etiqueta": "1931",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/6. 1931 AMARILLO.png"
     },
     {
       "anio": 1932,
-      "titulo": "Campeonato Nacional 1932",
+      "etiqueta": "1932",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/7. 1932 ROJO.png"
     },
     {
+      "anio": 1932,
+      "etiqueta": "1932",
+      "titulo": "Hermanos González",
+      "imagen": "trofeos/1932 - HERMANOS GONZALEZ.png"
+    },
+    {
       "anio": 1933,
-      "titulo": "Campeonato Nacional 1933",
+      "etiqueta": "1933",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/8. 1933 AMARILLO.png"
     },
     {
+      "anio": 1933,
+      "etiqueta": "1933",
+      "titulo": "Asturias",
+      "imagen": "trofeos/1933 - ASTURIAS.png"
+    },
+    {
+      "anio": 1933,
+      "etiqueta": "1933",
+      "titulo": "Audax",
+      "imagen": "trofeos/1933 - AUDAX.png"
+    },
+    {
       "anio": 1935,
-      "titulo": "Campeonato Nacional 1935",
+      "etiqueta": "1935",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/9. 1935 ROJO.png"
     },
     {
+      "anio": 1935,
+      "etiqueta": "1935",
+      "titulo": "Bicentenario Virgen de los Ángeles",
+      "imagen": "trofeos/1935 - BICENTENARIO VIRGEN DE LOS ANGELES.png"
+    },
+    {
+      "anio": 1935,
+      "etiqueta": "1935",
+      "titulo": "Estadio Nacional",
+      "imagen": "trofeos/1935 - ESTADIO NACIONAL.png"
+    },
+    {
       "anio": 1937,
-      "titulo": "Campeonato Nacional 1937",
+      "etiqueta": "1937",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/10. 1937 AMARILLO.png"
     },
     {
+      "anio": 1939,
+      "etiqueta": "1939",
+      "titulo": "Chevrolet",
+      "imagen": "trofeos/1939 - CHEVROLET.png"
+    },
+    {
+      "anio": 1940,
+      "etiqueta": "1940",
+      "titulo": "Panamá",
+      "imagen": "trofeos/1940 - PANAMÁ.png"
+    },
+    {
+      "anio": 1942,
+      "etiqueta": "1942",
+      "titulo": "Presidente de Guatemala",
+      "imagen": "trofeos/1942 - PRESIDENTE DE GUATEMALA.png"
+    },
+    {
       "anio": 1947,
-      "titulo": "Campeonato Nacional 1947",
+      "etiqueta": "1947",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/11. 1947 ROJO.png"
     },
     {
       "anio": 1948,
-      "titulo": "Campeonato Nacional 1948",
+      "etiqueta": "1948",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/12. 1948 AMARILLO.png"
     },
     {
       "anio": 1951,
-      "titulo": "Campeonato Nacional 1951",
+      "etiqueta": "1951",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/13. 1951 ROJO.png"
     },
     {
+      "anio": 1952,
+      "etiqueta": "1952",
+      "titulo": "Banfield",
+      "imagen": "trofeos/1952 - BANFIELD.png"
+    },
+    {
+      "anio": 1952,
+      "etiqueta": "1952",
+      "titulo": "Sevilla",
+      "imagen": "trofeos/1952 - SEVILLA.png"
+    },
+    {
+      "anio": 1952,
+      "etiqueta": "1952",
+      "titulo": "U de Chile",
+      "imagen": "trofeos/1952 - U DE CHILE.png"
+    },
+    {
+      "anio": 1953,
+      "etiqueta": "1953",
+      "titulo": "Audax",
+      "imagen": "trofeos/1953 - AUDAX.png"
+    },
+    {
+      "anio": 1953,
+      "etiqueta": "1953",
+      "titulo": "Sport Boys",
+      "imagen": "trofeos/1953 - SPORT BOYS.png"
+    },
+    {
+      "anio": 1954,
+      "etiqueta": "1954",
+      "titulo": "Copa Costa Rica",
+      "imagen": "trofeos/1954 - COPA COSTA RICA.png"
+    },
+    {
+      "anio": 1954,
+      "etiqueta": "1954",
+      "titulo": "Marte",
+      "imagen": "trofeos/1954 - MARTE.png"
+    },
+    {
       "anio": 1955,
-      "titulo": "Campeonato Nacional 1955",
+      "etiqueta": "1955",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/14. 1955 AMARILLO.png"
     },
     {
+      "anio": 1955,
+      "etiqueta": "1955",
+      "titulo": "Copa Perugina",
+      "imagen": "trofeos/1955 - COPA PERUGINA.png"
+    },
+    {
+      "anio": 1955,
+      "etiqueta": "1955",
+      "titulo": "Fitina",
+      "imagen": "trofeos/1955 - FITINA.png"
+    },
+    {
+      "anio": 1956,
+      "etiqueta": "1956",
+      "titulo": "Traube Cincuentenario Cartaginés",
+      "imagen": "trofeos/1956 - TRAUBE CINCUENTENARIO CARTAGINES.png"
+    },
+    {
+      "anio": 1957,
+      "etiqueta": "1957",
+      "titulo": "Nicaragua",
+      "imagen": "trofeos/1957 - NICARAGUA.png"
+    },
+    {
+      "anio": 1957,
+      "etiqueta": "1957",
+      "titulo": "Rapid",
+      "imagen": "trofeos/1957 - RAPID.png"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "Águila",
+      "imagen": "trofeos/1958 - AGUILA.png"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "Independiente",
+      "imagen": "trofeos/1958 - INDEPENDIENTE.png"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "San Lorenzo de Almagro",
+      "imagen": "trofeos/1958 - SAN LORENZO DE ALMAGRO.png"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "Selección de Haití",
+      "imagen": "trofeos/1958 - SELECCION DE HAITI.png"
+    },
+    {
+      "anio": 1959,
+      "etiqueta": "1959",
+      "titulo": "Campeón de Copa",
+      "imagen": "trofeos/1959 - CAMPEON DE COPA.png"
+    },
+    {
+      "anio": 1959,
+      "etiqueta": "1959",
+      "titulo": "Copa Costa Rica",
+      "imagen": "trofeos/1959 - COPA COSTA RICA.png"
+    },
+    {
+      "anio": 1960,
+      "etiqueta": "1960",
+      "titulo": "Triangular Internacional",
+      "imagen": "trofeos/1960 - TRIANGULAR INTERNACIONAL.png"
+    },
+    {
       "anio": 1961,
-      "titulo": "Campeonato Nacional 1961",
+      "etiqueta": "1961",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/15. 1961 ROJO.png"
     },
     {
+      "anio": 1961,
+      "etiqueta": "1961",
+      "titulo": "Cruzeiro",
+      "imagen": "trofeos/1961 - CRUZEIRO.png"
+    },
+    {
+      "anio": 1963,
+      "etiqueta": "1963",
+      "titulo": "Unión Española",
+      "imagen": "trofeos/1963 - UNION ESPAÑOLA.png"
+    },
+    {
+      "anio": 1965,
+      "etiqueta": "1965",
+      "titulo": "Chacarita",
+      "imagen": "trofeos/1965 - CHACARITA.png"
+    },
+    {
+      "anio": 1969,
+      "etiqueta": "1969",
+      "titulo": "Gornik",
+      "imagen": "trofeos/1969 - GORNIK.png"
+    },
+    {
+      "anio": 1969,
+      "etiqueta": "1969",
+      "titulo": "Universidad de México",
+      "imagen": "trofeos/1969 - UNIVERSIDAD DE MEXICO.png"
+    },
+    {
+      "anio": 1971,
+      "etiqueta": "1971",
+      "titulo": "Triangular Internacional",
+      "imagen": "trofeos/1971 - TRIANGULAR INTERNACIONAL.png"
+    },
+    {
       "anio": 1978,
-      "titulo": "Campeonato Nacional 1978",
+      "etiqueta": "1978",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/16. 1978 AMARILLA.png"
     },
     {
+      "anio": 1978,
+      "etiqueta": "1978",
+      "titulo": "50 Aniversario Centro de Sport",
+      "imagen": "trofeos/1978 - 50 ANIVERSARIO CENTRO DE SPORT.png"
+    },
+    {
+      "anio": 1978,
+      "etiqueta": "1978",
+      "titulo": "Copa Sardimar",
+      "imagen": "trofeos/1978 - COPA SARDIMAR.png"
+    },
+    {
+      "anio": 1978,
+      "etiqueta": "1978",
+      "titulo": "Deportivo México",
+      "imagen": "trofeos/1978 - DEPORTIVO MEXICO.png"
+    },
+    {
       "anio": 1979,
-      "titulo": "Campeonato Nacional 1979",
+      "etiqueta": "1979",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/17. 1979 ROJA.png"
     },
     {
       "anio": 1981,
-      "titulo": "Campeonato Nacional 1981",
+      "etiqueta": "1981",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/18. 1981 AMARILLO.png"
     },
     {
+      "anio": 1984,
+      "etiqueta": "1984",
+      "titulo": "Triangular Sanyo",
+      "imagen": "trofeos/1984 - TRIANGULAR SANYO.png"
+    },
+    {
       "anio": 1985,
-      "titulo": "Campeonato Nacional 1985",
+      "etiqueta": "1985",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/19. 1985 ROJO.png"
     },
     {
+      "anio": 1985,
+      "etiqueta": "1985",
+      "titulo": "Triangular Sanyo",
+      "imagen": "trofeos/1985 - TRIANGULAR SANYO.png"
+    },
+    {
+      "anio": 1986,
+      "etiqueta": "1986",
+      "titulo": "Vélez",
+      "imagen": "trofeos/1986 - VELEZ.png"
+    },
+    {
       "anio": 1987,
-      "titulo": "Campeonato Nacional 1987",
+      "etiqueta": "1987",
+      "titulo": "Campeonato Nacional",
       "imagen": "trofeos/20. 1987 AMARILLO.png"
+    },
+    {
+      "anio": 1987,
+      "etiqueta": "1987",
+      "titulo": "Clasificatorio CONCACAF",
+      "imagen": "trofeos/1987 - CLASIFICATORIO CONCACAF.png"
+    },
+    {
+      "anio": 1988,
+      "etiqueta": "1988",
+      "titulo": "Copa Camel",
+      "imagen": "trofeos/1988 - COPA CAMEL.png"
+    },
+    {
+      "anio": 1988,
+      "etiqueta": "1988",
+      "titulo": "Copa Internacional de las Américas",
+      "imagen": "trofeos/1988 - COPA INTERNACIONAL DE LAS AMERICAS.png"
+    },
+    {
+      "anio": 1992,
+      "etiqueta": "1992",
+      "titulo": "Cuernavaca",
+      "imagen": "trofeos/1992 - CUERNAVACA.png"
+    },
+    {
+      "anio": 1992,
+      "etiqueta": "1992",
+      "titulo": "Triangular Internacional",
+      "imagen": "trofeos/1992 - TRIANGULAR INTERNACIONAL.png"
+    },
+    {
+      "anio": 1992,
+      "etiqueta": "1992-1993",
+      "titulo": "Campeonato Nacional",
+      "imagen": "trofeos/1992-1993 - Campeonato Nacional.png"
+    },
+    {
+      "anio": 1993,
+      "etiqueta": "1993",
+      "titulo": "Campeón Cerveza Nacional",
+      "imagen": "trofeos/1993 - CAMPEON CERVEZA NACIONAL.png"
+    },
+    {
+      "anio": 1996,
+      "etiqueta": "1996",
+      "titulo": "90 Minutos por la Vida",
+      "imagen": "trofeos/1996 - 90 MINUTOS POR LA VIDA.png"
+    },
+    {
+      "anio": 2004,
+      "etiqueta": "2004",
+      "titulo": "Fello Meza",
+      "imagen": "trofeos/2004 - FELLO MEZA.png"
+    },
+    {
+      "anio": 2004,
+      "etiqueta": "2004",
+      "titulo": "Ricardo Saprissa",
+      "imagen": "trofeos/2004 - RICARDO SAPRISSA.png"
+    },
+    {
+      "anio": 2005,
+      "etiqueta": "2005",
+      "titulo": "90 Minutos por la Vida",
+      "imagen": "trofeos/2005 - 90 MINUTOS POR LA VIDA.png"
+    },
+    {
+      "anio": 2006,
+      "etiqueta": "2006",
+      "titulo": "90 Minutos por la Vida",
+      "imagen": "trofeos/2006 - 90 MINUTOS POR LA VIDA.png"
+    },
+    {
+      "anio": 2008,
+      "etiqueta": "2008",
+      "titulo": "90 Minutos por la Vida",
+      "imagen": "trofeos/2008 - 90 MINUTOS POR LA VIDA.png"
+    },
+    {
+      "anio": 2012,
+      "etiqueta": "2012",
+      "titulo": "90 Minutos por la Vida",
+      "imagen": "trofeos/2012 - 90 MINUTOS POR LA VIDA.png"
+    },
+    {
+      "anio": 2012,
+      "etiqueta": "2012",
+      "titulo": "Verano",
+      "imagen": "trofeos/2012 verano.png"
+    },
+    {
+      "anio": 2013,
+      "etiqueta": "2013",
+      "titulo": "Verano - Campeonato Nacional",
+      "imagen": "trofeos/2013 Verano - Campeonato Nacional.png"
+    },
+    {
+      "anio": 2014,
+      "etiqueta": "2014",
+      "titulo": "La Negrita",
+      "imagen": "trofeos/2014 - LA NEGRITA.png"
+    },
+    {
+      "anio": 2015,
+      "etiqueta": "2015",
+      "titulo": "Verano - Campeonato Nacional",
+      "imagen": "trofeos/2015 Verano - Campeonato Nacional.png"
+    },
+    {
+      "anio": 2016,
+      "etiqueta": "2016",
+      "titulo": "Verano",
+      "imagen": "trofeos/2016 verano.png"
+    },
+    {
+      "anio": 2017,
+      "etiqueta": "2017",
+      "titulo": "Verano - Campeonato Nacional",
+      "imagen": "trofeos/2017 Verano - Campeonato Nacional.png"
+    },
+    {
+      "anio": 2018,
+      "etiqueta": "2018",
+      "titulo": "CONCACAF",
+      "imagen": "trofeos/2018 - CONCACAF.png"
+    },
+    {
+      "anio": 2018,
+      "etiqueta": "2018",
+      "titulo": "Liga CONCACAF",
+      "imagen": "trofeos/2018 - LIGA CONCACAF.png"
+    },
+    {
+      "anio": 2018,
+      "etiqueta": "2018",
+      "titulo": "Verano",
+      "imagen": "trofeos/2018 verano.png"
+    },
+    {
+      "anio": 2020,
+      "etiqueta": "2020",
+      "titulo": "Super Copa",
+      "imagen": "trofeos/2020 - SUPER COPA.png"
     }
   ]
 }

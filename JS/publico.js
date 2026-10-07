@@ -120,14 +120,19 @@
     });
   }
 
-  /* ---------- Equipo: carrusel "Momentos de gloria" (campeonatos) ---------- */
+  /* ---------- Equipo: carrusel "Momentos de gloria" (títulos) ---------- */
   function iniciarTrofeos() {
     var roster = document.getElementById('roster-grid');
     if (!roster || document.getElementById('trophies')) return;
 
     cargar('trofeos.json').then(function (datos) {
-      var lista = datos.trofeos || [];
+      // Del más antiguo al más reciente (dentro de un mismo año se respeta el orden del JSON)
+      var lista = (datos.trofeos || []).slice().sort(function (a, b) { return (a.anio || 0) - (b.anio || 0); });
       if (!lista.length) return; // sin datos no se muestra una franja vacía
+
+      function decada(t) { return Math.floor((t.anio || 0) / 10) * 10; }
+      var decadas = [];
+      lista.forEach(function (t) { if (decadas.indexOf(decada(t)) === -1) decadas.push(decada(t)); });
 
       var sec = document.createElement('section');
       sec.id = 'trophies';
@@ -138,13 +143,22 @@
           '<span class="subtitle">Palmarés</span>' +
           '<h2 id="glory-title">Momentos de gloria</h2>' +
         '</div>' +
+        (decadas.length > 1
+          ? '<div class="glory-decades" role="group" aria-label="Ir a una década">' +
+              decadas.map(function (d) {
+                return '<button type="button" class="glory-chip" data-decada="' + d + '" aria-pressed="false">' + d + 's</button>';
+              }).join('') +
+            '</div>'
+          : '') +
         '<div class="glory-carousel">' +
           '<button type="button" class="glory-nav glory-prev" aria-label="Ver anteriores"><i class="fas fa-chevron-left"></i></button>' +
-          '<div class="glory-track" tabindex="0" role="region" aria-label="Campeonatos nacionales">' +
+          '<div class="glory-track" tabindex="0" role="region" aria-label="Títulos del club">' +
             lista.map(function (t) {
-              return '<figure class="glory-card">' +
-                '<img src="' + esc(encodeURI(ruta(t.imagen))) + '" alt="' + esc(t.titulo) + '" loading="lazy">' +
-                '<figcaption>' + esc(t.titulo) + '</figcaption></figure>';
+              var etiqueta = t.etiqueta || t.anio;
+              return '<figure class="glory-card" data-decada="' + decada(t) + '">' +
+                '<img src="' + esc(encodeURI(ruta(t.imagen))) + '" alt="' + esc(etiqueta + ' · ' + t.titulo) + '" loading="lazy">' +
+                '<figcaption><span class="glory-year">' + esc(etiqueta) + '</span>' +
+                '<span class="glory-name">' + esc(t.titulo) + '</span></figcaption></figure>';
             }).join('') +
           '</div>' +
           '<button type="button" class="glory-nav glory-next" aria-label="Ver siguientes"><i class="fas fa-chevron-right"></i></button>' +
@@ -157,20 +171,40 @@
       var pista = sec.querySelector('.glory-track');
       var prev = sec.querySelector('.glory-prev');
       var next = sec.querySelector('.glory-next');
+      var chips = [].slice.call(sec.querySelectorAll('.glory-chip'));
+      var tarjetas = [].slice.call(pista.children);
       var suave = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 
       function paso() { return Math.max(200, pista.clientWidth * 0.8); }
       function actualizar() {
         prev.disabled = pista.scrollLeft <= 4;
         next.disabled = pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 4;
+        // marca la década de la primera tarjeta visible
+        var x = pista.scrollLeft + 10, activa = tarjetas[0];
+        for (var i = 0; i < tarjetas.length; i++) {
+          if (tarjetas[i].offsetLeft <= x) activa = tarjetas[i]; else break;
+        }
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.decada === activa.dataset.decada)); });
       }
+
       prev.addEventListener('click', function () { pista.scrollBy({ left: -paso(), behavior: suave }); });
       next.addEventListener('click', function () { pista.scrollBy({ left: paso(), behavior: suave }); });
       pista.addEventListener('keydown', function (e) {
         if (e.key === 'ArrowRight') { e.preventDefault(); pista.scrollBy({ left: paso(), behavior: suave }); }
         if (e.key === 'ArrowLeft') { e.preventDefault(); pista.scrollBy({ left: -paso(), behavior: suave }); }
       });
-      pista.addEventListener('scroll', actualizar, { passive: true });
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var destino = pista.querySelector('.glory-card[data-decada="' + chip.dataset.decada + '"]');
+          if (destino) pista.scrollTo({ left: Math.max(0, destino.offsetLeft - 4), behavior: suave });
+        });
+      });
+      var pendiente = false;
+      pista.addEventListener('scroll', function () {
+        if (pendiente) return;
+        pendiente = true;
+        requestAnimationFrame(function () { pendiente = false; actualizar(); });
+      }, { passive: true });
       window.addEventListener('resize', actualizar);
       actualizar();
     }).catch(function () { /* si no carga, simplemente no se muestra la franja */ });
