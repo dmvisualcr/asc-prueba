@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zona de asociados del Club Sport Herediano.">
+<link rel="icon" href="../IMG/Escudo.PNG" type="image/png">
+<title>Mi cuenta | Club Sport Herediano</title>
+<link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="../CSS/publico.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="../IMG/Escudo.PNG" alt="Logo Herediano"></a>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../paginicio/plantel.html">Equipo</a></li>
+                <li><a href="../paginicio/cuerpo-tecnico.html">Cuerpo Técnico</a></li>
+                <li><a href="../paginicio/noticias.html">Noticias</a></li>
+                <li><a href="../paginicio/actividades.html">Comisión</a></li>
+                <li><a href="../paginicio/beneficios.html">Beneficios</a></li>
+                <li><a href="../paginicio/nosotros.html">Nosotros</a></li>
+                <li><a href="../paginicio/contacto.html">Contacto</a></li>
+                <li><a href="../paginicio/acceso-asociados.html" class="nav-btn active">Mi cuenta</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <span class="subtitle">Zona de asociados</span>
+            <h1 id="saludo">Hola</h1>
+            <p class="lead">Aquí vas a encontrar todo lo exclusivo para quienes forman parte de la asociación.</p>
+        </section>
+
+        <section class="account-section">
+            <div class="account-grid">
+                <article class="account-card">
+                    <h2>Mis datos</h2>
+                    <dl class="account-data" id="datos-socio">
+                        <dt>Número de socio</dt><dd data-campo="numero_socio">—</dd>
+                        <dt>Nombre</dt><dd data-campo="nombre">—</dd>
+                        <dt>Correo</dt><dd data-campo="correo">—</dd>
+                        <dt>Teléfono</dt><dd data-campo="telefono">—</dd>
+                        <dt>Sector</dt><dd data-campo="sector">—</dd>
+                        <dt data-opcional="tipo_membresia" hidden>Membresía</dt><dd data-campo="tipo_membresia" hidden></dd>
+                        <dt data-opcional="vencimiento" hidden>Vence</dt><dd data-campo="vencimiento" hidden></dd>
+                    </dl>
+                    <p class="account-note">Si algún dato está mal, escríbenos para corregirlo.</p>
+                </article>
+
+                <article class="account-card">
+                    <h2>Accesos rápidos</h2>
+                    <div class="account-actions">
+                        <a href="#" id="renovar" class="about-contact-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Renovar membresía</a>
+                        <a href="../paginicio/beneficios.html" class="btn-dark">Ver beneficios</a>
+                        <button type="button" id="cerrar-sesion" class="link-btn">Cerrar sesión</button>
+                    </div>
+
+                    <h3 class="account-sub">Próximamente aquí</h3>
+                    <ul class="soon-list">
+                        <li>Multimedia exclusiva</li>
+                        <li>Documentos importantes</li>
+                        <li>Fiscalía</li>
+                        <li>Buzón de ideas</li>
+                        <li>Avisos y eventos</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-lines">
+            <div class="footer-line-red"></div>
+            <div class="footer-line-yellow"></div>
+        </div>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/people/Asociaci%C3%B3n-Club-Sport-Herediano/61581442685298/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/acsherediano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/50622618489" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>© 2026 Asociación Deportiva Club Sport Herediano</p>
+            <p>Contáctenos: socios@herediano.com | Tel: +506 2261-8489</p>
+        </div>
+    </footer>
+    <script src="../JS/publico.js" data-base="../"></script>
+    <script src="../JS/cuenta.js"></script>
+</body>
+</html>

@@ -1237,17 +1237,280 @@ img.sin-foto {
 }
 
 /* ==========================================================================
-   9. ACCESO ASOCIADOS (página provisional)
+   9. ACCESO ASOCIADOS, CUENTA Y AVISO DE PRIVACIDAD
    ========================================================================== */
-.access-card {
-  max-width: 520px;
-}
+.access-card { max-width: 520px; }
 
-.access-card p {
+.access-lead {
+  margin-bottom: 24px;
   font-size: 14px;
   line-height: 1.7;
   color: var(--gris-textos);
-  margin-bottom: 26px;
+}
+
+.access-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.access-form[hidden],
+#acceso-sesion[hidden] { display: none; }
+
+.access-form label:not(.access-check) {
+  margin-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gris-oscuro);
+}
+
+.access-form input[type="text"],
+.access-form input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #d9d9d9;
+  border-radius: 10px;
+  background: var(--blanco-puro);
+  color: var(--gris-oscuro);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.access-form input[type="text"]:focus,
+.access-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--amarillo-dorado);
+  box-shadow: 0 0 0 3px rgba(226, 180, 66, 0.35);
+}
+
+.access-form input.access-code {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+.access-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 14px 0 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--gris-textos);
+}
+
+.access-check input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--rojo);
+}
+
+.access-check a { color: var(--rojo); font-weight: 700; }
+
+.access-form .about-contact-btn,
+#acceso-sesion .about-contact-btn {
+  align-self: center;
+  margin-top: 14px;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.access-form .about-contact-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.link-btn {
+  padding: 4px;
+  border: 0;
+  background: none;
+  color: var(--rojo);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-btn:hover:not(:disabled) { color: var(--gris-oscuro); }
+.link-btn:disabled { color: var(--gris-textos); text-decoration: none; cursor: default; }
+
+.access-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+  margin-top: 16px;
+}
+
+.access-links--stack { flex-direction: column; align-items: center; }
+
+.access-msg {
+  min-height: 0;
+  margin: 18px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.access-msg:empty { display: none; }
+
+.access-msg.is-error {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fbe9eb;
+  color: var(--rojo);
+}
+
+.access-msg.is-ok {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fdf1cc;
+  color: var(--gris-oscuro);
+}
+
+/* Inicio del asociado (/asociados/) */
+.account-section {
+  padding: 70px 20px 100px;
+  background: #ededed;
+}
+
+.account-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.account-card {
+  padding: 32px 30px;
+  background: var(--blanco-puro);
+  border-radius: 12px;
+  border-top: 5px solid var(--amarillo-dorado);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.account-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gris-oscuro);
+}
+
+.account-data {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 14px 24px;
+  margin-top: 22px;
+}
+
+.account-data dt {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gris-textos);
+}
+
+.account-data dd {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gris-oscuro);
+  word-break: break-word;
+}
+
+.account-data [hidden] { display: none; }
+
+.account-note {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 13px;
+  color: var(--gris-textos);
+}
+
+.account-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.account-actions .link-btn { align-self: flex-start; }
+
+.account-sub {
+  margin: 30px 0 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--gris-oscuro);
+}
+
+.soon-list { list-style: none; }
+
+.soon-list li {
+  padding: 9px 0 9px 22px;
+  position: relative;
+  border-bottom: 1px solid #f3f3f3;
+  font-size: 14px;
+  color: var(--gris-textos);
+}
+
+.soon-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--amarillo-dorado);
+}
+
+/* Aviso de privacidad */
+.legal-section {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+  color: var(--gris-textos);
+  line-height: 1.8;
+}
+
+.legal-section h2 {
+  margin: 34px 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gris-oscuro);
+}
+
+.legal-section ul { margin: 0 0 0 22px; }
+.legal-section a { color: var(--rojo); font-weight: 600; }
+
+.draft-banner {
+  padding: 14px 18px;
+  border-left: 4px solid var(--amarillo-dorado);
+  background: #fdf1cc;
+  font-size: 14px;
+  color: var(--gris-oscuro);
+}
+
+.legal-fecha { margin-top: 36px; font-size: 13px; }
+
+@media (max-width: 900px) {
+  .account-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .account-card { padding: 26px 20px; }
+  .account-data { grid-template-columns: 1fr; gap: 2px; }
+  .account-data dd { margin-bottom: 12px; }
 }
 
 /* ==========================================================================

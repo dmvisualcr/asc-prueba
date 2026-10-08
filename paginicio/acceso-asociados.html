@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zona de asociados del Club Sport Herediano.">
+<meta name="description" content="Entra a la zona de asociados del Club Sport Herediano con tu número de socio y tu correo.">
 <link rel="icon" href="../IMG/Escudo.PNG" type="image/png">
 <title>Acceso asociados | Club Sport Herediano</title>
 <link rel="stylesheet" href="../CSS/style.css">
@@ -46,11 +46,53 @@
             <div class="escudo-container">
                 <img src="../IMG/Escudo.PNG" alt="Escudo Club Sport Herediano" class="form-logo">
             </div>
+
             <h2 class="section-title">Zona de asociados</h2>
-            <p>Pronto vas a poder crear tu cuenta e iniciar sesión para ver tu perfil, los documentos y el contenido exclusivo. Si ya sos asociado y necesitás ayuda, escribinos.</p>
-            <a href="https://wa.me/50622618489" target="_blank" rel="noopener noreferrer" class="about-contact-btn">
-                <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
-            </a>
+            <p class="access-lead" id="acceso-intro">Escribe tu número de socio y el correo con el que estás registrado. Te enviaremos un código para entrar, sin contraseñas.</p>
+
+            <form id="form-paso1" class="access-form" novalidate>
+                <label for="numero_socio">Número de socio</label>
+                <input id="numero_socio" name="numero_socio" type="text" inputmode="numeric" autocomplete="off" maxlength="30" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" autocomplete="email" maxlength="254" required>
+
+                <label class="access-check">
+                    <input type="checkbox" id="consentimiento" required>
+                    <span>He leído y acepto el <a href="privacidad.html" target="_blank" rel="noopener">aviso de privacidad</a>.</span>
+                </label>
+
+                <button type="submit" class="about-contact-btn" id="enviar-codigo">Enviarme el código</button>
+            </form>
+
+            <form id="form-paso2" class="access-form" hidden novalidate>
+                <p class="access-lead">Enviamos un código de 6 dígitos a <strong id="correo-enviado"></strong>. Vale por 10 minutos.</p>
+
+                <label for="codigo">Código</label>
+                <input id="codigo" name="codigo" type="text" class="access-code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" required>
+
+                <button type="submit" class="about-contact-btn" id="entrar">Entrar</button>
+
+                <div class="access-links">
+                    <button type="button" id="reenviar" class="link-btn">Reenviar código</button>
+                    <button type="button" id="otros-datos" class="link-btn">Usar otros datos</button>
+                </div>
+            </form>
+
+            <div id="acceso-sesion" hidden>
+                <p class="access-lead">Ya iniciaste sesión como <strong id="sesion-nombre"></strong>.</p>
+                <div class="access-links access-links--stack">
+                    <a href="/asociados/" class="about-contact-btn">Ir a mi cuenta</a>
+                    <button type="button" id="cerrar-sesion" class="link-btn">Cerrar sesión</button>
+                </div>
+            </div>
+
+            <p class="access-msg" id="acceso-mensaje" role="status" aria-live="polite"></p>
+
+            <p class="form-link-text">
+                ¿Problemas para entrar? <a href="https://wa.me/50622618489" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a><br>
+                ¿Aún no eres asociado? <a href="form.html">Quiero ser asociado</a>
+            </p>
         </section>
     </main>
 
@@ -67,9 +109,9 @@
             </div>
             <p>© 2026 Asociación Deportiva Club Sport Herediano</p>
             <p>Contáctenos: socios@herediano.com | Tel: +506 2261-8489</p>
-            <p>Desarrollado por <a href="https://www.instagram.com/dmvisuals.cr/" target="_blank" rel="noopener noreferrer">DM Visual</a></p>
         </div>
     </footer>
-
+    <script src="../JS/publico.js" data-base="../"></script>
+    <script src="../JS/acceso.js"></script>
 </body>
 </html>

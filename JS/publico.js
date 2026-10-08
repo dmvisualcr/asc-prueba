@@ -485,9 +485,28 @@
     }).catch(function () { /* la sección queda oculta si no hay datos */ });
   }
 
+  /* ---------- Menú: "Acceso asociados" pasa a "Mi cuenta" si hay sesión abierta ---------- */
+  function iniciarBotonAcceso() {
+    var boton = document.querySelector('.nav-links .nav-btn');
+    if (!boton || !window.fetch) return;
+    fetch(BASE + 'api/yo', { credentials: 'same-origin', cache: 'no-store' })
+      .then(function (r) {
+        // En vistas de prueba sin servidor (GitHub Pages) esto devuelve una página 404: se ignora
+        return r.ok && /json/.test(r.headers.get('Content-Type') || '') ? r.json() : null;
+      })
+      .then(function (j) {
+        if (j && j.autenticado) {
+          boton.textContent = 'Mi cuenta';
+          boton.setAttribute('href', BASE + 'asociados/');
+        }
+      })
+      .catch(function () {});
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     iniciarPlantel();
     iniciarTrofeos();
+    iniciarBotonAcceso();
     iniciarCuerpoTecnico();
     iniciarNoticias();
     iniciarCalendario();
