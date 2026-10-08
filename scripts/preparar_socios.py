@@ -5,6 +5,7 @@ Convierte la lista de asociados (Excel o CSV) en un archivo SQL listo para carga
 USO:
     python scripts/preparar_socios.py  ruta/a/asociados.xlsx
     python scripts/preparar_socios.py  ruta/a/asociados.csv
+    python scripts/preparar_socios.py  ruta/a/asociados.csv  --junto     (todo en UN solo archivo; ideal para cargarlo con wrangler)
 
 Genera, en la misma carpeta del archivo original:
     socios-importar.sql     -> lo que se carga a la base de datos
@@ -103,9 +104,11 @@ def sql(valor):
 
 
 def main():
-    if len(sys.argv) != 2:
+    argumentos = [a for a in sys.argv[1:] if not a.startswith("--")]
+    junto = "--junto" in sys.argv[1:]
+    if len(argumentos) != 1:
         sys.exit(__doc__)
-    ruta = Path(sys.argv[1])
+    ruta = Path(argumentos[0])
     if not ruta.exists():
         sys.exit(f"No encuentro el archivo: {ruta}")
 
@@ -191,7 +194,9 @@ def main():
     # Se borran los archivos de corridas anteriores para no cargar uno viejo por error
     for viejo in ruta.parent.glob("socios-importar*.sql"):
         viejo.unlink()
-    TAMANO_PARTE = 100  # asociados por archivo: la consola de D1 se queja si el texto es muy largo
+    # Por defecto: 100 asociados por archivo (la consola de D1 se queja si el texto es muy largo).
+    # Con --junto todo va en un solo archivo, pensado para cargarlo con wrangler.
+    TAMANO_PARTE = max(len(inserts), 1) if junto else 100
     partes = [inserts[i:i + TAMANO_PARTE] for i in range(0, len(inserts), TAMANO_PARTE)] or [[]]
     archivos_sql = []
     for n, parte in enumerate(partes, start=1):
