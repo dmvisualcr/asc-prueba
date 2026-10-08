@@ -8,6 +8,8 @@ USO:
 
 Genera, en la misma carpeta del archivo original:
     socios-importar.sql     -> lo que se carga a la base de datos
+                               (si hay más de 100 asociados se divide en partes: socios-importar-1.sql,
+                                socios-importar-2.sql… y se cargan una por una, en orden)
     socios-revision.txt     -> filas con problemas (solo número de fila y motivo, sin datos personales)
 
 Columnas que entiende (no importa el orden, ni las mayúsculas, ni las tildes):
@@ -30,7 +32,7 @@ from pathlib import Path
 
 COLUMNAS = {
     "numero_socio": {"numerodesocio", "numerosocio", "nsocio", "nrosocio", "nosocio", "socio", "numero", "codigosocio"},
-    "nombre": {"nombre", "nombrecompleto", "nombreyapellidos", "asociado"},
+    "nombre": {"nombre", "nombrecompleto", "nombreyapellidos", "asociado", "nombredelcliente", "cliente", "nombredelsocio", "nombredelasociado"},
     "correo": {"email", "correo", "correoelectronico", "mail"},
     "telefono": {"telefono", "celular", "tel", "telefonocelular"},
     "fecha_nacimiento": {"fechadenacimiento", "fechanacimiento", "nacimiento", "fechanac", "cumpleanos"},
@@ -120,9 +122,34 @@ def main():
                 indice[campo] = i
         if nombre in IGNORADAS:
             ignoradas.append(str(filas[0][i]))
+    # Segunda pasada: palabras clave dentro del encabezado (para títulos como "Nombre del Cliente")
+    PALABRAS = [
+        ("nombre", ["nombre", "cliente"]),
+        ("correo", ["mail", "correo"]),
+        ("telefono", ["telefono", "celular"]),
+        ("fecha_nacimiento", ["nacimiento", "cumple"]),
+        ("sector", ["sector"]),
+        ("numero_socio", ["socio"]),
+    ]
+    usadas = set(indice.values())
+    for campo, claves in PALABRAS:
+        if campo in indice:
+            continue
+        for i, nombre in enumerate(encabezado):
+            if i in usadas or nombre in IGNORADAS:
+                continue
+            if any(k in nombre for k in claves):
+                indice[campo] = i
+                usadas.add(i)
+                break
+
     faltan = [c for c in ("numero_socio", "nombre", "correo") if c not in indice]
     if faltan:
         sys.exit(f"No encontré estas columnas obligatorias: {', '.join(faltan)}.\nEncabezados leídos: {[str(c) for c in filas[0]]}")
+
+    print("Columnas usadas:")
+    for campo, i in indice.items():
+        print(f"   {campo:17} <- \"{filas[0][i]}\"")
 
     def celda(fila, campo):
         i = indice.get(campo)
@@ -151,18 +178,27 @@ def main():
         ok.append((numero, nombre, correo, telefono, nacimiento, sector))
         correos[correo] = correos.get(correo, 0) + 1
 
-    lineas = [
-        "-- Generado por scripts/preparar_socios.py. Contiene datos personales: NO subir a GitHub.",
-    ]
+    encabezado_sql = "-- Generado por scripts/preparar_socios.py. Contiene datos personales: NO subir a GitHub."
+    inserts = []
     for numero, nombre, correo, telefono, nacimiento, sector in ok:
-        lineas.append(
+        inserts.append(
             "INSERT INTO socios (numero_socio, nombre, correo, telefono, fecha_nacimiento, sector) VALUES "
             f"({sql(numero)}, {sql(nombre)}, {sql(correo)}, {sql(telefono)}, {sql(nacimiento)}, {sql(sector)}) "
             "ON CONFLICT(numero_socio) DO UPDATE SET nombre = excluded.nombre, correo = excluded.correo, "
             "telefono = excluded.telefono, fecha_nacimiento = excluded.fecha_nacimiento, sector = excluded.sector;"
         )
-    salida = ruta.with_name("socios-importar.sql")
-    salida.write_text("\n".join(lineas) + "\n", encoding="utf-8")
+
+    # Se borran los archivos de corridas anteriores para no cargar uno viejo por error
+    for viejo in ruta.parent.glob("socios-importar*.sql"):
+        viejo.unlink()
+    TAMANO_PARTE = 100  # asociados por archivo: la consola de D1 se queja si el texto es muy largo
+    partes = [inserts[i:i + TAMANO_PARTE] for i in range(0, len(inserts), TAMANO_PARTE)] or [[]]
+    archivos_sql = []
+    for n, parte in enumerate(partes, start=1):
+        nombre_archivo = "socios-importar.sql" if len(partes) == 1 else f"socios-importar-{n}.sql"
+        destino = ruta.with_name(nombre_archivo)
+        destino.write_text(encabezado_sql + "\n" + "\n".join(parte) + "\n", encoding="utf-8")
+        archivos_sql.append(destino)
 
     compartidos = sum(1 for c in correos.values() if c > 1)
     reporte = ruta.with_name("socios-revision.txt")
@@ -177,7 +213,9 @@ def main():
         print(f"Columna(s) ignorada(s) a propósito (no se guardan): {', '.join(ignoradas)}")
     if problemas:
         print(f"Con problemas: {len(problemas)}  -> revisa {reporte.name}")
-    print(f"Archivo SQL: {salida}")
+    print("Archivo(s) para cargar a la base de datos, en este orden:")
+    for a in archivos_sql:
+        print(f"   {a}")
 
 
 if __name__ == "__main__":

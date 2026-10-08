@@ -1,0 +1,18 @@
+# Datos personales de asociados: NUNCA se suben a GitHub
+socios*.csv
+socios*.xlsx
+socios*.xlsm
+socios*.xls
+socios*.sql
+socios-revision.txt
+
+# Cualquier hoja de cálculo: aquí no hace falta ninguna y suelen traer datos personales
+*.csv
+*.xlsx
+*.xlsm
+*.xls
+
+# Archivos locales de Cloudflare / Node
+.dev.vars
+.wrangler/
+node_modules/
