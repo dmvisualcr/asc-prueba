@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Documentos de la Asociación Deportiva Club Sport Herediano.">
+<link rel="icon" href="../IMG/Escudo.PNG" type="image/png">
+<title>Documentos importantes | Zona de asociados</title>
+<link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="../CSS/publico.css">
+<link rel="stylesheet" href="../CSS/asociados.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-asociados">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./"><img src="../IMG/Escudo.PNG" alt="Logo Herediano"></a>
+                <span>Zona de<br>asociados</span>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="./">Inicio</a></li>
+                <li><a href="beneficios.html">Beneficios</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="documentos.html" class="active">Documentos</a></li>
+                <li><a href="fiscalia.html">Fiscalía</a></li>
+                <li><a href="buzon.html">Buzón</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#" class="nav-btn" id="nav-salir">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <span class="subtitle">Zona de asociados</span>
+            <h1>Documentos importantes</h1>
+            <p class="lead">Actas, estados financieros, reglamentos e informes de la asociación.</p>
+        </section>
+
+        <section class="docs-section">
+            <div class="docs-wrap">
+                <div class="docs-toolbar" id="docs-barra" hidden>
+                    <label for="buscar-doc" class="sr-only">Buscar un documento</label>
+                    <input type="search" id="buscar-doc" class="docs-search" placeholder="Buscar un documento…" autocomplete="off">
+                    <div class="news-filters" id="docs-chips" role="group" aria-label="Filtrar por categoría"></div>
+                </div>
+                <div id="lista-documentos" data-fuente="data/documentos.json" data-vacio="Pronto publicaremos aquí los documentos de la asociación." aria-live="polite">
+                    <p class="empty-note">Cargando documentos…</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-lines">
+            <div class="footer-line-red"></div>
+            <div class="footer-line-yellow"></div>
+        </div>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/people/Asociaci%C3%B3n-Club-Sport-Herediano/61581442685298/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/acsherediano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/50622618489" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>© 2026 Asociación Deportiva Club Sport Herediano</p>
+            <p>Contáctenos: socios@herediano.com | Tel: +506 2261-8489</p>
+            <p><a href="../index.html">← Volver al sitio público</a></p>
+        </div>
+    </footer>
+    <script src="../JS/asociados.js"></script>
+    <script src="../JS/documentos.js"></script>
+</body>
+</html>

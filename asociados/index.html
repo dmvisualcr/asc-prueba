@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Zona de asociados del Club Sport Herediano.">
 <link rel="icon" href="../IMG/Escudo.PNG" type="image/png">
-<title>Mi cuenta | Club Sport Herediano</title>
+<title>Mi cuenta | Zona de asociados</title>
 <link rel="stylesheet" href="../CSS/style.css">
 <link rel="stylesheet" href="../CSS/publico.css">
+<link rel="stylesheet" href="../CSS/asociados.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header-asociados">
         <div class="navbar">
             <div class="logo">
-                <a href="../index.html"><img src="../IMG/Escudo.PNG" alt="Logo Herediano"></a>
+                <a href="./"><img src="../IMG/Escudo.PNG" alt="Logo Herediano"></a>
+                <span>Zona de<br>asociados</span>
             </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -28,15 +31,14 @@
             </label>
 
             <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../paginicio/plantel.html">Equipo</a></li>
-                <li><a href="../paginicio/cuerpo-tecnico.html">Cuerpo Técnico</a></li>
-                <li><a href="../paginicio/noticias.html">Noticias</a></li>
-                <li><a href="../paginicio/actividades.html">Comisión</a></li>
-                <li><a href="../paginicio/beneficios.html">Beneficios</a></li>
-                <li><a href="../paginicio/nosotros.html">Nosotros</a></li>
-                <li><a href="../paginicio/contacto.html">Contacto</a></li>
-                <li><a href="../paginicio/acceso-asociados.html" class="nav-btn active">Mi cuenta</a></li>
+                <li><a href="./" class="active">Inicio</a></li>
+                <li><a href="beneficios.html">Beneficios</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="documentos.html">Documentos</a></li>
+                <li><a href="fiscalia.html">Fiscalía</a></li>
+                <li><a href="buzon.html">Buzón</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#" class="nav-btn" id="nav-salir">Cerrar sesión</a></li>
             </ul>
         </div>
     </header>
@@ -49,7 +51,40 @@
         </section>
 
         <section class="account-section">
-            <div class="account-grid">
+            <div class="area-tiles">
+                <a class="area-tile" href="beneficios.html">
+                    <span class="area-tile-icon"><i class="fas fa-tags"></i></span>
+                    <h3>Beneficios</h3>
+                    <p>Descuentos y comercios aliados, con el boletín de convenios.</p>
+                </a>
+                <a class="area-tile" href="multimedia.html">
+                    <span class="area-tile-icon"><i class="fas fa-photo-film"></i></span>
+                    <h3>Multimedia exclusiva</h3>
+                    <p>Archivo fotográfico, cápsulas históricas y expresidentes.</p>
+                </a>
+                <a class="area-tile" href="documentos.html">
+                    <span class="area-tile-icon"><i class="fas fa-folder-open"></i></span>
+                    <h3>Documentos importantes</h3>
+                    <p>Actas, estados financieros, reglamentos e informes.</p>
+                </a>
+                <a class="area-tile" href="fiscalia.html">
+                    <span class="area-tile-icon"><i class="fas fa-scale-balanced"></i></span>
+                    <h3>Fiscalía</h3>
+                    <p>Quiénes integran la Fiscalía y sus informes.</p>
+                </a>
+                <a class="area-tile" href="buzon.html">
+                    <span class="area-tile-icon"><i class="fas fa-envelope-open-text"></i></span>
+                    <h3>Buzón de ideas</h3>
+                    <p>Envía tus sugerencias y propuestas directamente a la Junta.</p>
+                </a>
+                <a class="area-tile" href="nosotros.html">
+                    <span class="area-tile-icon"><i class="fas fa-people-group"></i></span>
+                    <h3>Nosotros</h3>
+                    <p>Junta Directiva, misión, visión y valores.</p>
+                </a>
+            </div>
+
+            <div class="account-grid account-grid--pair">
                 <article class="account-card">
                     <h2>Mis datos</h2>
                     <dl class="account-data" id="datos-socio">
@@ -65,21 +100,9 @@
                 </article>
 
                 <article class="account-card">
-                    <h2>Accesos rápidos</h2>
-                    <div class="account-actions">
-                        <a href="#" id="renovar" class="about-contact-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Renovar membresía</a>
-                        <a href="../paginicio/beneficios.html" class="btn-dark">Ver beneficios</a>
-                        <button type="button" id="cerrar-sesion" class="link-btn">Cerrar sesión</button>
-                    </div>
-
-                    <h3 class="account-sub">Próximamente aquí</h3>
-                    <ul class="soon-list">
-                        <li>Multimedia exclusiva</li>
-                        <li>Documentos importantes</li>
-                        <li>Fiscalía</li>
-                        <li>Buzón de ideas</li>
-                        <li>Avisos y eventos</li>
-                    </ul>
+                    <h2>Tu membresía</h2>
+                    <p class="account-lead">Para renovar o consultar el estado de tu membresía, escríbenos por WhatsApp. Ya vamos con tu número de socio en el mensaje.</p>
+                    <a href="#" id="renovar" class="about-contact-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Renovar membresía</a>
                 </article>
             </div>
         </section>
@@ -98,9 +121,10 @@
             </div>
             <p>© 2026 Asociación Deportiva Club Sport Herediano</p>
             <p>Contáctenos: socios@herediano.com | Tel: +506 2261-8489</p>
+            <p><a href="../index.html">← Volver al sitio público</a></p>
         </div>
     </footer>
-    <script src="../JS/publico.js" data-base="../"></script>
+    <script src="../JS/asociados.js"></script>
     <script src="../JS/cuenta.js"></script>
 </body>
 </html>

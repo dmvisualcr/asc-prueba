@@ -3,12 +3,12 @@
   'use strict';
 
   var LOGIN = '/paginicio/acceso-asociados.html';
+  var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
 
   function formatearFecha(iso) {
     var p = String(iso || '').split('-');
     if (p.length !== 3) return iso;
-    var meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
-    return Number(p[2]) + ' de ' + meses[Number(p[1]) - 1] + ' de ' + p[0];
+    return Number(p[2]) + ' de ' + MESES[Number(p[1]) - 1] + ' de ' + p[0];
   }
 
   fetch('/api/yo', { credentials: 'same-origin', cache: 'no-store' })
@@ -32,13 +32,11 @@
         }
       });
 
-      var texto = 'Hola, quiero renovar mi membresía. Mi número de socio es ' + s.numero_socio + '.';
-      document.getElementById('renovar').href = 'https://wa.me/50622618489?text=' + encodeURIComponent(texto);
+      var renovar = document.getElementById('renovar');
+      if (renovar) {
+        var texto = 'Hola, quiero renovar mi membresía. Mi número de socio es ' + s.numero_socio + '.';
+        renovar.href = 'https://wa.me/50622618489?text=' + encodeURIComponent(texto);
+      }
     })
     .catch(function () { location.href = LOGIN; });
-
-  document.getElementById('cerrar-sesion').addEventListener('click', function () {
-    fetch('/api/auth/salir', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: '{}' })
-      .finally(function () { location.href = '/index.html'; });
-  });
 })();

@@ -1,0 +1,8 @@
+{
+  "categorias": [
+    { "nombre": "Actas", "descripcion": "Actas de asambleas y de la Junta Directiva.", "documentos": [] },
+    { "nombre": "Estados financieros", "descripcion": "", "documentos": [] },
+    { "nombre": "Reglamentos y estatutos", "descripcion": "", "documentos": [] },
+    { "nombre": "Informes", "descripcion": "", "documentos": [] }
+  ]
+}
