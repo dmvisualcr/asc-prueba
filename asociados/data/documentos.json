@@ -1,8 +1,29 @@
 {
   "categorias": [
-    { "nombre": "Actas", "descripcion": "Actas de asambleas y de la Junta Directiva.", "documentos": [] },
-    { "nombre": "Estados financieros", "descripcion": "", "documentos": [] },
-    { "nombre": "Reglamentos y estatutos", "descripcion": "", "documentos": [] },
-    { "nombre": "Informes", "descripcion": "", "documentos": [] }
+    {
+      "nombre": "Actas",
+      "descripcion": "Actas de asambleas y de la Junta Directiva.",
+      "documentos": []
+    },
+    {
+      "nombre": "Estados financieros",
+      "descripcion": "",
+      "documentos": []
+    },
+    {
+      "nombre": "Reglamentos y estatutos",
+      "descripcion": "",
+      "documentos": []
+    },
+    {
+      "nombre": "Informes de Fiscalía",
+      "descripcion": "Informes que publica la Fiscalía de la asociación.",
+      "documentos": []
+    },
+    {
+      "nombre": "Informes",
+      "descripcion": "",
+      "documentos": []
+    }
   ]
 }

@@ -1,4 +1,4 @@
-/* DOCUMENTOS.JS — lista de documentos de /asociados/documentos.html y /asociados/fiscalia.html.
+/* DOCUMENTOS.JS — lista de documentos de /asociados/documentos.html.
    Lee el archivo indicado en data-fuente (por ejemplo data/documentos.json). Ese archivo y los PDF
    viven dentro de /asociados/, así que el servidor solo los entrega a quien tenga sesión abierta. */
 (function () {

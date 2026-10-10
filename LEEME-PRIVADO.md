@@ -10,17 +10,16 @@ Todo lo que está dentro de `/asociados/` solo se entrega a quien tenga sesión 
 | `asociados/beneficios.html` | Beneficios, comercios aliados y boletín de convenios (PDF) |
 | `asociados/multimedia.html` | Archivo fotográfico, cápsulas históricas y expresidentes |
 | `asociados/documentos.html` | Documentos con buscador y categorías |
-| `asociados/fiscalia.html` | Integrantes de la Fiscalía + sus informes |
 | `asociados/buzon.html` | Buzón de ideas (formulario de Google) |
-| `asociados/nosotros.html` | Junta Directiva, misión, visión y valores |
+| `asociados/nosotros.html` | Junta Directiva, contacto con la Fiscalía (botón de WhatsApp), misión, visión y valores |
 
-El menú de esta zona es propio (Inicio · Beneficios · Multimedia · Documentos · Fiscalía · Buzón · Nosotros ·
+El menú de esta zona es propio (Inicio · Beneficios · Multimedia · Documentos · Buzón · Nosotros ·
 Cerrar sesión). El menú del sitio público queda solo para la parte pública. Desde el pie de página se vuelve al sitio público.
 
-## Cómo publicar un documento (Documentos o Fiscalía)
-1. Copia el PDF a la carpeta `asociados/docs/` (créala si no existe). Si es de Fiscalía, puedes usar `asociados/docs/fiscalia/`.
+## Cómo publicar un documento
+1. Copia el PDF a la carpeta `asociados/docs/` (créala si no existe). Los informes de la Fiscalía van aquí también, en la categoría "Informes de Fiscalía".
    Usa nombres sin tildes ni espacios si puedes: `acta-asamblea-2026.pdf`.
-2. Abre `asociados/data/documentos.json` (o `fiscalia.json`) y agrega un bloque dentro de la categoría que corresponda:
+2. Abre `asociados/data/documentos.json` y agrega un bloque dentro de la categoría que corresponda:
 
 ```json
 { "titulo": "Acta de Asamblea Ordinaria 2026",
@@ -33,8 +32,23 @@ Cerrar sesión). El menú del sitio público queda solo para la parte pública. 
    - Categorías vacías no se muestran. Para crear una nueva, copia una categoría completa y cambia el nombre.
 3. Sube los cambios. Si algo no aparece, revisa que no falte ninguna coma o comilla en el JSON.
 
+## WhatsApp de la Fiscalía
+En `asociados/nosotros.html`, busca (Ctrl + F) `50622618489`. Por ahora es el WhatsApp de la asociación.
+Cuando tengas el número real, reemplázalo ahí (código de país + número, sin `+` ni espacios; ejemplo: `50688887777`).
+
+## Si venías de la versión anterior
+Ya no existe la página de Fiscalía. **Borra** estos dos archivos de tu proyecto:
+- `asociados/fiscalia.html`
+- `asociados/data/fiscalia.json`
+
+Y si ya habías agregado documentos en `asociados/data/documentos.json`, **no reemplaces ese archivo**: solo agrega esta categoría
+dentro de la lista `"categorias"` (entre las demás, separada por coma):
+```json
+{ "nombre": "Informes de Fiscalía", "descripcion": "Informes que publica la Fiscalía de la asociación.", "documentos": [] }
+```
+
 ## Agregar o quitar una opción del menú
-El menú está escrito en cada página (son 7 archivos). En VS Code: **Ctrl + Shift + H** (buscar y reemplazar en todos los archivos).
+El menú está escrito en cada página (son 6 archivos). En VS Code: **Ctrl + Shift + H** (buscar y reemplazar en todos los archivos).
 
 ## Importante: privacidad del repositorio
 Si tu repositorio de GitHub es **público**, cualquiera puede ver ahí los PDF de `asociados/docs/`, el enlace del
