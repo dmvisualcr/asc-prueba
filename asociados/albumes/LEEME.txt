@@ -1,0 +1,14 @@
+AQUÍ VAN LOS ÁLBUMES DE FOTOS
+
+Crea una carpeta por álbum. El nombre de la carpeta es el título del álbum:
+
+    01 - Demolición Estadio Eladio Rosabal Cordero
+    02 - Acto - Primera Piedra
+    ...
+
+- El número y el guion del inicio ("01 - ") sirven solo para ordenar los álbumes; no se muestran.
+- Dentro de cada carpeta van las fotos (.webp, .jpg o .png).
+- Opcional: una foto llamada portada.webp es la portada del álbum.
+- Opcional: un archivo descripcion.txt con un texto corto para mostrar bajo el título.
+
+Después, en el terminal del proyecto:   python scripts/generar_albumes.py

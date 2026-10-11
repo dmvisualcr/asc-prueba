@@ -15,7 +15,12 @@ export async function onRequest({ request, env, next }) {
 
   const respuesta = await next();
   const salida = new Response(respuesta.body, respuesta);
-  salida.headers.set('Cache-Control', 'private, no-store'); // que ninguna caché compartida guarde contenido privado
+  // "private" = ninguna caché compartida (como la de Cloudflare) guarda contenido privado.
+  // Las fotos y los PDF pueden guardarse en el navegador de la persona por un rato (así los álbumes cargan
+  // rápido al volver a verlos); las páginas y los datos no.
+  const tipo = respuesta.headers.get('Content-Type') || '';
+  const esArchivo = /^(image|video|audio)\//.test(tipo) || tipo.includes('pdf');
+  salida.headers.set('Cache-Control', esArchivo ? 'private, max-age=3600' : 'private, no-store');
   salida.headers.set('X-Robots-Tag', 'noindex, nofollow');
   return salida;
 }
