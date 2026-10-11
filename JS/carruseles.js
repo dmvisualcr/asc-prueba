@@ -15,15 +15,29 @@
     var reloj = null;
     var inicioX = null;
     var sinMovimiento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function medidas() {
+  var ancho = tarjetas[0].getBoundingClientRect().width;
+  var estilo = getComputedStyle(pista);
+  var estiloTarjeta = getComputedStyle(tarjetas[0]);
 
-    function medidas() {
-      var ancho = tarjetas[0].getBoundingClientRect().width;
-      var estilo = getComputedStyle(pista);
-      var hueco = parseFloat(estilo.columnGap || estilo.gap) || 0;
-      var paso = ancho + hueco;
-      var visibles = Math.max(1, Math.floor((marco.getBoundingClientRect().width + hueco) / paso));
-      return { paso: paso, max: Math.max(0, tarjetas.length - visibles) };
-    }
+  var margenIzq = parseFloat(estiloTarjeta.marginLeft) || 0;
+  var margenDer = parseFloat(estiloTarjeta.marginRight) || 0;
+  var hueco = parseFloat(estilo.columnGap || estilo.gap) || 0;
+
+  var paso = ancho + margenIzq + margenDer + hueco;
+  var anchoMarco = marco.getBoundingClientRect().width;
+
+  var visibles = Math.max(
+    1,
+    Math.floor((anchoMarco + hueco) / paso)
+  );
+
+  return {
+    paso: paso,
+    max: Math.max(0, tarjetas.length - visibles)
+  };
+}
+
 
     function pintar() {
       var m = medidas();
