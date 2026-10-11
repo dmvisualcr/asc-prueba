@@ -1,3 +1,60 @@
 {
-  "albumes": []
+  "albumes": [
+    {
+      "id": "demolicion-estadio-eladio-rosabal-cordero",
+      "titulo": "Demolición Estadio Eladio Rosabal Cordero",
+      "descripcion": "",
+      "portada": "albumes/01 - Demolición Estadio Eladio Rosabal Cordero/_mini/CSH_0001.webp",
+      "cantidad": 39
+    },
+    {
+      "id": "acto-primera-piedra",
+      "titulo": "Acto - Primera Piedra",
+      "descripcion": "",
+      "portada": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0053.webp",
+      "cantidad": 8
+    },
+    {
+      "id": "dias-del-asociado",
+      "titulo": "Días del Asociado",
+      "descripcion": "",
+      "portada": "albumes/03 - Días del Asociado/_mini/1.webp",
+      "cantidad": 31
+    },
+    {
+      "id": "estadio-eladio-rosabal-cordero",
+      "titulo": "Estadio Eladio Rosabal Cordero",
+      "descripcion": "",
+      "portada": "albumes/04 - Estadio Eladio Rosabal Cordero/_mini/2M2S4209.webp",
+      "cantidad": 6
+    },
+    {
+      "id": "fotos-de-equipos-pasados",
+      "titulo": "Fotos de Equipos pasados",
+      "descripcion": "",
+      "portada": "albumes/05 - Fotos de Equipos pasados/_mini/1 (2).webp",
+      "cantidad": 48
+    },
+    {
+      "id": "exposicion-museologica-2015",
+      "titulo": "Exposición Museológica 2015",
+      "descripcion": "",
+      "portada": "albumes/06 - Exposición Museológica 2015/_mini/DSC01866.webp",
+      "cantidad": 12
+    },
+    {
+      "id": "juntas-directivas",
+      "titulo": "Juntas Directivas",
+      "descripcion": "",
+      "portada": "albumes/07 - Juntas Directivas/_mini/1921.webp",
+      "cantidad": 11
+    },
+    {
+      "id": "carnets-antiguos",
+      "titulo": "Carnets Antiguos",
+      "descripcion": "",
+      "portada": "albumes/08 - Carnets Antiguos/_mini/1960.webp",
+      "cantidad": 6
+    }
+  ]
 }

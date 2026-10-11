@@ -1,0 +1,39 @@
+{
+  "id": "acto-primera-piedra",
+  "titulo": "Acto - Primera Piedra",
+  "descripcion": "",
+  "fotos": [
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0053.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0053.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0061.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0061.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0087.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0087.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0211.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0211.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0221.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0221.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0246.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0246.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0306.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0306.webp"
+    },
+    {
+      "src": "albumes/02 - Acto - Primera Piedra/AEG_0339.webp",
+      "mini": "albumes/02 - Acto - Primera Piedra/_mini/AEG_0339.webp"
+    }
+  ]
+}
