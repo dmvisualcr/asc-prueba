@@ -580,49 +580,49 @@
       "anio": 2021,
       "etiqueta": "2021",
       "titulo": "Apertura",
-      "imagen": "2021 - APERTURA.png"
+      "imagen": "trofeos/2021 - APERTURA.png"
     },
     {
       "anio": 2022,
       "etiqueta": "2022",
       "titulo": "Super Copa",
-      "imagen": "2022 - SUPER COPA.png"
+      "imagen": "trofeos/2022 - SUPER COPA.png"
     },
     {
       "anio": 2022,
       "etiqueta": "2022",
       "titulo": "Clausura",
-      "imagen": "2024 - CLAUSURA.png"
+      "imagen": "trofeos/2024 - CLAUSURA.png"
     },
     {
       "anio": 2024,
       "etiqueta": "2024",
       "titulo": "Super Copa",
-      "imagen": "2024 - CLAUSURA.png"
+      "imagen": "trofeos/2024 - CLAUSURA.png"
     },
     {
       "anio": 2024,
       "etiqueta": "2024",
       "titulo": "Super Copa",
-      "imagen": "2024 - SUPER COPA.png"
+      "imagen": "trofeos/2024 - SUPER COPA.png"
     },
     {
       "anio": 2025,
       "etiqueta": "2025",
       "titulo": "Clausura",
-      "imagen": "2025 - CLAUSURA.png"
+      "imagen": "trofeos/2025 - CLAUSURA.png"
     },
     {
       "anio": 2026,
       "etiqueta": "2026",
       "titulo": "Clausura",
-      "imagen": "2026 - CLAUSURA.png"
+      "imagen": "trofeos/2026 - CLAUSURA.png"
     },
     {
       "anio": 2026,
       "etiqueta": "2026",
       "titulo": "Super Copa",
-      "imagen": "2026 - SUPER COPA.png"
+      "imagen": "trofeos/2026 - SUPER COPA.png"
     }
   ]
 }
