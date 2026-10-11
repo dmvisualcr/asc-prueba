@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "¡Gracias, Wanchope!",
+      "fecha": "2026-10-11",
+      "fecha_hora": "2026-10-11T09:45:38-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1791733494856-dd996735-315d-45be-91a6-06fdcf7b5887.jpeg",
+      "resumen": "El Club Sport Herediano informa que el entrenador, Paulo César Wanchope, no continuará formando parte de nuestra institución. Le agradecemos su tiempo, compromiso y entrega al club.",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/gracias-wanchope"
+    },
+    {
       "titulo": "HEREDIANO VS SAN CARLOS: ENTRADAS A LA VENTA",
       "fecha": "2026-10-06",
       "fecha_hora": "2026-10-06T11:35:12-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/abner-hudson-bienvenido-al-campeon-nacional"
-    },
-    {
-      "titulo": "Aarón Suárez: Bienvenido al Campeón Nacional",
-      "fecha": "2026-05-22",
-      "fecha_hora": "2026-05-22T16:28:00-06:00",
-      "imagen": "https://www.herediano.com/news/aaron-suarez-bienvenido-al-campeon-nacional/cover.jpg",
-      "resumen": "El jugador Aarón Suárez será nuevo refuerzo de nuestro equipo para el próximo torneo de Apertura 2026.Suárez se une a “El Team” luego de su paso por el fútbol de Turquía, donde militó en el Igdir FK.Ficha Técnica:Nombre: Aarón René Suárez ZúñigaEdad: 23 añosPosición: Mediocampista ofensivo",
-      "categoria": "Refuerzos",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/aaron-suarez-bienvenido-al-campeon-nacional"
     }
   ]
 }
