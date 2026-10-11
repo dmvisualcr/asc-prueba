@@ -311,7 +311,7 @@
 
 /* ---------- Álbumes de fotos ---------- */
 .albumes-section {
-  padding: 60px 20px 10px;
+  padding: 40px 20px 30px;
   background: var(--blanco-puro);
 }
 
@@ -340,10 +340,24 @@
   background: var(--amarillo-dorado);
 }
 
+.albumes-section .albumes-wrap h2 { text-align: center; }
+.albumes-section .albumes-wrap h2::after { margin-left: auto; margin-right: auto; }
+
 .albumes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* la última fila queda centrada */
   gap: 22px;
+}
+
+.albumes-grid .album-card { flex: 0 1 calc((100% - 66px) / 4); min-width: 220px; }
+
+@media (max-width: 900px) {
+  .albumes-grid .album-card { flex-basis: calc((100% - 22px) / 2); }
+}
+
+@media (max-width: 560px) {
+  .albumes-grid .album-card { flex-basis: 100%; }
 }
 
 .album-card {
