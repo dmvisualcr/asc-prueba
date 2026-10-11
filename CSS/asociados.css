@@ -631,11 +631,11 @@
     margin-bottom: 30px;
     text-align: center;
 }
-
 .president-card-item {
     min-width: 220px;
     max-width: 22%;
-    flex-basis: auto;
+    flex: 0 0 220px; /* Mantiene un ancho fijo para cada tarjeta */
+    box-sizing: border-box;
     padding: 15px 12px;
     margin: 0 15px;
     text-align: center;
@@ -647,7 +647,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     height: auto;
 }
-
 .president-card-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
