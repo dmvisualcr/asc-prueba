@@ -3,52 +3,52 @@
     {
       "nombre": "Convenios Comerciales CSH",
       "descripcion": "Convenios Comerciales.",
-      "documentos": "docs/Convenios Comerciales CSH.pdf"
+      "documentos": "asociados/docs/Convenios Comerciales CSH.pdf"
     },
     {
       "nombre": "Informe Labores Comisión 2024",
       "descripcion": "Informe Labores Comisión 2024",
-      "documentos": "docs/Informe Labores Comisión CSH Dic 2024.pdf"
+      "documentos": "asociados/docs/Informe Labores Comisión CSH Dic 2024.pdf"
     },
     {
       "nombre": "Informe Labores Comisión 2025",
       "descripcion": "Informe Labores Comisión 2025",
-      "documentos": "docs/Informe Labores Comisión CSH Dic 2025.pdf"
+      "documentos": "asociados/docs/Informe Labores Comisión CSH Dic 2025.pdf"
     },
     {
       "nombre": "Reglamento Sesiones Virtuales",
       "descripcion": "Reglamento Sesiones Virtuales.",
-      "documentos": "docs/Reglamento Sesiones Virtuales.pdf"
+      "documentos": "asociados/docs/Reglamento Sesiones Virtuales.pdf"
     },
     {
       "nombre": "Estatutos de la Asociación",
       "descripcion": "Estatutos de la Asociación",
-      "documentos": "docs/Estatutos de la Asociación.pdf"
+      "documentos": "asociados/docs/Estatutos de la Asociación.pdf"
     },
     {
       "nombre": "Reglamento Asambleas Generales",
       "descripcion": "Reglamento Asambleas Generales",
-      "documentos": "docs/Reglamento Asambleas Generales.pdf"
+      "documentos": "asociados/docs/Reglamento Asambleas Generales.pdf"
     },
     {
       "nombre": "Reglamento Disciplinario",
       "descripcion": "Reglamento Disciplinario",
-      "documentos": "docs/Reglamento Disciplinario.pdf"
+      "documentos": "asociados/docs/Reglamento Disciplinario.pdf"
     },
     {
       "nombre": "Reglamento Filiales",
       "descripcion": "Reglamento Filiales",
-      "documentos": "docs/Reglamento Filiales.pdf"
+      "documentos": "asociados/docs/Reglamento Filiales.pdf"
     },
     {
       "nombre": "Reglamento Interno de Elecciones",
       "descripcion": "Reglamento Interno de Elecciones",
-      "documentos": "docs/Reglamento Interno de Elecciones.pdf"
+      "documentos": "asociados/docs/Reglamento Interno de Elecciones.pdf"
     },
     {
       "nombre": "Reglamento Realización de Sesiones de Junta Directiva",
       "descripcion": "Reglamento Realización de Sesiones de Junta Directiva",
-      "documentos": "docs/Reglamento Realización de Sesiones de Junta Directiva.pdf"
+      "documentos": "asociados/docs/Reglamento Realización de Sesiones de Junta Directiva.pdf"
     }
   ]
 }
