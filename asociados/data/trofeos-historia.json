@@ -1,3 +1,711 @@
 {
-  "trofeos": []
+  "trofeos": [
+    {
+      "anio": 1912,
+      "etiqueta": "1912",
+      "titulo": "Belisario Porras",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1912 - BELISARIO PORRAS.webp"
+    },
+    {
+      "anio": 1915,
+      "etiqueta": "1915",
+      "titulo": "Alfredo González",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1915 - ALFREDO GONZALEZ.webp"
+    },
+    {
+      "anio": 1915,
+      "etiqueta": "1915",
+      "titulo": "Rafael Guirola",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1915 - RAFAEL GUIROLA.webp"
+    },
+    {
+      "anio": 1921,
+      "etiqueta": "1921",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1921 - CN.webp"
+    },
+    {
+      "anio": 1922,
+      "etiqueta": "1922",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1922 - CN.webp"
+    },
+    {
+      "anio": 1924,
+      "etiqueta": "1924",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1924 - CN.webp"
+    },
+    {
+      "anio": 1924,
+      "etiqueta": "1924",
+      "titulo": "Copa Siglo Nuevo",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1924 - COPA SIGLO NUEVO.webp"
+    },
+    {
+      "anio": 1926,
+      "etiqueta": "1926",
+      "titulo": "Fortuna 12 Setiembre",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1926 - FORTUNA 12 SETIEMBRE.webp"
+    },
+    {
+      "anio": 1926,
+      "etiqueta": "1926",
+      "titulo": "Fortuna",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1926 - FORTUNA.webp"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "Atlético Chalaco",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1927 - ATLETICO CHALACO.webp"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1927 - CN.webp"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927",
+      "titulo": "La Libertad",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1927 - LA LIBERTAD.webp"
+    },
+    {
+      "anio": 1927,
+      "etiqueta": "1927-1928",
+      "titulo": "Fiestas Cívicas",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1927 1928 - FIESTAS CIVICAS.webp"
+    },
+    {
+      "anio": 1930,
+      "etiqueta": "1930",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1930 - CN.webp"
+    },
+    {
+      "anio": 1931,
+      "etiqueta": "1931",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1931 - CN.webp"
+    },
+    {
+      "anio": 1932,
+      "etiqueta": "1932",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1932 - CN.webp"
+    },
+    {
+      "anio": 1932,
+      "etiqueta": "1932",
+      "titulo": "Hermanos González",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1932 - HERMANOS GONZALEZ.webp"
+    },
+    {
+      "anio": 1933,
+      "etiqueta": "1933",
+      "titulo": "Asturias",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1933 - ASTURIAS.webp"
+    },
+    {
+      "anio": 1933,
+      "etiqueta": "1933",
+      "titulo": "Audax",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1933 - AUDAX.webp"
+    },
+    {
+      "anio": 1933,
+      "etiqueta": "1933",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1933 - CN.webp"
+    },
+    {
+      "anio": 1935,
+      "etiqueta": "1935",
+      "titulo": "Bicentenario Virgen de los Ángeles",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1935 - BICENTENARIO VIRGEN DE LOS ANGELES.webp"
+    },
+    {
+      "anio": 1935,
+      "etiqueta": "1935",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1935 - CN.webp"
+    },
+    {
+      "anio": 1935,
+      "etiqueta": "1935",
+      "titulo": "Estadio Nacional",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1935 - ESTADIO NACIONAL.webp"
+    },
+    {
+      "anio": 1937,
+      "etiqueta": "1937",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1937 - CN.webp"
+    },
+    {
+      "anio": 1939,
+      "etiqueta": "1939",
+      "titulo": "Chevrolet",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1939 - CHEVROLET.webp"
+    },
+    {
+      "anio": 1940,
+      "etiqueta": "1940",
+      "titulo": "Panamá",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1940 - PANAMÁ.webp"
+    },
+    {
+      "anio": 1942,
+      "etiqueta": "1942",
+      "titulo": "Presidente de Guatemala",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1942 - PRESIDENTE DE GUATEMALA.webp"
+    },
+    {
+      "anio": 1947,
+      "etiqueta": "1947",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1947 - CN.webp"
+    },
+    {
+      "anio": 1948,
+      "etiqueta": "1948",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1948 - CN.webp"
+    },
+    {
+      "anio": 1951,
+      "etiqueta": "1951",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1951 - CN.webp"
+    },
+    {
+      "anio": 1952,
+      "etiqueta": "1952",
+      "titulo": "Banfield",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1952 - BANFIELD.webp"
+    },
+    {
+      "anio": 1952,
+      "etiqueta": "1952",
+      "titulo": "Sevilla",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1952 - SEVILLA.webp"
+    },
+    {
+      "anio": 1952,
+      "etiqueta": "1952",
+      "titulo": "U de Chile",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1952 - U DE CHILE.webp"
+    },
+    {
+      "anio": 1953,
+      "etiqueta": "1953",
+      "titulo": "Audax",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1953 - AUDAX.webp"
+    },
+    {
+      "anio": 1953,
+      "etiqueta": "1953",
+      "titulo": "Sport Boys",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1953 - SPORT BOYS.webp"
+    },
+    {
+      "anio": 1953,
+      "etiqueta": "1953",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/1953 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 1954,
+      "etiqueta": "1954",
+      "titulo": "Copa Costa Rica",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1954 - COPA COSTA RICA.webp"
+    },
+    {
+      "anio": 1954,
+      "etiqueta": "1954",
+      "titulo": "Marte",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1954 - MARTE.webp"
+    },
+    {
+      "anio": 1955,
+      "etiqueta": "1955",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1955 - CN.webp"
+    },
+    {
+      "anio": 1956,
+      "etiqueta": "1956",
+      "titulo": "Traube Cincuentenario Cartaginés",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1956 - TRAUBE CINCUENTENARIO CARTAGINES.webp"
+    },
+    {
+      "anio": 1957,
+      "etiqueta": "1957",
+      "titulo": "Nicaragua F",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1957 - NICARAGUA F.webp"
+    },
+    {
+      "anio": 1957,
+      "etiqueta": "1957",
+      "titulo": "Nicaragua M",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1957 - NICARAGUA M.webp"
+    },
+    {
+      "anio": 1957,
+      "etiqueta": "1957",
+      "titulo": "Rapid",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1957 - RAPID.webp"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "Independiente",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1958 - INDEPENDIENTE.webp"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "San Lorenzo de Almagro",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1958 - SAN LORENZO DE ALMAGRO.webp"
+    },
+    {
+      "anio": 1958,
+      "etiqueta": "1958",
+      "titulo": "Selección de Haití",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1958 - SELECCION DE HAITI.webp"
+    },
+    {
+      "anio": 1959,
+      "etiqueta": "1959",
+      "titulo": "Campeón de Copa",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1959 - CAMPEON DE COPA.webp"
+    },
+    {
+      "anio": 1959,
+      "etiqueta": "1959",
+      "titulo": "Copa Costa Rica",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1959 - COPA COSTA RICA.webp"
+    },
+    {
+      "anio": 1960,
+      "etiqueta": "1960",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/1960 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 1960,
+      "etiqueta": "1960",
+      "titulo": "Triangular Internacional",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1960 - TRIANGULAR INTERNACIONAL.webp"
+    },
+    {
+      "anio": 1961,
+      "etiqueta": "1961",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1961 - CN.webp"
+    },
+    {
+      "anio": 1961,
+      "etiqueta": "1961",
+      "titulo": "Cruzeiro",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1961 - CRUZEIRO.webp"
+    },
+    {
+      "anio": 1969,
+      "etiqueta": "1969",
+      "titulo": "Gornik",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1969 - GORNIK.webp"
+    },
+    {
+      "anio": 1974,
+      "etiqueta": "1974",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/1974 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 1978,
+      "etiqueta": "1978",
+      "titulo": "50 Aniversario Centro de Sport",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1978 - 50 ANIVERSARIO CENTRO DE SPORT.webp"
+    },
+    {
+      "anio": 1978,
+      "etiqueta": "1978",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1978 - CN.webp"
+    },
+    {
+      "anio": 1978,
+      "etiqueta": "1978",
+      "titulo": "Deportivo México",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1978 - DEPORTIVO MEXICO.webp"
+    },
+    {
+      "anio": 1979,
+      "etiqueta": "1979",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1979 - CN.webp"
+    },
+    {
+      "anio": 1981,
+      "etiqueta": "1981",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1981 - CN.webp"
+    },
+    {
+      "anio": 1984,
+      "etiqueta": "1984",
+      "titulo": "Triangular Sanyo",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1984 - TRIANGULAR SANYO.webp"
+    },
+    {
+      "anio": 1985,
+      "etiqueta": "1985",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1985 - CN.webp"
+    },
+    {
+      "anio": 1987,
+      "etiqueta": "1987",
+      "titulo": "Clasificatorio CONCACAF",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1987 - CLASIFICATORIO CONCACAF.webp"
+    },
+    {
+      "anio": 1988,
+      "etiqueta": "1988",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1988 - CN.webp"
+    },
+    {
+      "anio": 1988,
+      "etiqueta": "1988",
+      "titulo": "Copa Camel",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1988 - COPA CAMEL.webp"
+    },
+    {
+      "anio": 1988,
+      "etiqueta": "1988",
+      "titulo": "Semifinal Camel",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1988 - SEMIFINAL CAMEL.webp"
+    },
+    {
+      "anio": 1988,
+      "etiqueta": "1988",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/1988 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 1992,
+      "etiqueta": "1992",
+      "titulo": "Cuernavaca",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1992 - CUERNAVACA.webp"
+    },
+    {
+      "anio": 1992,
+      "etiqueta": "1992",
+      "titulo": "Triangular Internacional",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1992 - TRIANGULAR INTERNACIONAL.webp"
+    },
+    {
+      "anio": 1993,
+      "etiqueta": "1993",
+      "titulo": "Campeón Cerveza Nacional",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1993 - CAMPEON CERVEZA NACIONAL.webp"
+    },
+    {
+      "anio": 1993,
+      "etiqueta": "1993",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/1993 - CN.webp"
+    },
+    {
+      "anio": 1996,
+      "etiqueta": "1996",
+      "titulo": "90 Minutos por la Vida",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/1996 - 90 MINUTOS POR LA VIDA.webp"
+    },
+    {
+      "anio": 2000,
+      "etiqueta": "2000-2001",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2000 2001 SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2003,
+      "etiqueta": "2003-2004",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2003 2004 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2004,
+      "etiqueta": "2004",
+      "titulo": "Campeonato Nacional · Clausura",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2004 - CN CLAUSURA.webp"
+    },
+    {
+      "anio": 2004,
+      "etiqueta": "2004",
+      "titulo": "Fello Meza",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2004 - FELLO MEZA.webp"
+    },
+    {
+      "anio": 2004,
+      "etiqueta": "2004",
+      "titulo": "La Negrita",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2004 - LA NEGRITA.webp"
+    },
+    {
+      "anio": 2004,
+      "etiqueta": "2004",
+      "titulo": "Ricardo Saprissa",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2004 - RICARDO SAPRISSA.webp"
+    },
+    {
+      "anio": 2005,
+      "etiqueta": "2005",
+      "titulo": "90 Minutos por la Vida",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2005 - 90 MINUTOS POR LA VIDA.webp"
+    },
+    {
+      "anio": 2006,
+      "etiqueta": "2006",
+      "titulo": "90 Minutos por la Vida",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2006 - 90 MINUTOS POR LA VIDA.webp"
+    },
+    {
+      "anio": 2007,
+      "etiqueta": "2007",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2007 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2008,
+      "etiqueta": "2008",
+      "titulo": "90 Minutos por la Vida",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2008 - 90 MINUTOS POR LA VIDA.webp"
+    },
+    {
+      "anio": 2009,
+      "etiqueta": "2009",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2009 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2010,
+      "etiqueta": "2010",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2010 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2011,
+      "etiqueta": "2011",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2011 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2012,
+      "etiqueta": "2012",
+      "titulo": "90 Minutos por la Vida",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2012 - 90 MINUTOS POR LA VIDA.webp"
+    },
+    {
+      "anio": 2012,
+      "etiqueta": "2012",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2012 - CN.webp"
+    },
+    {
+      "anio": 2012,
+      "etiqueta": "2012",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2012 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2013,
+      "etiqueta": "2013",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2013 - CN.webp"
+    },
+    {
+      "anio": 2013,
+      "etiqueta": "2013",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2013 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2014,
+      "etiqueta": "2014",
+      "titulo": "La Negrita",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2014 - LA NEGRITA .webp"
+    },
+    {
+      "anio": 2014,
+      "etiqueta": "2014",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2014 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2015,
+      "etiqueta": "2015",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2015 - CN.webp"
+    },
+    {
+      "anio": 2016,
+      "etiqueta": "2016",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2016 - CN.webp"
+    },
+    {
+      "anio": 2017,
+      "etiqueta": "2017",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2017 - CN.webp"
+    },
+    {
+      "anio": 2018,
+      "etiqueta": "2018",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2018 - CN.webp"
+    },
+    {
+      "anio": 2018,
+      "etiqueta": "2018",
+      "titulo": "CONCACAF",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2018 - CONCACAF.webp"
+    },
+    {
+      "anio": 2018,
+      "etiqueta": "2018",
+      "titulo": "Subcampeón",
+      "categoria": "Subcampeonato",
+      "src": "trofeos/2018 - SUB CAMPEON.webp"
+    },
+    {
+      "anio": 2019,
+      "etiqueta": "2019",
+      "titulo": "Campeonato Nacional",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2019 - CN.webp"
+    },
+    {
+      "anio": 2020,
+      "etiqueta": "2020",
+      "titulo": "Campeonato Internacional Femenino",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2020 - CAMPEONATO INTERNACIONAL FEMENINO.webp"
+    },
+    {
+      "anio": 2020,
+      "etiqueta": "2020",
+      "titulo": "Campeonato Nacional Femenino",
+      "categoria": "Campeonato Nacional",
+      "src": "trofeos/2020 - CAMPEONATO NACIONAL FEMENINO.webp"
+    },
+    {
+      "anio": 2020,
+      "etiqueta": "2020",
+      "titulo": "Super Copa",
+      "categoria": "Copas y torneos",
+      "src": "trofeos/2020 - SUPER COPA.webp"
+    }
+  ]
 }
