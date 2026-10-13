@@ -38,6 +38,56 @@
     return 'fa-file-lines';
   }
 
+  // Las rutas se guardan relativas a /asociados/ ("docs/archivo.pdf"). Si alguien escribe "asociados/docs/…" se corrige solo.
+  function arreglarRuta(a) {
+    return String(a || '').trim().replace(/^\/?asociados\//i, '');
+  }
+
+  // Cuando cada documento se escribe suelto (sin categoría), se agrupa por palabra clave del título.
+  function categoriaAutomatica(titulo) {
+    var t = limpiar(titulo);
+    if (/reglament/.test(t)) return 'Reglamentos';
+    if (/informe/.test(t)) return 'Informes';
+    if (/estatuto/.test(t)) return 'Estatutos';
+    if (/\bacta/.test(t)) return 'Actas';
+    if (/financ/.test(t)) return 'Estados financieros';
+    if (/convenio/.test(t)) return 'Convenios';
+    return 'Otros documentos';
+  }
+
+  // Acepta tres formas de escribir data/documentos.json:
+  //  1) categorias: [{ nombre, documentos: [ {titulo, archivo, fecha, descripcion}, … ] }]   (la recomendada)
+  //  2) categorias: [{ nombre, descripcion, documentos: "docs/archivo.pdf" }]               (un documento por entrada)
+  //  3) documentos: [ {titulo, archivo, categoria, …} ]                                      (lista plana)
+  function aCategorias(datos) {
+    var porNombre = {}, orden = [];
+    function categoria(nombre, descripcion) {
+      if (!porNombre[nombre]) { porNombre[nombre] = { nombre: nombre, descripcion: descripcion || '', documentos: [] }; orden.push(nombre); }
+      return porNombre[nombre];
+    }
+    (datos.categorias || []).forEach(function (c) {
+      if (Array.isArray(c.documentos)) {
+        var cat = categoria(c.nombre, c.descripcion);
+        c.documentos.forEach(function (d) { cat.documentos.push(d); });
+      } else if (typeof c.documentos === 'string' && c.documentos) {
+        categoria(categoriaAutomatica(c.nombre)).documentos.push({ titulo: c.nombre, descripcion: c.descripcion, archivo: c.documentos, fecha: c.fecha });
+      }
+    });
+    (datos.documentos || []).forEach(function (d) { categoria(d.categoria || 'Documentos').documentos.push(d); });
+
+    return orden.map(function (n) {
+      var c = porNombre[n];
+      c.documentos = c.documentos.filter(function (d) { return d && d.titulo && d.archivo; }).map(function (d) {
+        var desc = d.descripcion || '';
+        // si la descripción solo repite el título, no se muestra dos veces
+        var a = limpiar(desc).replace(/[^a-z0-9]/g, ''), b = limpiar(d.titulo).replace(/[^a-z0-9]/g, '');
+        if (a && (b.indexOf(a) !== -1 || a.indexOf(b) !== -1)) desc = '';
+        return { titulo: d.titulo, descripcion: desc, archivo: arreglarRuta(d.archivo), fecha: d.fecha };
+      }).sort(function (x, y) { return String(y.fecha || '').localeCompare(String(x.fecha || '')); });
+      return c;
+    }).filter(function (c) { return c.documentos.length; });
+  }
+
   function filaDocumento(d) {
     var meta = [fecha(d.fecha), d.descripcion].filter(Boolean).map(esc).join(' · ');
     var url = /^https?:\/\//.test(d.archivo) ? d.archivo : encodeURI(d.archivo);
@@ -62,13 +112,7 @@
   fetch(cont.dataset.fuente, { credentials: 'same-origin', cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw new Error('no se pudo leer la lista'); return r.json(); })
     .then(function (datos) {
-      categorias = (datos.categorias || []).map(function (c) {
-        return {
-          nombre: c.nombre,
-          descripcion: c.descripcion || '',
-          documentos: (c.documentos || []).slice().sort(function (a, b) { return String(b.fecha || '').localeCompare(String(a.fecha || '')); })
-        };
-      }).filter(function (c) { return c.documentos.length; });
+      categorias = aCategorias(datos);
 
       if (!categorias.length) { cont.innerHTML = '<p class="empty-note">' + esc(vacio) + '</p>'; return; }
 
