@@ -1,16 +1,11 @@
 {
   "director": {
-    "nombre": "Paulo César Wanchope",
+    "nombre": "Jafet Soto Molina",
     "cargo": "Director técnico",
     "foto": "IMG/cuerpo-tecnico/DT.webp",
-    "bio": "Exfutbolista y referente del fútbol costarricense, cuenta con una amplia trayectoria tanto nacional como internacional. Formado en las ligas menores del Herediano, regresó en 2026 para asumir por tercera ocasión la dirección técnica del conjunto rojiamarillo. A lo largo de su carrera como entrenador también ha dirigido a la Selección Nacional de Costa Rica, Saprissa, Cartaginés y Pérez Zeledón."
+    "bio": "Jafet Soto Molina es un exfutbolista, entrenador y dirigente costarricense, nacido el 1 de abril de 1976. Identificado profundamente con el Club Sport Herediano, ha desarrollado gran parte de su trayectoria deportiva y profesional ligado a la institución rojiamarilla, tanto dentro como fuera de la cancha. Como director técnico, ha conquistado títulos nacionales y la Liga Concacaf de 2018. En octubre de 2026, asumió nuevamente la dirección técnica del equipo florense tras la salida de Paulo César Wanchope, mientras continúa desempeñándose como presidente del club."
   },
   "staff": [
-    {
-      "nombre": "Jafet Soto",
-      "cargo": "Director técnico",
-      "foto": "IMG/cuerpo-tecnico/asistente-1.jpg"
-    },
     {
       "nombre": "Yendrick Ruiz",
       "cargo": "Asistente técnico",
