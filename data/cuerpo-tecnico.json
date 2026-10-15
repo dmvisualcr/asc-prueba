@@ -12,6 +12,11 @@
       "foto": "IMG/cuerpo-tecnico/asistente-2.jpg"
     },
     {
+      "nombre": "óscar Esteban Granados",
+      "cargo": "Asistente técnico",
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
+    },
+    {
       "nombre": "Miguel Segura",
       "cargo": "Entrenador de Porteros",
       "foto": "IMG/cuerpo-tecnico/porteros.jpg"
@@ -26,5 +31,30 @@
       "cargo": "Fisioterapeuta",
       "foto": "IMG/cuerpo-tecnico/medico.jpg"
     }
+    ,
+    {
+      "nombre": "Álvaro Mora",
+      "cargo": "Médico",
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
+    }
+    ,
+    {
+      "nombre": "Jorge Espinoza",
+      "cargo": "Masajista",
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
+    }
+    ,
+    {
+      "nombre": "Javier Arroyo",
+      "cargo": "Utilero",
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
+    }
+    ,
+    {
+      "nombre": "Geovanny Barrantes",
+      "cargo": "Utilero",
+      "foto": "IMG/cuerpo-tecnico/medico.jpg"
+    }
+    
   ]
 }
