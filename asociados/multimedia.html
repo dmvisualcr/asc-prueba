@@ -53,6 +53,52 @@
             <h2>Galería y Contenido Exclusivo</h2>
             <p>Revive los mejores momentos del Club con nuestra galería exclusiva y videos detrás de cámaras.</p>
 
+            <!-- Reproductor musical para asociados -->
+            <section class="musica-asociados" aria-labelledby="musica-titulo">
+                <div class="musica-card">
+                    <div class="musica-identidad">
+                        <span class="musica-icono" aria-hidden="true"><i class="fas fa-music"></i></span>
+                        <div>
+                            <p class="musica-etiqueta">EXCLUSIVO PARA ASOCIADOS</p>
+                            <h2 id="musica-titulo">Música Rojiamarilla</h2>
+                            <p class="musica-descripcion">Elegí tu canción y disfrutá de nuestra pasión.</p>
+                        </div>
+                    </div>
+
+                    <div class="musica-controles">
+                        <div class="musica-cancion-actual">
+                            <span id="musica-numero">CANCIÓN 1 DE 5</span>
+                            <strong id="musica-nombre">Canción 1</strong>
+                        </div>
+                        <div class="musica-botones">
+                            <button type="button" id="musica-anterior" aria-label="Canción anterior" title="Canción anterior"><i class="fas fa-backward-step"></i></button>
+                            <button type="button" id="musica-play" class="musica-play" aria-label="Reproducir" title="Reproducir"><i class="fas fa-play"></i></button>
+                            <button type="button" id="musica-siguiente" aria-label="Siguiente canción" title="Siguiente canción"><i class="fas fa-forward-step"></i></button>
+                        </div>
+                        <div class="musica-progreso">
+                            <span id="musica-tiempo-actual">0:00</span>
+                            <input id="musica-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la canción">
+                            <span id="musica-duracion">0:00</span>
+                        </div>
+                        <div class="musica-volumen">
+                            <i class="fas fa-volume-low" aria-hidden="true"></i>
+                            <input id="musica-volumen" type="range" min="0" max="1" value="0.8" step="0.05" aria-label="Volumen">
+                            <i class="fas fa-volume-high" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="musica-lista" aria-label="Seleccionar canción">
+                        <button type="button" class="musica-pista activa" data-pista="0" aria-pressed="true"><span>01</span><strong>Canción 1</strong><i class="fas fa-play" aria-hidden="true"></i></button>
+                        <button type="button" class="musica-pista" data-pista="1" aria-pressed="false"><span>02</span><strong>Canción 2</strong><i class="fas fa-play" aria-hidden="true"></i></button>
+                        <button type="button" class="musica-pista" data-pista="2" aria-pressed="false"><span>03</span><strong>Canción 3</strong><i class="fas fa-play" aria-hidden="true"></i></button>
+                        <button type="button" class="musica-pista" data-pista="3" aria-pressed="false"><span>04</span><strong>Canción 4</strong><i class="fas fa-play" aria-hidden="true"></i></button>
+                        <button type="button" class="musica-pista" data-pista="4" aria-pressed="false"><span>05</span><strong>Canción 5</strong><i class="fas fa-play" aria-hidden="true"></i></button>
+                    </div>
+                    <audio id="musica-audio" preload="none"></audio>
+                    <p class="musica-nota">La música solo se reproduce cuando vos lo decidís.</p>
+                </div>
+            </section>
+
             <section id="albumes" class="albumes-section">
                 <div class="albumes-wrap">
                     <h2>Álbumes de fotos</h2>
@@ -317,5 +363,110 @@
     <script src="../JS/asociados.js"></script>
     <script src="../JS/albumes.js"></script>
     <script src="../JS/carruseles.js"></script>
+    <script>
+    (() => {
+        const audio = document.getElementById('musica-audio');
+        if (!audio) return;
+
+        const pistas = [
+            { nombre: 'Canción 1', archivo: 'canciones/track1.mp3' },
+            { nombre: 'Canción 2', archivo: 'canciones/track2.mp3' },
+            { nombre: 'Canción 3', archivo: 'canciones/track3.mp3' },
+            { nombre: 'Canción 4', archivo: 'canciones/track4.mp3' },
+            { nombre: 'Canción 5', archivo: 'canciones/track5.mp3' }
+        ];
+        const playBtn = document.getElementById('musica-play');
+        const playIcon = playBtn.querySelector('i');
+        const nombre = document.getElementById('musica-nombre');
+        const numero = document.getElementById('musica-numero');
+        const seek = document.getElementById('musica-seek');
+        const volumen = document.getElementById('musica-volumen');
+        const tiempoActual = document.getElementById('musica-tiempo-actual');
+        const duracion = document.getElementById('musica-duracion');
+        const botonesPista = [...document.querySelectorAll('.musica-pista')];
+        let actual = 0;
+
+        const formatoTiempo = (segundos) => {
+            if (!Number.isFinite(segundos)) return '0:00';
+            const min = Math.floor(segundos / 60);
+            const seg = Math.floor(segundos % 60).toString().padStart(2, '0');
+            return `${min}:${seg}`;
+        };
+
+        function actualizarPista() {
+            nombre.textContent = pistas[actual].nombre;
+            numero.textContent = `CANCIÓN ${actual + 1} DE ${pistas.length}`;
+            botonesPista.forEach((boton, indice) => {
+                const activa = indice === actual;
+                boton.classList.toggle('activa', activa);
+                boton.setAttribute('aria-pressed', String(activa));
+                const icono = boton.querySelector('i');
+                if (icono) icono.className = activa && !audio.paused ? 'fas fa-volume-high' : 'fas fa-play';
+            });
+        }
+
+        function cargarPista(indice, reproducir = false) {
+            actual = (indice + pistas.length) % pistas.length;
+            audio.pause();
+            audio.src = pistas[actual].archivo;
+            audio.load();
+            seek.value = 0;
+            tiempoActual.textContent = '0:00';
+            duracion.textContent = '0:00';
+            actualizarPista();
+            actualizarBoton();
+            if (reproducir) {
+                audio.play().then(actualizarBoton).catch(() => actualizarBoton());
+            }
+        }
+
+        function actualizarBoton() {
+            const reproduciendo = !audio.paused;
+            playIcon.className = reproduciendo ? 'fas fa-pause' : 'fas fa-play';
+            playBtn.setAttribute('aria-label', reproduciendo ? 'Pausar' : 'Reproducir');
+            playBtn.title = reproduciendo ? 'Pausar' : 'Reproducir';
+            actualizarPista();
+        }
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                if (!audio.src) audio.src = pistas[actual].archivo;
+                audio.play().then(actualizarBoton).catch(actualizarBoton);
+            } else {
+                audio.pause();
+                actualizarBoton();
+            }
+        });
+        document.getElementById('musica-anterior').addEventListener('click', () => cargarPista(actual - 1, true));
+        document.getElementById('musica-siguiente').addEventListener('click', () => cargarPista(actual + 1, true));
+        botonesPista.forEach((boton) => boton.addEventListener('click', () => cargarPista(Number(boton.dataset.pista), true)));
+        volumen.addEventListener('input', () => { audio.volume = Number(volumen.value); });
+        audio.volume = Number(volumen.value);
+        audio.addEventListener('timeupdate', () => {
+            if (Number.isFinite(audio.duration) && audio.duration > 0) {
+                seek.value = (audio.currentTime / audio.duration) * 100;
+                duracion.textContent = formatoTiempo(audio.duration);
+            }
+            tiempoActual.textContent = formatoTiempo(audio.currentTime);
+        });
+        seek.addEventListener('input', () => {
+            if (Number.isFinite(audio.duration) && audio.duration > 0) {
+                audio.currentTime = (Number(seek.value) / 100) * audio.duration;
+            }
+        });
+        audio.addEventListener('play', actualizarBoton);
+        audio.addEventListener('pause', actualizarBoton);
+        audio.addEventListener('ended', () => {
+            if (actual < pistas.length - 1) cargarPista(actual + 1, true);
+            else { audio.currentTime = 0; actualizarBoton(); }
+        });
+        audio.addEventListener('error', () => {
+            nombre.textContent = 'No se pudo cargar el audio';
+        });
+
+        cargarPista(0, false);
+    })();
+    </script>
+
 </body>
 </html>

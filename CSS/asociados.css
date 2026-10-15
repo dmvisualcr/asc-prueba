@@ -1262,3 +1262,137 @@
         height: 180px;
     }
 }
+
+
+/* ---------- Reproductor musical de Multimedia ---------- */
+.musica-asociados {
+    max-width: 920px;
+    margin: 0 auto 52px;
+    padding: 0 20px;
+}
+.musica-card {
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    border-top: 4px solid var(--amarillo-dorado);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(0,0,0,.07);
+}
+.musica-identidad {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 26px 20px;
+    background: #202020;
+    color: #fff;
+}
+.musica-icono {
+    display: flex;
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--amarillo-dorado);
+    color: #202020;
+    font-size: 22px;
+}
+.musica-etiqueta {
+    margin: 0 0 5px;
+    color: var(--amarillo-dorado);
+    font: 800 10px/1.4 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+}
+.musica-identidad h2 {
+    margin: 0;
+    color: #fff;
+    font: 800 22px/1.25 'Montserrat', sans-serif;
+}
+.musica-descripcion {
+    margin: 6px 0 0;
+    color: #dedede;
+    font-size: 13px;
+}
+.musica-controles { padding: 22px 26px 18px; }
+.musica-cancion-actual { display: flex; flex-direction: column; gap: 4px; }
+.musica-cancion-actual span {
+    color: #777;
+    font: 800 10px 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+.musica-cancion-actual strong {
+    color: #222;
+    font: 700 17px 'Montserrat', sans-serif;
+}
+.musica-botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin: 18px 0;
+}
+.musica-botones button {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #252525;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+.musica-botones button:hover { background: #e5e5e5; transform: scale(1.04); }
+.musica-botones button.musica-play {
+    width: 52px;
+    height: 52px;
+    background: var(--rojo);
+    color: #fff;
+    font-size: 18px;
+}
+.musica-botones button.musica-play:hover { background: #9e0013; }
+.musica-progreso { display: flex; align-items: center; gap: 12px; }
+.musica-progreso span { min-width: 34px; color: #666; font-size: 11px; font-variant-numeric: tabular-nums; }
+.musica-progreso input, .musica-volumen input {
+    min-width: 0;
+    accent-color: var(--rojo);
+    cursor: pointer;
+}
+.musica-progreso input { flex: 1; }
+.musica-volumen { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: 13px; color: #666; }
+.musica-volumen input { width: 120px; }
+.musica-lista { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; padding: 0 26px 22px; }
+.musica-pista {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 12px 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fafafa;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+}
+.musica-pista span { color: #888; font: 700 11px 'Montserrat', sans-serif; }
+.musica-pista strong { flex: 1; overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.musica-pista i { color: #888; font-size: 10px; }
+.musica-pista:hover, .musica-pista.activa { border-color: var(--amarillo-dorado); background: #fff8e7; }
+.musica-pista.activa span, .musica-pista.activa i { color: var(--rojo); }
+.musica-nota { margin: 0; padding: 12px 20px; border-top: 1px solid #eee; color: #777; font-size: 11px; text-align: center; }
+@media (max-width: 700px) {
+    .musica-identidad { padding: 20px; }
+    .musica-controles { padding: 20px; }
+    .musica-lista { grid-template-columns: 1fr; padding: 0 20px 20px; }
+    .musica-pista { padding: 13px 14px; }
+    .musica-pista strong { font-size: 13px; }
+    .musica-volumen input { width: 100px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .musica-botones button, .musica-pista { transition: none; }
+}
