@@ -12,6 +12,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Beneficios de asociados: conserva la línea visual clara del index */
+.join-section .join-points-expanded {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 42px;
+}
+.join-section .join-points-expanded .join-point {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 205px;
+    padding: 28px 26px;
+    background: #fff;
+    border-left: 4px solid var(--amarillo-dorado, #e5b83d);
+    border-radius: 13px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .055);
+    text-align: left;
+}
+.join-section .join-points-expanded .join-point > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #1d1d1d;
+    color: var(--amarillo-dorado, #e5b83d);
+    font-size: 21px;
+}
+.join-section .join-points-expanded .join-point h3 {
+    margin: 0 0 9px;
+    color: #171717;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.join-section .join-points-expanded .join-point p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.75;
+}
+@media (max-width: 900px) {
+    .join-section .join-points-expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+    .join-section .join-points-expanded { grid-template-columns: 1fr; gap: 16px; }
+    .join-section .join-points-expanded .join-point { min-height: 0; padding: 23px 21px; }
+}
+</style>
 </head>
 <body>
     <header>
@@ -91,21 +144,46 @@
         <div class="join-inner">
             <h2 class="section-title">Ser asociado</h2>
             <p class="join-lead">Los asociados participan en las decisiones del club y viven el equipo de cerca. Estos son algunos beneficios; el detalle, los documentos y el contenido exclusivo están en la zona de asociados.</p>
-            <div class="join-points">
+            <div class="join-points join-points-expanded">
                 <div class="join-point">
-                    <i class="fas fa-ticket-alt"></i>
+                    <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+                    <h3>Tu silla en el nuevo Rosabal</h3>
+                    <p>Espacio asegurado y numerado en el nuevo Estadio Eladio Rosabal Cordero, por toda la anualidad, con localidades, sectores y butacas asignadas.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-trophy" aria-hidden="true"></i>
                     <h3>Boleto asegurado</h3>
-                    <p>Ingreso a los partidos donde el Club Sport Herediano sea local, incluidas semifinales y finales.</p>
+                    <p>Entrada garantizada a los partidos como local: fase regular, semifinales, finales, gran final y juegos de la Liga de Campeones de CONCACAF.</p>
                 </div>
                 <div class="join-point">
-                    <i class="fas fa-handshake-angle"></i>
-                    <h3>Voz y voto</h3>
-                    <p>Participás en las asambleas y podés elegir y ser electo para la Junta Directiva.</p>
+                    <i class="fas fa-play" aria-hidden="true"></i>
+                    <h3>Actos inaugurales</h3>
+                    <p>Acceso a los eventos deportivos inaugurales del nuevo estadio incluidos en la anualidad, junto con torneos locales e internacionales.</p>
                 </div>
                 <div class="join-point">
-                    <i class="fas fa-tags"></i>
-                    <h3>Descuentos y rifas</h3>
-                    <p>Descuentos en las tiendas oficiales y en comercios aliados, y promociones exclusivas.</p>
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <h3>Voz y voto en el club</h3>
+                    <p>Derecho a participar en Asambleas Ordinarias y Extraordinarias, y a elegir o ser electo para conformar la Junta Directiva del CSH.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                    <h3>Descuentos en tiendas y comercios</h3>
+                    <p>Beneficios especiales en compras dentro de las tiendas oficiales y en una red de comercios aliados en todo el país.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-wifi" aria-hidden="true"></i>
+                    <h3>App exclusiva y Wi-Fi en el estadio</h3>
+                    <p>App dedicada para asociados y Wi-Fi ilimitado en cada evento del nuevo Rosabal Cordero.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    <h3>Actividades exclusivas</h3>
+                    <p>Eventos privados, rifas, promociones y experiencias diseñadas solo para asociados durante toda la temporada.</p>
+                </div>
+                <div class="join-point">
+                    <i class="fas fa-house" aria-hidden="true"></i>
+                    <h3>Financiamiento</h3>
+                    <p>Opción de tasa 0 con el BAC para pagar tu membresía de forma cómoda.</p>
                 </div>
             </div>
             <div class="join-actions">
