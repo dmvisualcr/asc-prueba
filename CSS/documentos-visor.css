@@ -35,3 +35,56 @@ body.pdf-viewer-open { overflow: hidden; }
   .pdf-v-btn { min-width: 32px; min-height: 34px; padding: 6px 8px; }
   .pdf-viewer-body { padding: 8px; }
 }
+
+/* Ajustes visuales: controles completos y documento centrado. */
+.pdf-viewer-modal {
+  padding: 24px;
+  box-sizing: border-box;
+}
+.pdf-viewer-panel {
+  width: min(1180px, 100%);
+  height: min(88vh, 900px);
+  min-height: 360px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+.pdf-viewer-header,
+.pdf-viewer-toolbar {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.pdf-viewer-header {
+  min-height: 54px;
+  padding: 12px 18px;
+  border-bottom: 2px solid #c8102e;
+}
+.pdf-viewer-toolbar {
+  min-height: 54px;
+  padding: 9px 12px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.pdf-viewer-body {
+  min-height: 0;
+  padding: 20px;
+  background: #e7e7e7;
+}
+#pdf-viewer-canvas {
+  max-width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  background: #fff;
+  box-shadow: 0 3px 14px rgba(0,0,0,.16);
+}
+.pdf-v-btn {
+  flex: 0 0 auto;
+  text-decoration: none;
+  line-height: 1.2;
+}
+@media (max-width: 600px) {
+  .pdf-viewer-modal { padding: 0; }
+  .pdf-viewer-panel { height: 100dvh; min-height: 0; }
+  .pdf-viewer-header { min-height: 50px; padding: 10px 12px; }
+  .pdf-viewer-toolbar { min-height: 50px; }
+  .pdf-viewer-body { padding: 10px; }
+}
