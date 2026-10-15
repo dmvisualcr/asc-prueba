@@ -65,8 +65,9 @@
   function mostrarActual() {
     var f = lista[actual];
     imagen.src = ruta(f.src);
-    imagen.alt = f.titulo || ('Imagen ' + (actual + 1) + ' de ' + lista.length);
-    pie.textContent = (actual + 1) + ' / ' + lista.length + (f.titulo ? ' · ' + f.titulo : '');
+    imagen.alt = f.pie || f.titulo || ('Imagen ' + (actual + 1) + ' de ' + lista.length);
+    var texto = f.pie || f.titulo;
+    pie.textContent = (actual + 1) + ' / ' + lista.length + (texto ? ' · ' + texto : '');
     [actual - 1, actual + 1].forEach(function (i) { if (lista[i]) new Image().src = ruta(lista[i].src); });
   }
 
@@ -116,70 +117,87 @@
 
   /* ============ Trofeos en la Historia del Herediano (multimedia.html) ============ */
   var gridTrofeos = document.getElementById('th-grid');
-  if (gridTrofeos) {
+  if (gridTrofeos && gridTrofeos.dataset.modo === 'fila') {
+    // Vista corta: una sola fila con los trofeos más recientes y un botón para ver todos
+    var seccionFila = document.getElementById('trofeos-historia');
+    var verTodos = document.getElementById('th-ver-todos');
+    leer('data/trofeos-historia.json').then(function (d) {
+      var todos = (d.trofeos || []).slice().sort(function (a, b) { return (b.anio || 0) - (a.anio || 0); });
+      if (!todos.length) {
+        gridTrofeos.innerHTML = '<p class="empty-note">Pronto publicaremos aquí los trofeos de la historia del club.</p>';
+        if (verTodos) verTodos.parentNode.hidden = true;
+        return;
+      }
+      var items = todos.slice(0, Number(gridTrofeos.dataset.max) || 8).map(function (t) {
+        return { src: t.src, etiqueta: t.etiqueta, titulo: t.titulo, pie: t.etiqueta + ' · ' + t.titulo };
+      });
+      gridTrofeos.innerHTML = items.map(function (t, i) {
+        return '<button type="button" class="hist-card" data-i="' + i + '" aria-label="Ver ' + esc(t.pie) + '">' +
+          '<img src="' + esc(ruta(t.src)) + '" alt="" loading="lazy" decoding="async">' +
+          '<span class="hist-year">' + esc(t.etiqueta) + '</span>' +
+          '<span class="hist-name">' + esc(t.titulo) + '</span></button>';
+      }).join('');
+      if (verTodos) verTodos.textContent = 'Ver todos los trofeos (' + todos.length + ')';
+
+      // Una sola fila: se muestran tantas tarjetas como columnas tenga la pantalla (6 en computadora, 2 en celular…)
+      var tarjetas = [].slice.call(gridTrofeos.querySelectorAll('.hist-card'));
+      var columnas = function () { return Math.max(1, getComputedStyle(gridTrofeos).gridTemplateColumns.split(' ').length); };
+      var ajustar = function () { var n = columnas(); tarjetas.forEach(function (el, i) { el.hidden = i >= n; }); };
+      ajustar();
+      window.addEventListener('resize', ajustar);
+
+      gridTrofeos.addEventListener('click', function (e) {
+        var b = e.target.closest('.hist-card');
+        if (b) abrirVisor(items.slice(0, columnas()), Number(b.dataset.i), b);
+      });
+    }).catch(function () {
+      if (seccionFila) seccionFila.hidden = true;
+    });
+  } else if (gridTrofeos) {
     var secTrofeos = document.getElementById('trofeos-historia');
     var barra = document.getElementById('th-barra');
     var buscar = document.getElementById('th-buscar');
     var chips = document.getElementById('th-chips');
     var mas = document.getElementById('th-mas');
-    var botonAlbum = mas ? mas.querySelector('button') : null;
-    var trofeos = [], visibles = [], mostrados = 0, categoria = 'Todos', consulta = '', albumAbierto = false;
-    var TROFEOS_DESTACADOS = 4;
+    var trofeos = [], visibles = [], mostrados = 0, categoria = 'Todos', consulta = '';
 
-    function tarjetaTrofeo(t, i) {
-      return '<button type="button" class="hist-card" data-i="' + i + '" aria-label="Ver ' + esc(t.etiqueta + ' ' + t.titulo) + '">' +
-        '<img src="' + esc(ruta(t.src)) + '" alt="" loading="lazy" decoding="async">' +
-        '<span class="hist-year">' + esc(t.etiqueta) + '</span>' +
-        '<span class="hist-name">' + esc(t.titulo) + '</span></button>';
-    }
-
-    function pintarMas() {
+    var pintarMas = function () {
       var tanda = visibles.slice(mostrados, mostrados + TROFEOS_POR_TANDA);
       gridTrofeos.insertAdjacentHTML('beforeend', tanda.map(function (t, i) {
-        return tarjetaTrofeo(t, mostrados + i);
+        return '<button type="button" class="hist-card" data-i="' + (mostrados + i) + '" aria-label="Ver ' + esc(t.etiqueta + ' ' + t.titulo) + '">' +
+          '<img src="' + esc(ruta(t.src)) + '" alt="" loading="lazy" decoding="async">' +
+          '<span class="hist-year">' + esc(t.etiqueta) + '</span>' +
+          '<span class="hist-name">' + esc(t.titulo) + '</span></button>';
       }).join(''));
       mostrados += tanda.length;
-      mas.hidden = !albumAbierto || mostrados >= visibles.length;
-    }
+      mas.hidden = mostrados >= visibles.length;
+    };
 
-    function filtrar() {
+    var filtrar = function () {
       var q = limpiar(consulta);
       visibles = trofeos.filter(function (t) {
         return (categoria === 'Todos' || t.categoria === categoria) &&
           (!q || limpiar(t.etiqueta + ' ' + t.titulo).indexOf(q) !== -1);
-      }).map(function (t) {
-        return { src: t.src, etiqueta: t.etiqueta, titulo: t.titulo, categoria: t.categoria, anio: t.anio };
-      });
+      }).map(function (t) { return { src: t.src, etiqueta: t.etiqueta, titulo: t.titulo, pie: t.etiqueta + ' · ' + t.titulo, categoria: t.categoria, anio: t.anio }; });
       gridTrofeos.innerHTML = '';
       mostrados = 0;
+      mas.hidden = true;
       if (!visibles.length) {
         gridTrofeos.innerHTML = '<p class="empty-note">No encontramos trofeos con esa búsqueda.</p>';
-        mas.hidden = true;
         return;
       }
       pintarMas();
-    }
-
-    function mostrarDestacados() {
-      albumAbierto = false;
-      gridTrofeos.classList.remove('is-expanded');
-      barra.hidden = true;
-      mas.hidden = false;
-      botonAlbum.textContent = 'Ver todos los trofeos';
-      gridTrofeos.innerHTML = trofeos.slice(0, TROFEOS_DESTACADOS).map(function (t, i) {
-        return tarjetaTrofeo(t, i);
-      }).join('');
-    }
+    };
 
     leer('data/trofeos-historia.json').then(function (d) {
       trofeos = (d.trofeos || []).slice().sort(function (a, b) { return (a.anio || 0) - (b.anio || 0); });
       if (!trofeos.length) {
         gridTrofeos.innerHTML = '<p class="empty-note">Pronto publicaremos aquí los trofeos de la historia del club.</p>';
-        mas.hidden = true;
         return;
       }
       var cats = [];
       trofeos.forEach(function (t) { if (cats.indexOf(t.categoria) === -1) cats.push(t.categoria); });
+      barra.hidden = false;
       if (cats.length > 1) {
         chips.innerHTML = ['Todos'].concat(cats).map(function (c) {
           var n = c === 'Todos' ? trofeos.length : trofeos.filter(function (t) { return t.categoria === c; }).length;
@@ -194,32 +212,12 @@
         });
       }
       buscar.addEventListener('input', function () { consulta = buscar.value; filtrar(); });
-      botonAlbum.addEventListener('click', function () {
-        if (!albumAbierto) {
-          albumAbierto = true;
-          gridTrofeos.classList.add('is-expanded');
-          barra.hidden = false;
-          botonAlbum.textContent = 'Cerrar álbum de trofeos';
-          filtrar();
-        } else {
-          consulta = '';
-          buscar.value = '';
-          categoria = 'Todos';
-          chips.querySelectorAll('.news-chip').forEach(function (x) {
-            x.setAttribute('aria-pressed', String(x.dataset.cat === 'Todos'));
-          });
-          mostrarDestacados();
-        }
-      });
+      mas.querySelector('button').addEventListener('click', pintarMas);
       gridTrofeos.addEventListener('click', function (e) {
         var b = e.target.closest('.hist-card');
-        if (!b) return;
-        var items = albumAbierto ? visibles : trofeos.slice(0, TROFEOS_DESTACADOS).map(function (t) {
-          return { src: t.src, etiqueta: t.etiqueta, titulo: t.titulo, categoria: t.categoria, anio: t.anio };
-        });
-        abrirVisor(items, Number(b.dataset.i), b);
+        if (b) abrirVisor(visibles, Number(b.dataset.i), b);
       });
-      mostrarDestacados();
+      filtrar();
     }).catch(function () {
       if (secTrofeos) secTrofeos.hidden = true;
     });

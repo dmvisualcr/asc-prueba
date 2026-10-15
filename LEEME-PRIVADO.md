@@ -9,7 +9,9 @@ Todo lo que está dentro de `/asociados/` solo se entrega a quien tenga sesión 
 | `asociados/index.html` | Inicio: accesos a cada sección + datos del asociado + renovar por WhatsApp |
 | `asociados/beneficios.html` | Beneficios, comercios aliados y boletín de convenios (PDF) |
 | `asociados/multimedia.html` | Álbumes de fotos, archivo fotográfico, cápsulas históricas y expresidentes |
-| (dentro de Multimedia) | "Trofeos en la Historia del Herediano": cuadrícula con buscador, filtros y visor |
+| (dentro de Multimedia) | "Trofeos en la Historia del Herediano": una fila con los más recientes y botón "Ver todos los trofeos" |
+| `asociados/trofeos.html` | Los 101 trofeos, con buscador, filtros por tipo y visor |
+| (dentro de Multimedia) | "En busca de Julio Gómez en el Centenario Herediano": foto, historia y enlaces |
 | `asociados/album.html` | Un álbum: cuadrícula de fotos y visor a pantalla completa |
 | `asociados/documentos.html` | Documentos con buscador y categorías |
 | `asociados/buzon.html` | Buzón de ideas (formulario de Google) |
@@ -77,6 +79,18 @@ Cada trofeo se clasifica solo en uno de tres tipos: **Campeonato Nacional** (CN,
 
 **Corregir un título a mano:** abre `asociados/data/trofeos-historia.json`, cambia el texto de `"titulo"` (o `"categoria"`) y guarda.
 Al volver a correr el programa tus correcciones se respetan. Si un nombre de archivo no empieza con el año, el programa lo avisa y no lo agrega.
+
+## En busca de Julio Gómez (Multimedia)
+Va entre las cápsulas históricas y los expresidentes. La foto es `IMG/Julio_Gomez.jpg`.
+Para cambiar el texto o los enlaces, abre `asociados/multimedia.html` y busca (Ctrl + F) `julio-gomez`.
+- Cada enlace es una línea `<li>…</li>`. El nombre que se muestra va dentro de `<strong>` (arriba) y `<small>` (abajo).
+- Para agregar un enlace, copia una línea `<li>…</li>` completa y cambia el `href` y los textos.
+- Los íconos: `fab fa-facebook-f` (Facebook), `fab fa-youtube` (YouTube), `fas fa-newspaper` (nota de prensa).
+
+## Trofeos: fila corta y página completa
+En Multimedia se ve una sola fila con los trofeos más **recientes** (tantos como caben: 6 en computadora, 2 en celular).
+El botón "Ver todos los trofeos" abre `trofeos.html` con los 101. Para mostrar otros trofeos en la fila, o cuántos,
+hay que cambiar `data-max="8"` en `multimedia.html` (cantidad máxima) o pedirme otro criterio de orden.
 
 ## WhatsApp de la Fiscalía
 En `asociados/nosotros.html`, busca (Ctrl + F) `50622618489`. Por ahora es el WhatsApp de la asociación.
