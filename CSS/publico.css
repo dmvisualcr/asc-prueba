@@ -1640,6 +1640,14 @@ img.sin-foto {
   line-height: 1.15;
   text-transform: uppercase;
 }
+.force-section .force-subtitle {
+  margin: 13px 0 0;
+  color: var(--amarillo-dorado);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
 .force-section p {
   max-width: 650px;
   margin: 16px auto 0;
