@@ -118,5 +118,61 @@
       "foto": "IMG/jugadores/25.webp",
       "destacado": false
     }
+    ,
+    {
+      "numero": 88,
+      "nombre": "Ariel Arauz",
+      "posicion": "Mediocentro",
+      "foto": "IMG/jugadores/88.webp",
+      "destacado": false
+    }
+    ,
+    {
+      "numero": 80,
+      "nombre": "Deyverjen Matthews",
+      "posicion": "Delantero",
+      "foto": "IMG/jugadores/80.webp",
+      "destacado": false
+    }
+    ,
+    {
+      "numero": 20,
+      "nombre": "Reggy Rivera",
+      "posicion": "Lateral Derecho",
+      "foto": "IMG/jugadores/20.webp",
+      "destacado": false
+    }
+    ,
+    {
+      "numero": 32,
+      "nombre": "Abner Hudson",
+      "posicion": "Delantero",
+      "foto": "IMG/jugadores/32.webp",
+      "destacado": false
+    }
+    ,
+    {
+      "numero": 33,
+      "nombre": "Fernando Lesme",
+      "posicion": "Delantero",
+      "foto": "IMG/jugadores/3.webp",
+      "destacado": false
+    }
+    ,
+    {
+      "numero": 34,
+      "nombre": "Jesús Henestrosa",
+      "posicion": "Delantero",
+      "foto": "IMG/jugadores/34.webp",
+      "destacado": false
+    }
+    ,
+    {
+      "numero": 1,
+      "nombre": "Alenzandre Lezcano",
+      "posicion": "Portero",
+      "foto": "IMG/jugadores/1.webp",
+      "destacado": false
+    }
   ]
 }
