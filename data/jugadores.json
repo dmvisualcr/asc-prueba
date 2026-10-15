@@ -14,6 +14,13 @@
       "destacado": false
     },
     {
+      "numero": 1,
+      "nombre": "Alenzandre Lezcano",
+      "posicion": "Portero",
+      "foto": "IMG/jugadores/1.webp",
+      "destacado": false
+    },
+    {
       "numero": 38,
       "nombre": "Getsel Montes",
       "posicion": "Defensa Central",
@@ -166,13 +173,6 @@
       "foto": "IMG/jugadores/34.webp",
       "destacado": false
     }
-    ,
-    {
-      "numero": 1,
-      "nombre": "Alenzandre Lezcano",
-      "posicion": "Portero",
-      "foto": "IMG/jugadores/1.webp",
-      "destacado": false
-    }
+    
   ]
 }
