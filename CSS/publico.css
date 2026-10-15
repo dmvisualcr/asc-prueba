@@ -1602,12 +1602,10 @@ img.sin-foto {
   position: relative;
   overflow: hidden;
   padding: 58px 20px 62px;
-  color: var(--blanco-puro);
+  color: var(--gris-oscuro);
   text-align: center;
-  background:
-    linear-gradient(115deg, rgba(0,0,0,.96), rgba(24,24,24,.94)),
-    var(--gris-oscuro);
-  border-top: 1px solid rgba(255,255,255,.08);
+  background: #fff;
+  border-top: 1px solid #eeeeee;
 }
 .force-section::before {
   content: "";
@@ -1626,7 +1624,7 @@ img.sin-foto {
 .force-kicker {
   display: inline-block;
   margin-bottom: 12px;
-  color: var(--amarillo-dorado);
+  color: var(--rojo);
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 800;
@@ -1644,7 +1642,7 @@ img.sin-foto {
 .force-section p {
   max-width: 650px;
   margin: 16px auto 0;
-  color: rgba(255,255,255,.75);
+  color: #555555;
   font-size: 14px;
   line-height: 1.8;
 }
