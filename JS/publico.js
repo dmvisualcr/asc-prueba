@@ -164,8 +164,13 @@
           '<button type="button" class="glory-nav glory-next" aria-label="Ver siguientes"><i class="fas fa-chevron-right"></i></button>' +
         '</div>';
 
-      var seccionEquipo = roster.closest('section') || roster.parentElement;
-      seccionEquipo.insertAdjacentElement('afterend', sec);
+      // En la página unificada, los trofeos van después de Fuerza Herediana.
+      // En otras páginas que solo tengan plantel, se conserva el comportamiento anterior.
+      var puntoInsercion = document.getElementById('force-herediana-section')
+        || document.getElementById('staff-grid') && document.getElementById('staff-grid').closest('section')
+        || roster.closest('section')
+        || roster.parentElement;
+      puntoInsercion.insertAdjacentElement('afterend', sec);
       protegerImagenes(sec);
 
       var pista = sec.querySelector('.glory-track');

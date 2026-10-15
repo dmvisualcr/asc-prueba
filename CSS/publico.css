@@ -1557,3 +1557,100 @@ img.sin-foto {
   .player-card:hover,
   .join-point:hover { transform: none; }
 }
+
+
+/* ==========================================================================
+   7. PÁGINA UNIFICADA: Equipo + Cuerpo técnico + Fuerza Herediana
+   ========================================================================== */
+.unified-section-heading {
+  max-width: var(--max-width);
+  margin: 0 auto 42px;
+  text-align: center;
+}
+.unified-section-heading h2 {
+  margin-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+.unified-section-heading p {
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.unified-coach-section {
+  padding-top: 76px;
+}
+.unified-staff-section {
+  padding: 10px 20px 76px;
+  background: var(--gris-oscuro);
+  color: var(--blanco-puro);
+}
+.unified-staff-section .section-title {
+  color: var(--blanco-puro);
+}
+.unified-staff-section .board-description {
+  color: rgba(255,255,255,.72);
+  text-align: center;
+  margin: 12px auto 30px;
+}
+.force-section {
+  position: relative;
+  overflow: hidden;
+  padding: 58px 20px 62px;
+  color: var(--blanco-puro);
+  text-align: center;
+  background:
+    linear-gradient(115deg, rgba(0,0,0,.96), rgba(24,24,24,.94)),
+    var(--gris-oscuro);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.force-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(180px, 42%);
+  height: 4px;
+  background: linear-gradient(90deg, var(--rojo) 0 50%, var(--amarillo-dorado) 50% 100%);
+}
+.force-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.force-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--amarillo-dorado);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.force-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(27px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -.5px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.force-section p {
+  max-width: 650px;
+  margin: 16px auto 0;
+  color: rgba(255,255,255,.75);
+  font-size: 14px;
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .unified-coach-section { padding: 58px 16px 46px; }
+  .unified-section-heading { margin-bottom: 30px; }
+  .unified-staff-section { padding: 8px 16px 58px; }
+  .force-section { padding: 46px 20px 50px; }
+}
