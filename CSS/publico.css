@@ -1754,10 +1754,45 @@ img.sin-foto {
   margin-top: 0;
 }
 
+/* En escritorio, los botones ocupan el espacio libre junto a las dos últimas tarjetas. */
+.join-section .join-actions-grid {
+  grid-column: 3;
+  grid-row: 3;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 12px 4px 12px 10px;
+}
+
+.join-section .join-actions-grid a {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  white-space: normal;
+}
+
 @media (max-width: 1000px) {
   .join-section .join-points-expanded {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
+  }
+
+  .join-section .join-actions-grid {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 0 0;
+  }
+
+  .join-section .join-actions-grid a {
+    width: auto;
   }
 }
 
@@ -1777,6 +1812,15 @@ img.sin-foto {
     width: 44px;
     height: 44px;
     margin-bottom: 14px;
+  }
+
+  .join-section .join-actions-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .join-section .join-actions-grid a {
+    width: 100%;
   }
 }
 
