@@ -1587,14 +1587,14 @@ img.sin-foto {
 }
 .unified-staff-section {
   padding: 10px 20px 76px;
-  background: var(--gris-oscuro);
-  color: var(--blanco-puro);
+  background: #ffffff;
+  color: var(--gris-oscuro);
 }
 .unified-staff-section .section-title {
-  color: var(--blanco-puro);
+  color: var(--gris-oscuro);
 }
 .unified-staff-section .board-description {
-  color: rgba(255,255,255,.72);
+  color: #666666;
   text-align: center;
   margin: 12px auto 30px;
 }
@@ -1604,8 +1604,9 @@ img.sin-foto {
   padding: 58px 20px 62px;
   color: var(--gris-oscuro);
   text-align: center;
-  background: #fff;
-  border-top: 1px solid #eeeeee;
+  background: var(--gris-oscuro);
+  color: var(--blanco-puro);
+  border-top: 1px solid #333333;
 }
 .force-section::before {
   content: "";
@@ -1642,13 +1643,13 @@ img.sin-foto {
 .force-section p {
   max-width: 650px;
   margin: 16px auto 0;
-  color: #555555;
+  color: rgba(255,255,255,.78);
   font-size: 14px;
   line-height: 1.8;
 }
 @media (max-width: 768px) {
   .unified-coach-section { padding: 58px 16px 46px; }
   .unified-section-heading { margin-bottom: 30px; }
-  .unified-staff-section { padding: 8px 16px 58px; }
+ .unified-staff-section { padding: 8px 16px 58px; }
   .force-section { padding: 46px 20px 50px; }
 }
