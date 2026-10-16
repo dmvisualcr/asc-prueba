@@ -369,11 +369,11 @@
         if (!audio) return;
 
         const pistas = [
-            { nombre: 'Canción 1', archivo: 'canciones/track1.mp3' },
-            { nombre: 'Canción 2', archivo: 'canciones/track2.mp3' },
-            { nombre: 'Canción 3', archivo: 'canciones/track3.mp3' },
-            { nombre: 'Canción 4', archivo: 'canciones/track4.mp3' },
-            { nombre: 'Canción 5', archivo: 'canciones/track5.mp3' }
+            { nombre: 'Canción 1', archivo: '/asociados/canciones/track1.mp3' },
+            { nombre: 'Canción 2', archivo: '/asociados/canciones/track2.mp3' },
+            { nombre: 'Canción 3', archivo: '/asociados/canciones/track3.mp3' },
+            { nombre: 'Canción 4', archivo: '/asociados/canciones/track4.mp3' },
+            { nombre: 'Canción 5', archivo: '/asociados/canciones/track5.mp3' }
         ];
         const playBtn = document.getElementById('musica-play');
         const playIcon = playBtn.querySelector('i');
@@ -461,7 +461,8 @@
             else { audio.currentTime = 0; actualizarBoton(); }
         });
         audio.addEventListener('error', () => {
-            nombre.textContent = 'No se pudo cargar el audio';
+            nombre.textContent = 'Error al cargar. Revisá la ruta del MP3';
+            actualizarBoton();
         });
 
         cargarPista(0, false);
