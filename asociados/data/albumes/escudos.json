@@ -1,0 +1,43 @@
+{
+  "id": "escudos",
+  "titulo": "Escudos",
+  "descripcion": "",
+  "fotos": [
+    {
+      "src": "albumes/09 - Escudos/15028876401439289670CLUBSPORTHEREDIANORSZ.jpg",
+      "mini": "albumes/09 - Escudos/_mini/15028876401439289670CLUBSPORTHEREDIANORSZ.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/CSH Actual.png",
+      "mini": "albumes/09 - Escudos/_mini/CSH Actual.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/csh.png",
+      "mini": "albumes/09 - Escudos/_mini/csh.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/Escudo DORADO.png",
+      "mini": "albumes/09 - Escudos/_mini/Escudo DORADO.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/escudo-herediano_1 copia.png",
+      "mini": "albumes/09 - Escudos/_mini/escudo-herediano_1 copia.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/logo heredia 100.jpg",
+      "mini": "albumes/09 - Escudos/_mini/logo heredia 100.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/WhatsApp Image 2021-02-04 at 12.05.56 AM copia.png",
+      "mini": "albumes/09 - Escudos/_mini/WhatsApp Image 2021-02-04 at 12.05.56 AM copia.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/WhatsApp Image 2021-03-08 at 8.58.45 PM copia.png",
+      "mini": "albumes/09 - Escudos/_mini/WhatsApp Image 2021-03-08 at 8.58.45 PM copia.webp"
+    },
+    {
+      "src": "albumes/09 - Escudos/WhatsApp Image 2021-04-07 at 9.32.50 AM.jpeg",
+      "mini": "albumes/09 - Escudos/_mini/WhatsApp Image 2021-04-07 at 9.32.50 AM.webp"
+    }
+  ]
+}

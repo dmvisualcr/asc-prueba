@@ -1,0 +1,31 @@
+{
+  "id": "mascotas",
+  "titulo": "Mascotas",
+  "descripcion": "",
+  "fotos": [
+    {
+      "src": "albumes/10 - Mascotas/1987 Huracan.jpg",
+      "mini": "albumes/10 - Mascotas/_mini/1987 Huracan.webp"
+    },
+    {
+      "src": "albumes/10 - Mascotas/1993 Oso Pirro con Héctor Marchena y Álvaro Amarilla..jpg",
+      "mini": "albumes/10 - Mascotas/_mini/1993 Oso Pirro con Héctor Marchena y Álvaro Amarilla..webp"
+    },
+    {
+      "src": "albumes/10 - Mascotas/HURACAN Rojiamarillo.jpg",
+      "mini": "albumes/10 - Mascotas/_mini/HURACAN Rojiamarillo.webp"
+    },
+    {
+      "src": "albumes/10 - Mascotas/TIGRE 2007.png",
+      "mini": "albumes/10 - Mascotas/_mini/TIGRE 2007.webp"
+    },
+    {
+      "src": "albumes/10 - Mascotas/TIGRE (3).jpg",
+      "mini": "albumes/10 - Mascotas/_mini/TIGRE (3).webp"
+    },
+    {
+      "src": "albumes/10 - Mascotas/tigre.jpg",
+      "mini": "albumes/10 - Mascotas/_mini/tigre.webp"
+    }
+  ]
+}

@@ -19,14 +19,14 @@
       "titulo": "Días del Asociado",
       "descripcion": "",
       "portada": "albumes/03 - Días del Asociado/_mini/1.webp",
-      "cantidad": 31
+      "cantidad": 38
     },
     {
       "id": "estadio-eladio-rosabal-cordero",
       "titulo": "Estadio Eladio Rosabal Cordero",
       "descripcion": "",
-      "portada": "albumes/04 - Estadio Eladio Rosabal Cordero/_mini/2M2S4209.webp",
-      "cantidad": 6
+      "portada": "albumes/04 - Estadio Eladio Rosabal Cordero/_mini/2M2S4198.webp",
+      "cantidad": 11
     },
     {
       "id": "fotos-de-equipos-pasados",
@@ -55,6 +55,62 @@
       "descripcion": "",
       "portada": "albumes/08 - Carnets Antiguos/_mini/1960.webp",
       "cantidad": 6
+    },
+    {
+      "id": "escudos",
+      "titulo": "Escudos",
+      "descripcion": "",
+      "portada": "albumes/09 - Escudos/_mini/15028876401439289670CLUBSPORTHEREDIANORSZ.webp",
+      "cantidad": 9
+    },
+    {
+      "id": "mascotas",
+      "titulo": "Mascotas",
+      "descripcion": "",
+      "portada": "albumes/10 - Mascotas/_mini/1987 Huracan.webp",
+      "cantidad": 6
+    },
+    {
+      "id": "celebraciones-campeonatos",
+      "titulo": "Celebraciones Campeonatos",
+      "descripcion": "",
+      "portada": "albumes/11 - Celebraciones Campeonatos/_mini/2.webp",
+      "cantidad": 24
+    },
+    {
+      "id": "personajes-historicos",
+      "titulo": "Personajes Historicos",
+      "descripcion": "",
+      "portada": "albumes/12 - Personajes Historicos/_mini/1993 Kenneth Paniagua (2).webp",
+      "cantidad": 53
+    },
+    {
+      "id": "himno-oficial",
+      "titulo": "Himno Oficial",
+      "descripcion": "",
+      "portada": "albumes/13 - Himno Oficial/_mini/Himno1.webp",
+      "cantidad": 13
+    },
+    {
+      "id": "centenario",
+      "titulo": "Centenario",
+      "descripcion": "",
+      "portada": "albumes/14 - Centenario/_mini/201096610_10165215104435402_7792242408272017545_n.webp",
+      "cantidad": 21
+    },
+    {
+      "id": "biografias",
+      "titulo": "Biografías",
+      "descripcion": "",
+      "portada": "albumes/15 - Biografías/_mini/Biografía Cuico Bejarano 001.webp",
+      "cantidad": 38
+    },
+    {
+      "id": "placas-historicas",
+      "titulo": "Placas Históricas",
+      "descripcion": "",
+      "portada": "albumes/16 - Placas Históricas/_mini/Placa agradecimiento a Patrocinadores CSH 1988.webp",
+      "cantidad": 7
     }
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "id": "placas-historicas",
+  "titulo": "Placas Históricas",
+  "descripcion": "",
+  "fotos": [
+    {
+      "src": "albumes/16 - Placas Históricas/Placa agradecimiento a Patrocinadores CSH 1988.jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa agradecimiento a Patrocinadores CSH 1988.webp"
+    },
+    {
+      "src": "albumes/16 - Placas Históricas/Placa Cincuentenario CSH 1971.jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa Cincuentenario CSH 1971.webp"
+    },
+    {
+      "src": "albumes/16 - Placas Históricas/Placa Felicitación al CSH 1978 (02).jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa Felicitación al CSH 1978 (02).webp"
+    },
+    {
+      "src": "albumes/16 - Placas Históricas/Placa Felicitación al CSH 1978.jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa Felicitación al CSH 1978.webp"
+    },
+    {
+      "src": "albumes/16 - Placas Históricas/Placa Homenaje 70 años Rafael Feluco  Herrera.jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa Homenaje 70 años Rafael Feluco  Herrera.webp"
+    },
+    {
+      "src": "albumes/16 - Placas Históricas/Placa Homenaje Eladio Rosabal 1965.jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa Homenaje Eladio Rosabal 1965.webp"
+    },
+    {
+      "src": "albumes/16 - Placas Históricas/Placa Junta Directiva 2007-2009.jpg",
+      "mini": "albumes/16 - Placas Históricas/_mini/Placa Junta Directiva 2007-2009.webp"
+    }
+  ]
+}

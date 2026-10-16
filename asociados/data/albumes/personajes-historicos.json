@@ -1,0 +1,219 @@
+{
+  "id": "personajes-historicos",
+  "titulo": "Personajes Historicos",
+  "descripcion": "",
+  "fotos": [
+    {
+      "src": "albumes/12 - Personajes Historicos/1993 Kenneth Paniagua (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/1993 Kenneth Paniagua (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/1993 Nicogol (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/1993 Nicogol (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/2007 Robert Arias.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/2007 Robert Arias.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/2012 Final Odir.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/2012 Final Odir.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Abel Sandoval.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Abel Sandoval.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/allan cruz.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/allan cruz.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Allan Oviedo (3).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Allan Oviedo (3).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Angelin Bernini.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Angelin Bernini.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Asdrúbal Yuba Paniagua 3.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Asdrúbal Yuba Paniagua 3.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Braulio Morales.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Braulio Morales.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/cancela.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/cancela.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Carlos Camacho.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Carlos Camacho.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Carlos Lobo.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Carlos Lobo.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Claudio Cayito Arguedas.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Claudio Cayito Arguedas.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Claudio Jara.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Claudio Jara.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Danilo Montero.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Danilo Montero.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/EdgarQuesada.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/EdgarQuesada.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Eladio Rosabal.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Eladio Rosabal.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/elias aguilar.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/elias aguilar.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Enrique de Mezerville 1921.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Enrique de Mezerville 1921.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Esteban Granados.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Esteban Granados.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Esteban ramirez.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Esteban ramirez.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Felo García.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Felo García.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Fernando Macho Montero.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Fernando Macho Montero.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Fernando Montero.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Fernando Montero.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Geovanny Jara.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Geovanny Jara.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/German Chavarría (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/German Chavarría (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Gilberto Beto Arguedas.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Gilberto Beto Arguedas.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Guillermo Zapa Pérez (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Guillermo Zapa Pérez (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Isaac Sasso.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Isaac Sasso.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Jafet Soto (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Jafet Soto (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Jimmy marin.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Jimmy marin.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Jorge Washington Santos.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Jorge Washington Santos.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/jose miguel cubero.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/jose miguel cubero.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Julio Gómez.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Julio Gómez.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/junior diaz.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/junior diaz.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Leo gonzalez.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Leo gonzalez.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/mambo.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/mambo.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Marvin Obando (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Marvin Obando (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Marío Murillo.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Marío Murillo.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Mauricio Solis (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Mauricio Solis (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/morgan.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/morgan.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Nilton Nobrega.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Nilton Nobrega.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Otoniel Chompipe Martínez (1).png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Otoniel Chompipe Martínez (1).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Pablo salazar.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Pablo salazar.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Paulo Cesar (2).jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Paulo Cesar (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Randall azofeifa.JPG",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Randall azofeifa.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Roger Álvarez (2).png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Roger Álvarez (2).webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Sergio Salazar.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Sergio Salazar.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Vicente Wanchope.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Vicente Wanchope.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Wálter Rojas.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Wálter Rojas.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/yendrick ruiz.jpg",
+      "mini": "albumes/12 - Personajes Historicos/_mini/yendrick ruiz.webp"
+    },
+    {
+      "src": "albumes/12 - Personajes Historicos/Álvaro Grant McDonald.png",
+      "mini": "albumes/12 - Personajes Historicos/_mini/Álvaro Grant McDonald.webp"
+    }
+  ]
+}

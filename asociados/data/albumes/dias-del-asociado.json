@@ -4,6 +4,10 @@
   "descripcion": "",
   "fotos": [
     {
+      "src": "albumes/03 - Días del Asociado/1.JPG",
+      "mini": "albumes/03 - Días del Asociado/_mini/1.webp"
+    },
+    {
       "src": "albumes/03 - Días del Asociado/1.webp",
       "mini": "albumes/03 - Días del Asociado/_mini/1.webp"
     },
@@ -126,6 +130,30 @@
     {
       "src": "albumes/03 - Días del Asociado/33.webp",
       "mini": "albumes/03 - Días del Asociado/_mini/33.webp"
+    },
+    {
+      "src": "albumes/03 - Días del Asociado/IMG_0168.jpg",
+      "mini": "albumes/03 - Días del Asociado/_mini/IMG_0168.webp"
+    },
+    {
+      "src": "albumes/03 - Días del Asociado/IMG_0225.jpg",
+      "mini": "albumes/03 - Días del Asociado/_mini/IMG_0225.webp"
+    },
+    {
+      "src": "albumes/03 - Días del Asociado/IMG_0227.jpg",
+      "mini": "albumes/03 - Días del Asociado/_mini/IMG_0227.webp"
+    },
+    {
+      "src": "albumes/03 - Días del Asociado/IMG_0242.jpg",
+      "mini": "albumes/03 - Días del Asociado/_mini/IMG_0242.webp"
+    },
+    {
+      "src": "albumes/03 - Días del Asociado/IMG_0346.jpg",
+      "mini": "albumes/03 - Días del Asociado/_mini/IMG_0346.webp"
+    },
+    {
+      "src": "albumes/03 - Días del Asociado/IMG_0348.jpg",
+      "mini": "albumes/03 - Días del Asociado/_mini/IMG_0348.webp"
     }
   ]
 }

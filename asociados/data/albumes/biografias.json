@@ -1,0 +1,159 @@
+{
+  "id": "biografias",
+  "titulo": "Biografías",
+  "descripcion": "",
+  "fotos": [
+    {
+      "src": "albumes/15 - Biografías/Biografía Cuico Bejarano 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Cuico Bejarano 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Cuico Bejarano 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Cuico Bejarano 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Cuico Bejarano 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Cuico Bejarano 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Cuico Bejarano.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Cuico Bejarano.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Edgar Quesada 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Edgar Quesada 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Edgar Quesada 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Edgar Quesada 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Edgar Quesada 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Edgar Quesada 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Edgar Quesada.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Edgar Quesada.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Felo García 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Felo García 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Felo García 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Felo García 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Felo García 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Felo García 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Felo García 004.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Felo García 004.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Felo García.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Felo García.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Francisco Fonseca y Gustavo Sánchez 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Francisco Fonseca y Gustavo Sánchez 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Francisco Fonseca y Gustavo Sánchez 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Francisco Fonseca y Gustavo Sánchez 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Francisco Fonseca y Gustavo Sánchez.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Francisco Fonseca y Gustavo Sánchez.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Hernán Alvarado 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Hernán Alvarado 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Hernán Alvarado 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Hernán Alvarado 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Hernán Alvarado 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Hernán Alvarado 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Hernán Alvarado 004.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Hernán Alvarado 004.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Hernán Alvarado.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Hernán Alvarado.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Jorge Ivaga.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Jorge Ivaga.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía José Francisco Fonseca.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía José Francisco Fonseca.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Luis Vargas V..jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Luis Vargas V..webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Mario Murillo 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Mario Murillo 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Mario Murillo 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Mario Murillo 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Mario Murillo 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Mario Murillo 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Mario Murillo.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Mario Murillo.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Max Villalobos 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Max Villalobos 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Max Villalobos 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Max Villalobos 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Max Villalobos 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Max Villalobos 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Max Villalobos.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Max Villalobos.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Rafael Herrera Alfaro.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Rafael Herrera Alfaro.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Álvaro Grant Mc Donald 001.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Álvaro Grant Mc Donald 001.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Álvaro Grant Mc Donald 002.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Álvaro Grant Mc Donald 002.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Álvaro Grant Mc Donald 003.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Álvaro Grant Mc Donald 003.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Álvaro Grant Mc Donald 004.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Álvaro Grant Mc Donald 004.webp"
+    },
+    {
+      "src": "albumes/15 - Biografías/Biografía Álvaro Grant Mc Donald.jpg",
+      "mini": "albumes/15 - Biografías/_mini/Biografía Álvaro Grant Mc Donald.webp"
+    }
+  ]
+}
