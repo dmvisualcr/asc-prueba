@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "HEREDIANO VS CARTAGINÉS: ENTRADAS A LA VENTA",
+      "fecha": "2026-10-20",
+      "fecha_hora": "2026-10-20T10:25:36-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1792513530075-whatsapp-image-2026-10-19-at-12-01-03-pm.jpeg",
+      "resumen": "¡Este sábado recibimos al Club Sport Cartaginés en nuestra CASA! 🏟️❤️💛 🎟️ Entradas a la venta en: Oficinas del Club y…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/herediano-vs-cartagines-entradas-a-la-venta"
+    },
+    {
       "titulo": "¡Gracias, Wanchope!",
       "fecha": "2026-10-11",
       "fecha_hora": "2026-10-11T09:45:38-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/reggy-rivera-bienvenido-al-campeon-nacional"
-    },
-    {
-      "titulo": "Abner Hudson: Bienvenido al Campeón Nacional",
-      "fecha": "2026-05-25",
-      "fecha_hora": "2026-05-25T14:05:59-06:00",
-      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1779736863773-abner.jpeg",
-      "resumen": "El jugador Abner Hudson será nuevo refuerzo de nuestro equipo para el próximo torneo de Apertura 2026. Hudson se une a “El Team” luego de su paso por el Municipal Liberia. Ficha Técnica: Nombre:…",
-      "categoria": "Noticias",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/abner-hudson-bienvenido-al-campeon-nacional"
     }
   ]
 }
