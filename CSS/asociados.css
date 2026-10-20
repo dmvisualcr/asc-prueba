@@ -625,30 +625,7 @@
   padding: 0 20px;
 }
 
-/* Mantiene el título de Julio Gómez con el mismo estilo de las cápsulas históricas */
-.julio-gomez > h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--rojo);
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-  position: relative;
-  display: block;
-  border-bottom: none !important;
-  padding-bottom: 0 !important;
-}
-
-.julio-gomez > h3::after {
-  content: '';
-  display: block;
-  width: 120px;
-  height: 3px;
-  background-color: var(--amarillo-dorado);
-  margin: 8px auto 20px;
-  border-radius: 2px;
-}
+.julio-gomez > h3 { text-align: center; }
 
 .julio-subtitulo {
   margin: 8px auto 36px;
@@ -1287,83 +1264,48 @@
 }
 
 
-/* ---------- Corrección de la Junta Directiva en nosotros.html ---------- */
-#junta-directiva.board-section {
-  padding: 50px 24px 70px;
-  background: #ededed;
+/* ---------- Reproductor musical de Multimedia ---------- */
+.musica-section {
+  max-width: 900px;
+  margin: 34px auto 54px;
+  padding: 0 20px;
 }
-
-#junta-directiva .board-grid {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 22px;
+.musica-player {
+  padding: 26px;
+  border-radius: 14px;
+  background: #222;
+  color: #fff;
+  border-top: 4px solid var(--amarillo-dorado);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
-
-#junta-directiva .member-card {
-  min-width: 0;
-  width: auto;
-  height: auto;
-  padding: 24px 16px 22px;
-  text-align: center;
-  overflow-wrap: anywhere;
+.musica-heading { display:flex; align-items:center; gap:14px; margin-bottom:22px; }
+.musica-icono { display:flex; align-items:center; justify-content:center; flex:0 0 48px; height:48px; border-radius:10px; background:var(--amarillo-dorado); color:#222; font-size:20px; }
+.musica-heading h2 { margin:0 0 5px; color:#fff; font:800 20px 'Montserrat',sans-serif; }
+.musica-heading p { margin:0; color:#d0d0d0; font-size:13px; }
+.musica-controles-principales { display:flex; align-items:center; gap:14px; }
+.musica-player button { cursor:pointer; }
+.musica-control-secundario,.musica-play { display:flex; align-items:center; justify-content:center; flex:0 0 auto; border:0; border-radius:50%; }
+.musica-control-secundario { width:38px; height:38px; background:#383838; color:#fff; }
+.musica-play { width:48px; height:48px; background:var(--amarillo-dorado); color:#222; font-size:18px; }
+.musica-control-secundario:hover { background:var(--rojo); }
+.musica-play:hover { filter:brightness(1.08); }
+.musica-pista-info { display:flex; flex-direction:column; gap:5px; min-width:0; margin-left:4px; }
+.musica-pista-info strong { font:700 15px 'Montserrat',sans-serif; overflow-wrap:anywhere; }
+.musica-pista-info small { color:var(--amarillo-dorado); font-size:10px; font-weight:700; letter-spacing:1px; }
+.musica-progreso { display:grid; grid-template-columns:38px minmax(0,1fr) 38px; align-items:center; gap:10px; margin-top:20px; }
+.musica-progreso span { color:#ddd; font-size:11px; font-variant-numeric:tabular-nums; }
+.musica-progreso input,.musica-volumen-wrap input { width:100%; accent-color:var(--amarillo-dorado); cursor:pointer; }
+.musica-volumen-wrap { display:flex; align-items:center; justify-content:flex-end; gap:10px; max-width:180px; margin:12px 0 22px auto; color:var(--amarillo-dorado); }
+.musica-lista { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; }
+.musica-pista { display:flex; align-items:center; justify-content:center; gap:8px; min-width:0; padding:11px 8px; border:1px solid #4a4a4a; border-radius:8px; background:#2c2c2c; color:#eee; font:600 12px 'Montserrat',sans-serif; }
+.musica-pista i { color:var(--amarillo-dorado); font-size:11px; }
+.musica-pista.activa { border-color:var(--amarillo-dorado); background:#3b3422; }
+.musica-pista:hover { border-color:var(--rojo); }
+@media (max-width:600px) {
+  .musica-section { margin:24px auto 40px; padding:0 14px; }
+  .musica-player { padding:20px 15px; }
+  .musica-heading h2 { font-size:17px; }
+  .musica-lista { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .musica-pista:last-child { grid-column:1 / -1; }
+  .musica-pista { justify-content:flex-start; }
 }
-
-#junta-directiva .member-card img {
-  display: block;
-  width: 110px;
-  height: 110px;
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  margin: 0 auto 15px;
-  flex-shrink: 0;
-}
-
-#junta-directiva .member-card h3 {
-  line-height: 1.3;
-  margin: 0 0 6px;
-}
-
-#junta-directiva .member-card p {
-  line-height: 1.35;
-  margin: 0;
-}
-
-@media (max-width: 1050px) {
-  #junta-directiva .board-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  #junta-directiva.board-section {
-    padding: 42px 18px 55px;
-  }
-  #junta-directiva .board-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-}
-
-@media (max-width: 460px) {
-  #junta-directiva .board-grid {
-    grid-template-columns: 1fr;
-    max-width: 340px;
-  }
-}
-
-/* Centrar las últimas tarjetas de la Junta Directiva */
-@media (min-width: 901px) {
-    #junta-directiva .board-grid .member-card:nth-child(9) {
-        grid-column: 2;
-    }
-
-    #junta-directiva .board-grid .member-card:nth-child(10) {
-        grid-column: 3;
-    }
-}
-

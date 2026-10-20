@@ -53,6 +53,49 @@
             <h2>Galería y Contenido Exclusivo</h2>
             <p>Revive los mejores momentos del Club con nuestra galería exclusiva y videos detrás de cámaras.</p>
 
+            <!-- Reproductor musical exclusivo para asociados -->
+            <section class="musica-section" aria-label="Reproductor musical">
+                <div class="musica-player">
+                    <div class="musica-heading">
+                        <span class="musica-icono"><i class="fas fa-music" aria-hidden="true"></i></span>
+                        <div>
+                            <h2>Música Rojiamarilla</h2>
+                            <p>Elegí tu canción y disfrutá del sonido del Team.</p>
+                        </div>
+                    </div>
+
+                    <div class="musica-controles-principales">
+                        <button type="button" id="musica-anterior" class="musica-control-secundario" aria-label="Canción anterior" title="Canción anterior"><i class="fas fa-backward-step"></i></button>
+                        <button type="button" id="musica-play" class="musica-play" aria-label="Reproducir" title="Reproducir"><i class="fas fa-play"></i></button>
+                        <button type="button" id="musica-siguiente" class="musica-control-secundario" aria-label="Canción siguiente" title="Canción siguiente"><i class="fas fa-forward-step"></i></button>
+                        <div class="musica-pista-info">
+                            <strong id="musica-nombre">Canción 1</strong>
+                            <small id="musica-numero">CANCIÓN 1 DE 5</small>
+                        </div>
+                    </div>
+
+                    <div class="musica-progreso">
+                        <span id="musica-tiempo-actual">0:00</span>
+                        <input type="range" id="musica-seek" min="0" max="100" value="0" step="0.1" aria-label="Posición de la canción">
+                        <span id="musica-duracion">0:00</span>
+                    </div>
+
+                    <div class="musica-volumen-wrap">
+                        <i class="fas fa-volume-low" aria-hidden="true"></i>
+                        <input type="range" id="musica-volumen" min="0" max="1" value="0.75" step="0.05" aria-label="Volumen">
+                    </div>
+
+                    <div class="musica-lista" aria-label="Seleccionar canción">
+                        <button type="button" class="musica-pista" data-pista="0" aria-pressed="true"><i class="fas fa-play"></i><span>Canción 1</span></button>
+                        <button type="button" class="musica-pista" data-pista="1" aria-pressed="false"><i class="fas fa-play"></i><span>Canción 2</span></button>
+                        <button type="button" class="musica-pista" data-pista="2" aria-pressed="false"><i class="fas fa-play"></i><span>Canción 3</span></button>
+                        <button type="button" class="musica-pista" data-pista="3" aria-pressed="false"><i class="fas fa-play"></i><span>Canción 4</span></button>
+                        <button type="button" class="musica-pista" data-pista="4" aria-pressed="false"><i class="fas fa-play"></i><span>Canción 5</span></button>
+                    </div>
+                    <audio id="musica-audio" preload="none"></audio>
+                </div>
+            </section>
+
             
 
             <section id="albumes" class="albumes-section">
