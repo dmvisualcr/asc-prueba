@@ -1285,3 +1285,73 @@
         height: 180px;
     }
 }
+
+
+/* ---------- Corrección de la Junta Directiva en nosotros.html ---------- */
+#junta-directiva.board-section {
+  padding: 50px 24px 70px;
+  background: #ededed;
+}
+
+#junta-directiva .board-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+#junta-directiva .member-card {
+  min-width: 0;
+  width: auto;
+  height: auto;
+  padding: 24px 16px 22px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+#junta-directiva .member-card img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  flex-shrink: 0;
+}
+
+#junta-directiva .member-card h3 {
+  line-height: 1.3;
+  margin: 0 0 6px;
+}
+
+#junta-directiva .member-card p {
+  line-height: 1.35;
+  margin: 0;
+}
+
+@media (max-width: 1050px) {
+  #junta-directiva .board-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  #junta-directiva.board-section {
+    padding: 42px 18px 55px;
+  }
+  #junta-directiva .board-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  #junta-directiva .board-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+}
