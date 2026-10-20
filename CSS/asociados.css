@@ -1355,3 +1355,15 @@
     max-width: 340px;
   }
 }
+
+/* Centrar las últimas tarjetas de la Junta Directiva */
+@media (min-width: 901px) {
+    #junta-directiva .board-grid .member-card:nth-child(9) {
+        grid-column: 2;
+    }
+
+    #junta-directiva .board-grid .member-card:nth-child(10) {
+        grid-column: 3;
+    }
+}
+
