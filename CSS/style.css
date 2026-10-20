@@ -1232,15 +1232,16 @@ footer p { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
   gap: 24px;
 }
 
-.board-grid.center-last-line {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
+/* La Junta Directiva se organiza en una sola cuadrícula de 4 columnas.
+   Las dos últimas tarjetas quedan centradas en escritorio. */
+@media (min-width: 901px) {
+  #junta-directiva .board-grid .member-card:nth-child(9) {
+    grid-column: 2;
+  }
 
-.board-grid.center-last-line .member-card {
-  flex: 0 1 220px;
+  #junta-directiva .board-grid .member-card:nth-child(10) {
+    grid-column: 3;
+  }
 }
 
 .member-card {
@@ -1291,9 +1292,6 @@ footer p { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
 @media (max-width: 480px) {
   .board-grid {
     grid-template-columns: 1fr;
-  }
-  .board-grid.center-last-line .member-card {
-    flex: 1 1 100%;
   }
 }
 
