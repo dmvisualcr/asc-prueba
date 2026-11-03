@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "herediano vs saprissa: entradas a la venta",
+      "fecha": "2026-11-02",
+      "fecha_hora": "2026-11-02T15:51:46-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1793657981824-1985d659-bb80-4d62-8f3d-e77691023635.jpeg",
+      "resumen": "¡Este jueves recibimos al DEPORTIVO SAPRISSA en nuestra CASA! 🏟️❤️💛 🎟️ Entradas a la venta en: Oficinas del Club y…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/herediano-vs-saprissa-entradas-a-la-venta"
+    },
+    {
       "titulo": "HEREDIANO VS CARTAGINÉS: ENTRADAS A LA VENTA",
       "fecha": "2026-10-20",
       "fecha_hora": "2026-10-20T10:25:36-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/llega-la-ii-edicion-del-campa-fut-y-recreacion-junto-a-solo-cracks"
-    },
-    {
-      "titulo": "Reggy Rivera: Bienvenido al Campeón Nacional",
-      "fecha": "2026-05-26",
-      "fecha_hora": "2026-05-26T14:57:01-06:00",
-      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1779828969866-reggy.jpeg",
-      "resumen": "El jugador Reggy Rivera será nuevo refuerzo de nuestro equipo para el próximo torneo de Apertura 2026. Rivera se une a “El Team” procedente de la Asociación Deportiva San Carlos. Ficha Técnica:…",
-      "categoria": "Noticias",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/reggy-rivera-bienvenido-al-campeon-nacional"
     }
   ]
 }
