@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "HEREDIANO VS INTER SAN CARLOS: ENTRADAS A LA VENTA",
+      "fecha": "2026-11-06",
+      "fecha_hora": "2026-11-06T16:01:12-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1794002259746-whatsapp-image-2026-11-06-at-3-01-12-pm.jpeg",
+      "resumen": "¡Este domingo recibimos a Inter San Carlos en nuestra CASA! 🏟️❤️💛 🎟️ Entradas a la venta en: Oficinas del Club y…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/herediano-vs-inter-san-carlos-entradas-a-la-venta"
+    },
+    {
       "titulo": "¡ORGULLO ROJIAMARILLO EN EL MUNDIAL!",
       "fecha": "2026-11-05",
       "fecha_hora": "2026-11-05T15:04:59-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/carta-de-jafet-soto-hacia-el-club-sport-herediano-en-su-105-aniversario"
-    },
-    {
-      "titulo": "CRONOGRAMA DE ACTIVIDADES 12 de junio: 105 ANIVERSARIO",
-      "fecha": "2026-06-10",
-      "fecha_hora": "2026-06-10T11:03:57-06:00",
-      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1781110800320-celebraci-n.jpeg",
-      "resumen": "Este 12 de junio celebramos 105 años de historia, pasión y tradición. Por eso, hemos preparado una serie de actividades especiales para que nuestra afición sea parte de esta gran celebración y…",
-      "categoria": "Noticias",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/cronograma-de-actividades-aniversario-12-de-junio"
     }
   ]
 }
