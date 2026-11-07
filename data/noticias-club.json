@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "COMUNICADO OFICIAL",
+      "fecha": "2026-11-07",
+      "fecha_hora": "2026-11-07T13:01:04-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1794078264417-4eadf76a-ef63-4bed-ba49-108cedca72f1.jpeg",
+      "resumen": "En relación con la información difundida acerca del nuevo Estadio Eladio Rosabal Cordero, el Club Sport Herediano comunica lo siguiente: La resolución municipal mencionada se encuentra en trámite,…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/comunicado-oficial-ra41"
+    },
+    {
       "titulo": "HEREDIANO VS INTER SAN CARLOS: ENTRADAS A LA VENTA",
       "fecha": "2026-11-06",
       "fecha_hora": "2026-11-06T16:01:12-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/farmacia-jireh-llega-al-nuevo-eladio-rosabal-cordero"
-    },
-    {
-      "titulo": "Carta de Jafet Soto hacia el club sport herediano en su 105 aniversario",
-      "fecha": "2026-06-12",
-      "fecha_hora": "2026-06-12T12:29:24-06:00",
-      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1781285885873-img-2373.png",
-      "resumen": "Querido Club Sport Herediano: Hoy es tu cumpleaños. Hoy cumplís 105 años de vida, de historia y de grandeza. Y aunque el tiempo parezca largo, para quienes te amamos tu historia se siente viva todos…",
-      "categoria": "Noticias",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/carta-de-jafet-soto-hacia-el-club-sport-herediano-en-su-105-aniversario"
     }
   ]
 }
