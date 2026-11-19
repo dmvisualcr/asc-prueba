@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "Alejandro necesita de su solidaridad para someterse a una cirugía de corazón",
+      "fecha": "2026-11-19",
+      "fecha_hora": "2026-11-19T15:17:41-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1795122649019-whatsapp-image-2026-11-19-at-1-47-56-pm.jpeg",
+      "resumen": "Con tan solo tres años, Alejandro enfrenta un importante desafío de salud. Su familia y la Fundación CorAll Family Costa Rica solicitan el apoyo de la población para recaudar ₡30 millones, monto…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/alejandro-necesita-de-su-solidaridad-para-viajar-someterse-a-una-cirugia-de-cora"
+    },
+    {
       "titulo": "🔴🟡 ¡RENOVÁ TU MEMBRESÍA Y APROVECHÁ ESTE BENEFICIO ESPECIAL!",
       "fecha": "2026-11-18",
       "fecha_hora": "2026-11-18T17:06:35-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/gracias-tepa"
-    },
-    {
-      "titulo": "COMUNICADO OFICIAL",
-      "fecha": "2026-06-16",
-      "fecha_hora": "2026-06-16T10:31:39-06:00",
-      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1781624865743-comunicado-de-prensa-horizontal.jpeg",
-      "resumen": "Apreciada comunidad herediana: Les informamos que, como resultado de un proceso de reestructuración técnica y organizativa por parte del desarrollador de la plataforma, la aplicación oficial del Club…",
-      "categoria": "Noticias",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/comunicado-oficial"
     }
   ]
 }
