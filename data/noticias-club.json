@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "titulo": "HEREDIANO VS ESCORPIONES: ENTRADAS A LA VENTA",
+      "fecha": "2026-11-24",
+      "fecha_hora": "2026-11-24T09:24:08-06:00",
+      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1795533742050-whatsapp-image-2026-11-23-at-9-56-55-am.jpeg",
+      "resumen": "¡Este viernes recibimos a Escorpiones en nuestra CASA! 🏟️❤️💛 🎟️ Entradas a la venta en: Oficinas del Club y…",
+      "categoria": "Noticias",
+      "fuente": "herediano.com",
+      "url": "https://www.herediano.com/noticias/herediano-vs-escorpiones-entradas-a-la-venta"
+    },
+    {
       "titulo": "Alejandro necesita de su solidaridad para someterse a una cirugía de corazón",
       "fecha": "2026-11-19",
       "fecha_hora": "2026-11-19T15:17:41-06:00",
@@ -289,16 +299,6 @@
       "categoria": "Noticias",
       "fuente": "herediano.com",
       "url": "https://www.herediano.com/noticias/fernando-lesme-bienvenido-al-campeon-nacional"
-    },
-    {
-      "titulo": "¡GRACIAS, TEPA!",
-      "fecha": "2026-06-22",
-      "fecha_hora": "2026-06-22T12:43:29-06:00",
-      "imagen": "https://ehmhligiadhmhmrjnpop.supabase.co/storage/v1/object/public/news-uploads/covers/1782153795428-tepa.jpeg",
-      "resumen": "El Club Sport Herediano informa que el jugador José de Jesús González no continuará formando parte de nuestra institución. Le agradecemos su tiempo, compromiso y entrega al club.",
-      "categoria": "Noticias",
-      "fuente": "herediano.com",
-      "url": "https://www.herediano.com/noticias/gracias-tepa"
     }
   ]
 }
